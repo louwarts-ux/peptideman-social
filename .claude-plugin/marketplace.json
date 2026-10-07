@@ -1,5 +1,9 @@
 {
   "name": "peptideman-social",
   "owner": { "name": "louwarts-ux" },
-  "plugins": [{ "name": "caption-check", "source": "./mods/caption-check" }]
+  "description": "Claude Code-plugins van louwarts-ux: caption-check voor social posts en Business OS voor ondernemers",
+  "plugins": [
+    { "name": "caption-check", "source": "./mods/caption-check" },
+    { "name": "business-os", "source": "./plugins/business-os" }
+  ]
 }

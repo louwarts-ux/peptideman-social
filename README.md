@@ -2,6 +2,16 @@
 
 Tools for the Peptideman social media workflow.
 
+## Plugins
+
+### business-os
+
+Business OS voor ondernemers: een onboarding die je bedrijfsprofiel vastlegt, een router (`/business-os:os`), 20 specialisten (copywriter, social media, e-mail, SEO, ads, merk, aanbod, sales, offertes, klantenservice, operations, automatisering met n8n, planning, HR, finance, juridisch, strateeg, marktonderzoek, data, prompt-engineer) en 10 masterclasses (`/business-os:masterclass`). Zie [plugins/business-os/README.md](plugins/business-os/README.md).
+
+```
+/plugin install business-os --marketplace louwarts-ux/peptideman-social
+```
+
 ## Mods
 
 ### caption-check
