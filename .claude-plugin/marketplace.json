@@ -1,0 +1,5 @@
+{
+  "name": "peptideman-social",
+  "owner": { "name": "louwarts-ux" },
+  "plugins": [{ "name": "caption-check", "source": "./mods/caption-check" }]
+}

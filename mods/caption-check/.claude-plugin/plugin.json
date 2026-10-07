@@ -1,0 +1,6 @@
+{
+  "name": "caption-check",
+  "version": "0.1.0",
+  "description": "/caption-check: checks a draft post against each platform's length and hashtag limits and flags risky health claims",
+  "author": { "name": "louwarts-ux" }
+}
