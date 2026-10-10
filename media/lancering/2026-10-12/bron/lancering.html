@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Lancering peptideman.nl</title>
+<style>
+/* Zelfde huisstijl als de carrousels van de Peptideman Bibliotheek (1080 x 1350, Poppins, zwart met goud). */
+:root{--bg:#000;--ink:#f5f2ea;--soft:#b7b1a3;--faint:#8b8577;--gold:#e2ba3c;--gold-base:#c9a227}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;background:var(--bg);overflow:hidden}
+body{font-family:'Poppins',sans-serif;color:var(--ink);position:relative;-webkit-font-smoothing:antialiased}
+
+.badge{position:absolute;left:96px;top:92px;border:2px solid rgba(226,186,60,.8);border-radius:14px;padding:13px 24px 12px;text-align:center;line-height:1.2}
+.badge b{display:block;font-weight:500;font-size:22px;letter-spacing:.24em;margin-right:-.24em;color:var(--ink)}
+.badge span{display:block;font-weight:400;font-size:15.5px;letter-spacing:.37em;margin-right:-.37em;margin-top:3px;color:var(--gold)}
+
+.hero{position:absolute;left:96px;right:96px;top:214px;bottom:330px;display:flex;flex-direction:column;justify-content:center}
+.titlewrap{position:relative}
+.title{position:relative;z-index:2;font-weight:700;font-size:190px;line-height:1.02;letter-spacing:-.03em;margin-left:-8px;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.title em{font-style:normal;display:inline-block;padding-right:.06em;text-shadow:none;filter:drop-shadow(0 2px 22px rgba(0,0,0,.55));background:linear-gradient(150deg,#f8de84 0%,#e2ba3c 42%,#b3881d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tail{position:relative;z-index:2;font-weight:300;font-size:62px;line-height:1.22;letter-spacing:-.01em;margin-top:44px;color:var(--ink)}
+
+.flare{position:absolute;z-index:1;left:626px;top:50%;width:0;height:0;mix-blend-mode:screen}
+.flare i{position:absolute;display:block}
+.flare .glow{left:-580px;top:-270px;width:1160px;height:540px;background:radial-gradient(ellipse at center,rgba(232,150,24,.26) 0%,rgba(190,110,10,.10) 38%,transparent 68%)}
+.flare .bloom{left:-340px;top:-70px;width:680px;height:140px;background:radial-gradient(ellipse at center,rgba(255,236,190,.80) 0%,rgba(255,190,70,.56) 18%,rgba(226,140,20,.24) 46%,transparent 72%);filter:blur(12px)}
+.flare .streak{left:-900px;top:-3px;width:1800px;height:6px;background:linear-gradient(90deg,transparent 4%,rgba(255,176,60,.55) 30%,rgba(255,236,196,.95) 50%,rgba(255,176,60,.55) 70%,transparent 96%);filter:blur(1.4px)}
+.flare .ray{left:-310px;top:-1px;width:620px;height:2px;background:linear-gradient(90deg,transparent,rgba(255,200,96,.50) 50%,transparent);transform:rotate(var(--a));filter:blur(.8px)}
+
+.disc{position:absolute;left:96px;right:96px;bottom:226px;font-weight:400;font-size:27px;line-height:1.45;color:var(--faint)}
+
+.track{position:absolute;left:0;right:0;top:1180px;height:2px;background:rgba(201,162,39,.30)}
+.light{position:absolute;top:1181px;left:984px;width:0;height:0}
+.light i{position:absolute;display:block}
+.light .streak{left:-210px;top:-2px;width:420px;height:4px;background:linear-gradient(90deg,transparent,rgba(255,196,84,.9) 42%,#fff8e6 50%,rgba(255,196,84,.9) 58%,transparent);filter:blur(.6px)}
+.light .bloom{left:-150px;top:-44px;width:300px;height:88px;background:radial-gradient(ellipse at center,rgba(255,214,120,.60) 0%,rgba(226,160,30,.24) 34%,transparent 70%);filter:blur(7px)}
+.light .core{left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;background:#fffaf0;box-shadow:0 0 18px 6px rgba(255,205,96,.85)}
+
+.foot{position:absolute;left:96px;right:96px;top:1222px;display:flex;justify-content:space-between;align-items:baseline;font-size:28px;font-weight:500;letter-spacing:.01em}
+.foot .site{color:var(--soft)}
+.foot .date{color:var(--faint);font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+  <div class="badge"><b>PEPTIDEMAN</b><span>NIEUWE WEBSITE</span></div>
+
+  <div class="hero">
+    <div class="titlewrap">
+      <div class="flare">
+        <i class="glow"></i><i class="bloom"></i>
+        <i class="ray" style="--a:18deg"></i><i class="ray" style="--a:42deg"></i><i class="ray" style="--a:67deg"></i>
+        <i class="ray" style="--a:113deg"></i><i class="ray" style="--a:138deg"></i><i class="ray" style="--a:162deg"></i>
+        <i class="streak"></i>
+      </div>
+      <h1 class="title">We zijn<br><em>open.</em></h1>
+    </div>
+    <p class="tail">Opnieuw opgebouwd<br>rond één vraag.</p>
+  </div>
+
+  <p class="disc">Uitsluitend voor onderzoeksdoeleinden.<br>Niet voor menselijk gebruik.</p>
+
+  <div class="track"></div>
+  <div class="light"><i class="bloom"></i><i class="streak"></i><i class="core"></i></div>
+  <div class="foot"><span class="site">peptideman.nl</span><span class="date">12 oktober 2026</span></div>
+</body>
+</html>
