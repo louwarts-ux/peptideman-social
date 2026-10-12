@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peptideman Kennisbank</title>
+<meta name="description" content="Onafhankelijke kennisbank over peptides: status, bewijsniveau en bronnen van 20+ peptides, uitleg over regelgeving, onderzoek en de nieuwste tech.">
+<meta property="og:title" content="Peptideman Kennisbank">
+<meta property="og:description" content="Status, bewijs en bronnen van 20+ peptides. Zoek, filter en vergelijk.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B2433">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=JetBrains+Mono:wght@500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: één kolom met plakkende zoekbalk; peptide-index als raster van "etiketten", detail in een dialoog, vergelijkbalk onderaan. */
+:root {
+  --bg: #F1F5F6; --surface: #FFFFFF; --ink: #0B2433; --muted: #557080; --line: #D2DEE3;
+  --accent: #0E8A8A; --accent-ink: #FFFFFF; --soft: #DDEEEE;
+  --ok: #0E8A8A; --info: #3E6A86; --warn: #B87C14; --warn-bg: #FBF1DE;
+  --hero: #0B2433; --hero-ink: #F1F5F6; --hero-muted: #A9C3CE;
+  --display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --body: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #081B26; --surface: #0E2635; --ink: #E3ECEF; --muted: #8FAAB6; --line: #1E3D4E;
+    --accent: #5CCFC3; --accent-ink: #062029; --soft: #12333F;
+    --ok: #5CCFC3; --info: #8DB7D3; --warn: #E7B455; --warn-bg: #2B2414;
+    --hero: #0E2635; --hero-ink: #E3ECEF; --hero-muted: #8FAAB6; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #081B26; --surface: #0E2635; --ink: #E3ECEF; --muted: #8FAAB6; --line: #1E3D4E;
+  --accent: #5CCFC3; --accent-ink: #062029; --soft: #12333F;
+  --ok: #5CCFC3; --info: #8DB7D3; --warn: #E7B455; --warn-bg: #2B2414;
+  --hero: #0E2635; --hero-ink: #E3ECEF; --hero-muted: #8FAAB6; color-scheme: dark;
+}
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+html { scroll-behavior: smooth; scroll-padding-top: 140px }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } * { transition: none !important } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.55 var(--body); -webkit-font-smoothing: antialiased }
+a { color: var(--accent) }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)) }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; margin: 0; line-height: 1.05 }
+h2 { font-size: clamp(28px, 4vw, 40px); font-stretch: 85% }
+h3 { font-size: 21px; font-stretch: 95% }
+.label { font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+
+/* Kop met zoekbalk */
+header.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line) }
+.bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; padding-block: 12px }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 800 17px/1 var(--display); font-stretch: 112%; letter-spacing: .14em }
+.brand svg { width: 26px; height: 26px }
+.search { flex: 1 1 280px; position: relative; min-width: 0 }
+.search input { width: 100%; padding: 11px 44px 11px 40px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit }
+.search input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent) }
+.search svg { position: absolute; left: 12px; top: 50%; translate: 0 -50%; width: 18px; height: 18px; color: var(--muted) }
+.search kbd { position: absolute; right: 10px; top: 50%; translate: 0 -50%; font: 500 12px/1 var(--mono); border: 1px solid var(--line); border-radius: 5px; padding: 4px 7px; color: var(--muted) }
+nav.sections { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex-basis: 100% }
+nav.sections a { white-space: nowrap; padding: 6px 12px; border-radius: 999px; text-decoration: none; color: var(--muted); font-weight: 600; font-size: 15px }
+nav.sections a:hover { background: var(--soft); color: var(--ink) }
+.theme { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; padding: 9px 12px; font: 600 14px var(--body); cursor: pointer }
+
+/* Intro */
+.hero { background: var(--hero); color: var(--hero-ink); padding-block: 44px 40px }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: end }
+.hero h1 { font-size: clamp(38px, 6.4vw, 68px); font-stretch: 78% }
+.hero p { color: var(--hero-muted); max-width: 52ch; margin: 14px 0 0; font-size: 18px }
+.chain { display: flex; align-items: center; flex-wrap: wrap; gap: 0; margin-bottom: 18px }
+.chain span { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; border: 2px solid #5CCFC3; font: 500 14px/1 var(--mono) }
+.chain span:nth-child(4n+3) { background: #0E8A8A; border-color: #0E8A8A; color: #fff }
+.chain i { width: 12px; height: 2px; background: #4F7A8C }
+.tally { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #2E5163 }
+.tally button { all: unset; cursor: pointer; padding: 14px 0; border-bottom: 1px solid #2E5163; display: flex; justify-content: space-between; gap: 10px; color: var(--hero-muted) }
+.tally button:nth-child(odd) { padding-right: 16px }
+.tally button:nth-child(even) { padding-left: 16px; border-left: 1px solid #2E5163 }
+.tally b { font: 800 26px/1 var(--display); color: var(--hero-ink); font-variant-numeric: tabular-nums }
+.tally button:hover span, .tally button:focus-visible span { color: var(--hero-ink) }
+
+/* Filters + raster */
+section { padding-block: 48px }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px }
+.chip { border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); padding: 7px 14px; border-radius: 999px; font: 600 14px var(--body); cursor: pointer; display: inline-flex; gap: 8px; align-items: center }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+.chip .dot { width: 9px; height: 9px; border-radius: 50% }
+.count { color: var(--muted); font-size: 15px; margin: 10px 0 18px }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px }
+.card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; cursor: pointer; transition: border-color .15s, transform .15s }
+.card:hover { border-color: var(--accent); transform: translateY(-2px) }
+.card h3 a { color: inherit; text-decoration: none }
+.card h3 a::after { content: ''; position: absolute; inset: 0 }
+.card .cls { font: 500 12px/1.3 var(--mono); color: var(--accent); letter-spacing: .03em }
+.card p { margin: 0; color: var(--muted); font-size: 15.5px }
+.meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line) }
+.pill { display: inline-flex; align-items: center; gap: 6px; font: 700 12px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; white-space: nowrap }
+.s-geneesmiddel { background: color-mix(in srgb, var(--ok) 16%, transparent); color: var(--ok) }
+.s-supplement, .s-cosmetica { background: color-mix(in srgb, var(--info) 16%, transparent); color: var(--info) }
+.s-niet-toegelaten { background: var(--warn-bg); color: var(--warn) }
+.meter { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); white-space: nowrap }
+.meter > span { display: inline-flex }
+.meter i { display: inline-block; width: 16px; height: 6px; border-radius: 2px; background: var(--line); margin-left: 2px }
+.meter i.on { background: var(--accent) }
+.cmp-toggle { position: relative; z-index: 1; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 8px; padding: 5px 9px; font: 600 13px var(--body); cursor: pointer }
+.cmp-toggle[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink) }
+.empty { padding: 40px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px }
+
+/* Vergelijken */
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); margin-top: 18px }
+table { border-collapse: collapse; width: 100%; min-width: 560px }
+th, td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 15.5px }
+th[scope="row"] { font: 500 12px/1.5 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); width: 150px }
+thead th { font: 800 20px/1.1 var(--display); font-stretch: 90% }
+tr:last-child td, tr:last-child th { border-bottom: 0 }
+.tray { position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; background: var(--ink); color: var(--bg); padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: center; gap: 12px; align-items: center; flex-wrap: wrap; font-weight: 600 }
+.tray a { background: var(--accent); color: var(--accent-ink); padding: 8px 14px; border-radius: 8px; text-decoration: none }
+.tray button { background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 8px; padding: 7px 12px; font: inherit; cursor: pointer; opacity: .8 }
+
+/* Kennisartikelen */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 28px 40px; margin-top: 22px }
+.cols > div { min-width: 0 }
+.cols p { margin: 8px 0 0; max-width: 62ch }
+dl.gloss { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); margin: 22px 0 0; border-top: 1px solid var(--line) }
+dl.gloss dt, dl.gloss dd { margin: 0; padding: 14px 0; border-bottom: 1px solid var(--line) }
+dl.gloss dt { font-weight: 600; padding-right: 20px }
+dl.gloss dd { color: var(--muted) }
+ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 0; border-top: 1px solid var(--line) }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 56px minmax(0, 1fr); padding: 16px 0; border-bottom: 1px solid var(--line) }
+ol.steps li::before { content: counter(s); font: 800 34px/1 var(--display); color: var(--accent) }
+ol.steps p { margin: 4px 0 0; color: var(--muted) }
+.tech { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 14px; margin-top: 22px }
+.tech article { border-top: 3px solid var(--accent); background: var(--surface); padding: 18px; border-radius: 0 0 10px 10px; min-width: 0 }
+.tech p { margin: 8px 0 0; color: var(--muted); font-size: 15.5px }
+.tech .lim { margin-top: 10px; font-size: 14px; color: var(--ink) }
+details { border-bottom: 1px solid var(--line); padding: 16px 0 }
+details:first-of-type { border-top: 1px solid var(--line); margin-top: 22px }
+summary { cursor: pointer; font-weight: 600; font-size: 18px }
+details p { margin: 10px 0 0; color: var(--muted); max-width: 70ch }
+footer { padding-block: 36px 110px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px }
+footer p { max-width: 75ch }
+
+/* Detaildialoog */
+dialog { width: min(720px, calc(100% - 24px)); max-height: calc(100% - 32px); border: 0; border-radius: 16px; padding: 0; background: var(--surface); color: var(--ink) }
+dialog::backdrop { background: rgb(4 16 24 / .6) }
+.dlg { padding: 26px 26px 22px; display: grid; gap: 18px }
+.dlg-head { display: flex; justify-content: space-between; gap: 16px; align-items: start }
+.dlg h2 { font-size: clamp(30px, 6vw, 44px); font-stretch: 80%; margin-top: 6px }
+.close { border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 10px; width: 40px; height: 40px; font-size: 22px; cursor: pointer; flex: none }
+.seq { display: flex; flex-wrap: wrap; gap: 4px; font: 500 14px/1 var(--mono) }
+.seq span { min-width: 28px; height: 28px; display: grid; place-items: center; border: 1.5px solid var(--accent); border-radius: 50%; padding: 0 4px }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line) }
+.facts div { padding: 12px 12px 12px 0; display: grid; gap: 6px; min-width: 0; justify-items: start }
+.facts div + div { padding-left: 12px; border-left: 1px solid var(--line) }
+.dlg h3 { font-size: 17px; font-stretch: 100% }
+.dlg p { margin: 4px 0 0 }
+.warnbox { background: var(--warn-bg); color: var(--ink); border-radius: 10px; padding: 12px 14px; font-size: 15px }
+.srcs { display: flex; flex-wrap: wrap; gap: 8px }
+.srcs a { font-size: 14px; border: 1px solid var(--line); padding: 6px 10px; border-radius: 8px; text-decoration: none }
+.actions { display: flex; flex-wrap: wrap; gap: 8px }
+.btn { border: 1.5px solid var(--ink); background: var(--ink); color: var(--bg); padding: 9px 14px; border-radius: 10px; font: 600 15px var(--body); cursor: pointer }
+.btn.ghost { background: transparent; color: var(--ink) }
+.toast { position: fixed; left: 50%; bottom: 84px; translate: -50% 0; background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-weight: 600; z-index: 30 }
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: 1fr }
+  .facts { grid-template-columns: 1fr }
+  .facts div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line) }
+  dl.gloss { grid-template-columns: 1fr }
+  dl.gloss dt { border-bottom: 0; padding-bottom: 0 }
+  .search kbd { display: none }
+  .brand { flex: 1 }
+  .search { order: 3; flex-basis: 100% }
+  nav.sections { order: 4 }
+  .tray { gap: 8px; font-size: 14px }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Peptideman, naar boven">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="7" cy="17" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="27" cy="7" r="5" fill="#0E8A8A"/><circle cx="27" cy="27" r="5" fill="none" stroke="#5CCFC3" stroke-width="2.5"/><path d="M11.5 15 22.5 9M11.5 19l11 6" stroke="currentColor" stroke-width="2.5"/></svg>
+      PEPTIDEMAN
+    </a>
+    <label class="search" for="q">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Zoek een peptide, bv. BPC-157 of GLP-1" autocomplete="off" aria-label="Zoek in de kennisbank">
+      <kbd>/</kbd>
+    </label>
+    <button class="theme" id="theme" type="button" aria-label="Wissel licht of donker thema">Thema</button>
+    <nav class="sections" aria-label="Onderdelen">
+      <a href="#peptides">Peptides A–Z</a><a href="#vergelijk">Vergelijken</a><a href="#basis">Basiskennis</a><a href="#regels">Regelgeving</a><a href="#onderzoek">Onderzoek lezen</a><a href="#tech">Tech &amp; tools</a><a href="#faq">Vragen</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="chain" aria-hidden="true"><span>G</span><i></i><span>E</span><i></i><span>P</span><i></i><span>P</span><i></i><span>P</span><i></i><span>G</span><i></i><span>K</span></div>
+      <h1>Peptides, helder uitgelegd.</h1>
+      <p>Een onafhankelijke kennisbank. Per peptide zie je wat het is, of het toegelaten is, hoe sterk het bewijs is en waar je de bronnen vindt.</p>
+    </div>
+    <div>
+      <div class="label" style="color:var(--hero-muted);margin-bottom:10px">Peptides per status · klik om te filteren</div>
+      <div class="tally" id="tally"></div>
+    </div>
+  </div>
+</div>
+
+<main>
+<section id="peptides">
+  <div class="wrap">
+    <div class="label">Peptide A–Z</div>
+    <h2>Zoek, filter en open een peptide</h2>
+    <div class="filters" id="f-status" aria-label="Filter op status"></div>
+    <div class="filters" id="f-thema" aria-label="Filter op thema" style="margin-top:0"></div>
+    <div class="count" id="count" aria-live="polite"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="vergelijk" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="label">Naast elkaar</div>
+    <h2>Vergelijk tot 3 peptides</h2>
+    <p style="max-width:60ch;color:var(--muted)">Tik bij een peptide op <b>Vergelijk</b>. Hieronder staat een voorbeeld met drie peptides totdat je zelf kiest.</p>
+    <div class="tablewrap" id="cmp"></div>
+  </div>
+</section>
+
+<section id="basis">
+  <div class="wrap">
+    <div class="label">Basiskennis</div>
+    <h2>De begrippen die je overal tegenkomt</h2>
+    <dl class="gloss">
+      <dt>Aminozuur</dt><dd>De bouwsteen van peptiden en eiwitten. Er zijn er 20 die je lichaam in eiwitten gebruikt; elk heeft een lettercode, zoals G (glycine) en K (lysine).</dd>
+      <dt>Peptide</dt><dd>Een korte keten van ongeveer 2 tot 50 aminozuren. Langere ketens noemen we eiwitten.</dd>
+      <dt>Peptidebinding</dt><dd>De chemische koppeling tussen twee aminozuren.</dd>
+      <dt>Sequentie</dt><dd>De volgorde van aminozuren, geschreven in lettercodes. BPC-157 is bijvoorbeeld GEPPPGKPADDAGLV.</dd>
+      <dt>Receptor</dt><dd>Een eiwit op of in een cel waar een peptide aan bindt, zoals een sleutel in een slot.</dd>
+      <dt>Agonist</dt><dd>Een stof die een receptor activeert. Semaglutide is een GLP-1-receptoragonist.</dd>
+      <dt>Analoog</dt><dd>Een aangepaste versie van een lichaamseigen peptide, vaak om hem langer te laten werken.</dd>
+      <dt>Halfwaardetijd</dt><dd>De tijd waarin de helft van een stof uit het bloed verdwenen is.</dd>
+      <dt>Biologische beschikbaarheid</dt><dd>Welk deel van een stof daadwerkelijk in de bloedbaan komt. Bij peptiden via de mond is dat vaak laag, omdat ze worden verteerd.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="regels" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="label">Regelgeving NL/EU</div>
+    <h2>Geneesmiddel, supplement, cosmetica of labstof</h2>
+    <div class="cols" id="regels-cols"></div>
+    <div class="cols">
+      <div><h3>Sport en doping</h3><p>Het WADA verbiedt onder meer BPC-157, TB-500, groeihormoon-secretagogen en insuline zonder dispensatie. De lijst wordt elk jaar op 1 januari bijgewerkt. Twijfel? Check de Dopingautoriteit.</p></div>
+      <div><h3>Reclame en claims</h3><p>Voor supplementen mogen alleen door de EU goedgekeurde gezondheidsclaims worden gebruikt. Reclame voor receptgeneesmiddelen richting consumenten is in Nederland verboden.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="onderzoek">
+  <div class="wrap">
+    <div class="label">Onderzoek lezen</div>
+    <h2>Vijf vragen bij elke studie</h2>
+    <ol class="steps">
+      <li><div><h3>Mens, muis of petrischaal?</h3><p>Dier- en celstudies zijn een begin. Ze zeggen weinig over effecten bij mensen.</p></div></li>
+      <li><div><h3>Hoeveel deelnemers?</h3><p>Kleine studies geven toevallige uitkomsten. Twaalf deelnemers zegt minder dan twaalfduizend.</p></div></li>
+      <li><div><h3>Was er een controlegroep?</h3><p>Gerandomiseerd en placebogecontroleerd (RCT) is de gouden standaard.</p></div></li>
+      <li><div><h3>Wie betaalde het?</h3><p>Financiering en belangen staan onderaan elke publicatie. Lees ze.</p></div></li>
+      <li><div><h3>Is het herhaald?</h3><p>Zoek naar systematische reviews en meta-analyses die alle studies samen bekijken.</p></div></li>
+    </ol>
+    <p style="color:var(--muted);margin-top:18px">Ons bewijslabel: <b>Sterk</b> = grote gerandomiseerde studies bij mensen. <b>Matig</b> = kleinere of wisselende humane studies. <b>Beperkt</b> = vooral dier- of laboratoriumonderzoek.</p>
+  </div>
+</section>
+
+<section id="tech" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="label">Tech &amp; tools</div>
+    <h2>De nieuwste snufjes rond onderzoek en gezondheid</h2>
+    <div class="tech">
+      <article><div class="label">Sensor</div><h3>Continue glucosemeter (CGM)</h3><p>Sensor op de bovenarm die dag en nacht de glucose in weefselvocht meet en naar je telefoon stuurt. Veel gebruikt in GLP-1-onderzoek.</p><p class="lim">Grens: meet weefselvocht, loopt iets achter op bloed.</p></article>
+      <article><div class="label">Wearable</div><h3>Smart ring en smartwatch</h3><p>Volgen slaap, rusthartslag, hartslagvariabiliteit en huidtemperatuur.</p><p class="lim">Grens: goed voor trends, geen medische diagnose.</p></article>
+      <article><div class="label">Slimme pen</div><h3>Connected injectiepen</h3><p>Pen of opzetstuk dat tijdstip en hoeveelheid registreert en met een app synchroniseert. In gebruik bij insuline.</p><p class="lim">Grens: werkt alleen met compatibele pennen.</p></article>
+      <article><div class="label">AI</div><h3>AI-zoektools voor literatuur</h3><p>Zoeken in miljoenen artikelen en vatten studies samen in gewone taal.</p><p class="lim">Grens: kan fouten maken. Lees de bron zelf.</p></article>
+      <article><div class="label">Thuistest</div><h3>Bloedtest met vingerprik</h3><p>Zelf bloed afnemen, opsturen naar een lab en de uitslag in een app bekijken.</p><p class="lim">Grens: bespreek afwijkende waarden altijd met een arts.</p></article>
+      <article><div class="label">Database</div><h3>Openbare registers</h3><p>EMA, ClinicalTrials.gov en het EU Clinical Trials Register laten zien welke studies lopen en welke middelen toegelaten zijn.</p><p class="lim">Tip: zoek op de stofnaam, niet op de merknaam.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="label">Vragen</div>
+    <h2>Veelgestelde vragen</h2>
+    <details><summary>Geven jullie doseringsadvies?</summary><p>Nee. Deze kennisbank is educatief. Voor gebruik van een geneesmiddel ga je naar je arts of apotheker.</p></details>
+    <details><summary>Is een peptide die online te koop is legaal?</summary><p>Te koop zijn betekent niet toegelaten zijn. Stoffen met het label "research chemical" of "niet voor menselijk gebruik" hebben geen controle op inhoud, zuiverheid of veiligheid.</p></details>
+    <details><summary>Werkt collageen uit een poeder?</summary><p>Er is onderzoek naar huid en gewrichten met wisselende uitkomsten. In de EU zijn er geen goedgekeurde gezondheidsclaims voor collageen.</p></details>
+    <details><summary>Ik ben sporter. Waar moet ik op letten?</summary><p>Veel peptiden staan op de WADA-lijst, ook buiten wedstrijdverband. Check elk middel bij de Dopingautoriteit voordat je het gebruikt.</p></details>
+    <details><summary>Hoe vaak wordt de kennisbank bijgewerkt?</summary><p>We lopen de status van alle peptides minstens elk kwartaal na. Laatste controle: oktober 2026.</p></details>
+    <details><summary>Ik mis een peptide. Kan ik die aanvragen?</summary><p>Ja. Stuur ons een bericht via Facebook of Instagram (@peptideman.nl).</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Educatieve inhoud, geen medisch advies.</b> Deze kennisbank vervangt geen arts of apotheker. Informatie over regelgeving kan veranderen; controleer altijd de actuele bron bij het EMA, CBG of de Dopingautoriteit.</p>
+    <p>© Peptideman · peptideman.nl · Laatste controle oktober 2026</p>
+  </div>
+</footer>
+
+<div class="tray" id="tray" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg" id="dlg-body"></div></dialog>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  const P = window.PEPTIDES, S = window.STATUS, B = window.BEWIJS
+  const $ = s => document.querySelector(s)
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('pm-' + k); return v ? JSON.parse(v) : d } catch { return d } },
+    set(k, v) { try { localStorage.setItem('pm-' + k, JSON.stringify(v)) } catch {} },
+  }
+  const state = { q: '', status: null, thema: null, cmp: store.get('cmp', []).filter(id => P.some(p => p.id === id)) }
+  const themas = [...new Set(P.map(p => p.thema))]
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+
+  // Thema-knop: systeem → licht → donker
+  const root = document.documentElement
+  const themeBtn = $('#theme')
+  const applyTheme = t => { if (t) root.dataset.theme = t; else delete root.dataset.theme; themeBtn.textContent = t === 'dark' ? 'Donker' : t === 'light' ? 'Licht' : 'Thema: auto' }
+  applyTheme(store.get('theme', null))
+  themeBtn.onclick = () => { const next = { null: 'light', light: 'dark', dark: null }[root.dataset.theme ?? null]; applyTheme(next); store.set('theme', next) }
+
+  const meter = n => `<span class="meter" title="Bewijs: ${B[n]}">${B[n]}<span>${[1, 2, 3].map(i => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span></span>`
+  const pill = s => `<span class="pill s-${s}">${S[s].label}</span>`
+
+  function tally() {
+    $('#tally').innerHTML = Object.keys(S).map(k => `<button type="button" data-s="${k}"><span>${S[k].label}</span><b>${P.filter(p => p.status === k).length}</b></button>`).join('')
+    $('#tally').onclick = e => { const b = e.target.closest('button'); if (!b) return; state.status = b.dataset.s; render(); $('#peptides').scrollIntoView() }
+  }
+
+  function filters() {
+    $('#f-status').innerHTML = `<button class="chip" type="button" data-s="" aria-pressed="${!state.status}">Alle statussen</button>` +
+      Object.keys(S).map(k => `<button class="chip" type="button" data-s="${k}" aria-pressed="${state.status === k}"><span class="dot s-${k}" style="background:currentColor"></span>${S[k].label}</button>`).join('')
+    $('#f-thema').innerHTML = `<button class="chip" type="button" data-t="" aria-pressed="${!state.thema}">Alle thema's</button>` +
+      themas.map(t => `<button class="chip" type="button" data-t="${esc(t)}" aria-pressed="${state.thema === t}">${esc(t)}</button>`).join('')
+  }
+  $('#f-status').onclick = e => { const b = e.target.closest('button'); if (b) { state.status = b.dataset.s || null; render() } }
+  $('#f-thema').onclick = e => { const b = e.target.closest('button'); if (b) { state.thema = b.dataset.t || null; render() } }
+
+  function matches(p) {
+    if (state.status && p.status !== state.status) return false
+    if (state.thema && p.thema !== state.thema) return false
+    if (!state.q) return true
+    const hay = norm([p.naam, p.klasse, p.thema, p.kort, p.werking, S[p.status].label, p.seq || ''].join(' '))
+    return norm(state.q).split(/\s+/).every(w => hay.includes(w))
+  }
+
+  function render() {
+    filters()
+    const list = P.filter(matches).sort((a, b) => a.naam.localeCompare(b.naam, 'nl'))
+    $('#count').textContent = `${list.length} van ${P.length} peptides`
+    $('#grid').innerHTML = list.length ? list.map(p => `
+      <article class="card" data-id="${p.id}">
+        <div class="cls">${esc(p.klasse)}</div>
+        <h3><a href="#${p.id}">${esc(p.naam)}</a></h3>
+        <p>${esc(p.kort)}</p>
+        <div class="meta">${pill(p.status)}${meter(p.bewijs)}
+          <button class="cmp-toggle" type="button" data-cmp="${p.id}" aria-pressed="${state.cmp.includes(p.id)}">Vergelijk</button></div>
+      </article>`).join('') : `<div class="empty">Geen peptide gevonden voor "${esc(state.q)}". Probeer een andere naam of wis de filters.</div>`
+    renderCmp()
+  }
+
+  $('#grid').addEventListener('click', e => {
+    const t = e.target.closest('[data-cmp]')
+    if (t) { e.preventDefault(); toggleCmp(t.dataset.cmp); return }
+  })
+
+  function toggleCmp(id) {
+    if (state.cmp.includes(id)) state.cmp = state.cmp.filter(x => x !== id)
+    else if (state.cmp.length >= 3) { toast('Je kunt maximaal 3 peptides vergelijken'); return }
+    else state.cmp = [...state.cmp, id]
+    store.set('cmp', state.cmp)
+    render()
+    if ($('#dlg').open) openDetail(location.hash.slice(1), false)
+  }
+
+  function renderCmp() {
+    const picked = state.cmp.length ? state.cmp : ['semaglutide', 'collageenpeptiden', 'bpc-157']
+    const items = picked.map(id => P.find(p => p.id === id))
+    const rows = [
+      ['Status', p => pill(p.status)], ['Bewijs', p => meter(p.bewijs)], ['Klasse', p => esc(p.klasse)],
+      ['Lengte', p => esc(p.lengte)], ['Werking', p => esc(p.werking)], ['Onderzoek', p => esc(p.onderzoek)],
+      ['Regels', p => esc(p.regels)], ['WADA', p => p.wada ? 'Verboden' : 'Niet op de lijst'],
+    ]
+    $('#cmp').innerHTML = `<table><thead><tr><th scope="col"><span class="label">${state.cmp.length ? 'Jouw keuze' : 'Voorbeeld'}</span></th>${items.map(p => `<th scope="col"><a href="#${p.id}" style="color:inherit">${esc(p.naam)}</a></th>`).join('')}</tr></thead>
+      <tbody>${rows.map(([l, f]) => `<tr><th scope="row">${l}</th>${items.map(p => `<td>${f(p)}</td>`).join('')}</tr>`).join('')}</tbody></table>`
+    const tray = $('#tray')
+    tray.hidden = state.cmp.length === 0
+    tray.innerHTML = `<span>${state.cmp.length} van 3 gekozen</span><a href="#vergelijk">Bekijk vergelijking</a><button type="button" id="cmp-clear">Wissen</button>`
+    const clear = $('#cmp-clear'); if (clear) clear.onclick = () => { state.cmp = []; store.set('cmp', []); render() }
+  }
+
+  const sources = p => [
+    ['PubMed-studies', `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(p.naam)}`],
+    ['Lopende studies', `https://clinicaltrials.gov/search?term=${encodeURIComponent(p.naam)}`],
+    ['EMA-geneesmiddelen', `https://www.ema.europa.eu/en/search?search_api_fulltext=${encodeURIComponent(p.naam)}`],
+    ['WADA-lijst', 'https://www.wada-ama.org/en/prohibited-list'],
+  ]
+
+  function openDetail(id, push = true) {
+    const p = P.find(x => x.id === id)
+    if (!p) return
+    const inCmp = state.cmp.includes(p.id)
+    $('#dlg-body').innerHTML = `
+      <div class="dlg-head"><div><div class="label">${esc(p.thema)} · ${esc(p.klasse)}</div><h2 id="dlg-title">${esc(p.naam)}</h2></div>
+        <button class="close" type="button" id="dlg-close" aria-label="Sluiten">×</button></div>
+      ${p.seq ? `<div><div class="label" style="margin-bottom:8px">Sequentie</div><div class="seq" aria-label="Sequentie ${p.seq}">${[...p.seq].map(c => `<span>${c}</span>`).join('')}</div></div>` : ''}
+      <div class="facts"><div><span class="label">Status</span>${pill(p.status)}</div><div><span class="label">Bewijs</span>${meter(p.bewijs)}</div><div><span class="label">Lengte</span><span>${esc(p.lengte)}</span></div></div>
+      <p style="font-size:18px;margin:0">${esc(p.kort)}</p>
+      <div><h3>Werking</h3><p>${esc(p.werking)}</p></div>
+      <div><h3>Onderzoek</h3><p>${esc(p.onderzoek)}</p></div>
+      <div><h3>Regels</h3><p>${esc(p.regels)}</p></div>
+      ${p.status === 'niet-toegelaten' || p.wada ? `<div class="warnbox">${p.status === 'niet-toegelaten' ? 'Geen EU-handelsvergunning: inhoud, zuiverheid en veiligheid van online aanbod zijn niet gecontroleerd. ' : ''}${p.wada ? 'Staat op de WADA-dopinglijst.' : ''}</div>` : ''}
+      <div><h3 style="margin-bottom:8px">Zelf de bronnen checken</h3><div class="srcs">${sources(p).map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener">${l} ↗</a>`).join('')}</div></div>
+      <div class="actions"><button class="btn" type="button" id="dlg-copy">Kopieer link</button><button class="btn ghost" type="button" id="dlg-cmp" aria-pressed="${inCmp}">${inCmp ? 'Uit vergelijking halen' : 'Toevoegen aan vergelijking'}</button></div>
+      <p class="label" style="text-transform:none;letter-spacing:0;font-family:var(--body);font-size:13px">Educatief, geen medisch advies. Status nagelopen oktober 2026.</p>`
+    const dlg = $('#dlg')
+    if (!dlg.open) dlg.showModal()
+    if (push && location.hash !== '#' + id) history.pushState(null, '', '#' + id)
+    $('#dlg-close').onclick = () => closeDetail()
+    $('#dlg-cmp').onclick = () => toggleCmp(p.id)
+    $('#dlg-copy').onclick = () => {
+      const url = location.href.split('#')[0] + '#' + p.id
+      navigator.clipboard.writeText(url).then(() => toast('Link gekopieerd'), () => toast(url))
+    }
+  }
+  function closeDetail() {
+    const dlg = $('#dlg')
+    if (dlg.open) dlg.close()
+  }
+  $('#dlg').addEventListener('close', () => { if (P.some(p => '#' + p.id === location.hash)) history.pushState(null, '', location.pathname + location.search + '#peptides') })
+  $('#dlg').addEventListener('click', e => { if (e.target === e.currentTarget) closeDetail() })
+
+  function route() {
+    const id = location.hash.slice(1)
+    if (P.some(p => p.id === id)) openDetail(id, false)
+    else closeDetail()
+  }
+  window.addEventListener('hashchange', route)
+  window.addEventListener('popstate', route)
+
+  let tt
+  function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(tt); tt = setTimeout(() => (t.hidden = true), 2200) }
+
+  // Regelgeving-kolommen uit dezelfde statusdefinities als de filters
+  $('#regels-cols').innerHTML = Object.keys(S).map(k => `<div>${pill(k)}<p>${S[k].uitleg}</p><p style="color:var(--muted);font-size:15px">Bijvoorbeeld: ${P.filter(p => p.status === k).slice(0, 3).map(p => `<a href="#${p.id}">${esc(p.naam)}</a>`).join(', ')}</p></div>`).join('')
+
+  const q = $('#q')
+  q.addEventListener('input', () => { state.q = q.value.trim(); render() })
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const first = $('#grid .card'); if (first) openDetail(first.dataset.id) } })
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== q && !$('#dlg').open) { e.preventDefault(); q.focus(); $('#peptides').scrollIntoView() }
+  })
+
+  tally()
+  render()
+  route()
+})()
+</script>
+</body>
+</html>
