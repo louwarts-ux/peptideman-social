@@ -133,3 +133,33 @@ Vragen? Stuur ons een bericht.
 
 Educatieve inhoud, geen medisch advies.`,
 }
+
+// Bijschriften voor losse peptideprofielen (beeld: beelden/profiel-<id>.png)
+export const profielPosts = {
+  'mots-c': `Peptide-profiel: MOTS-c 🧬
+
+Een peptide dat niet in de celkern maar in de mitochondriën wordt gecodeerd. Het wordt onderzocht in relatie tot stofwisseling en beweging.
+
+🔸 Status: niet toegelaten als geneesmiddel
+🔸 Bewijs: beperkt, vooral muisstudies
+🔸 WADA: verboden (S0)
+
+Werking, onderzoek en bronnen: peptideman.nl/kennisbank/#mots-c
+
+Educatieve inhoud, geen medisch advies.
+
+#peptides #mitochondrien #wetenschap #kennisbank`,
+  'ss-31': `Peptide-profiel: SS-31 (elamipretide) 🧬
+
+Een klein peptide van 4 aminozuren dat zich hecht aan het binnenmembraan van mitochondriën. Een van de weinige peptiden uit deze hoek met klinische studies bij mensen.
+
+🔸 Status: geen EU-handelsvergunning
+🔸 Bewijs: matig, kleine klinische studies met wisselende uitkomsten
+🔸 WADA: check de actuele lijst
+
+Werking, onderzoek en bronnen: peptideman.nl/kennisbank/#ss-31
+
+Educatieve inhoud, geen medisch advies.
+
+#peptides #mitochondrien #onderzoek #kennisbank`,
+}
