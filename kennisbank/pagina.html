@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peptide-kennisbank — status, bewijs en bronnen | PeptideMan</title>
+<meta name="description" content="Zoek, filter en vergelijk 25+ peptides: wat ze zijn, of ze in de EU zijn toegelaten, hoe sterk het wetenschappelijk bewijs is, WADA-status en bronnen.">
+<link rel="canonical" href="https://peptideman.nl/kennisbank/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b0b0d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PeptideMan">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Peptide-kennisbank | PeptideMan">
+<meta property="og:description" content="Status, bewijsniveau en bronnen van 25+ peptides. Zoek, filter en vergelijk.">
+<meta property="og:url" content="https://peptideman.nl/kennisbank/">
+<meta property="og:image" content="https://peptideman.nl/kennisbank/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23c9a227'/><text x='16' y='23' font-family='Arial,sans-serif' font-size='19' fill='%230b0b0d' text-anchor='middle' font-weight='bold'>P</text></svg>">
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Peptide-kennisbank","url":"https://peptideman.nl/kennisbank/","inLanguage":"nl-NL","publisher":{"@type":"Organization","name":"PeptideMan","url":"https://peptideman.nl/"}}</script>
+<style>
+/* Kennisbank: bouwt op /assets/style.css (zwart/goud); alles hier is geprefixt met kb- om botsingen te voorkomen. */
+.kb { --kb-ok: #6fcf97; --kb-info: #9fb6cf; --kb-warn: #e3805a; --kb-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace }
+.kb-label { font: 600 .72rem/1 var(--kb-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint) }
+.kb-hero { padding: 36px 0 30px; border-bottom: 1px solid var(--line); background: radial-gradient(90% 120% at 90% 0%, rgba(201,162,39,.14), transparent 60%) }
+.kb-hero__grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: end }
+.kb-hero p { color: var(--ink-soft); max-width: 56ch; margin: 0 }
+.kb-chain { display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 16px }
+.kb-chain span { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; border: 2px solid var(--accent); font: 600 .8rem/1 var(--kb-mono) }
+.kb-chain span:nth-child(4n+3) { background: var(--accent); color: var(--on-accent) }
+.kb-chain i { width: 10px; height: 2px; background: var(--line-strong) }
+.kb-tally { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line-strong) }
+.kb-tally button { all: unset; cursor: pointer; padding: 12px 0; border-bottom: 1px solid var(--line-strong); display: flex; justify-content: space-between; gap: 10px; color: var(--ink-soft) }
+.kb-tally button:nth-child(odd) { padding-right: 14px }
+.kb-tally button:nth-child(even) { padding-left: 14px; border-left: 1px solid var(--line-strong) }
+.kb-tally b { font-size: 1.5rem; color: var(--ink); font-variant-numeric: tabular-nums }
+.kb-tally button:hover span, .kb-tally button:focus-visible span { color: var(--accent) }
+.kb-tally button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.kb-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 18px 0 6px }
+.kb-search { flex: 1 1 320px; position: relative; min-width: 0 }
+.kb-search input { width: 100%; padding: 13px 48px 13px 42px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--bg-card); color: var(--ink); font: inherit }
+.kb-search input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-tint) }
+.kb-search svg { position: absolute; left: 14px; top: 50%; translate: 0 -50%; width: 18px; height: 18px; color: var(--ink-faint) }
+.kb-search kbd { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 600 .75rem/1 var(--kb-mono); border: 1px solid var(--line-strong); border-radius: 5px; padding: 4px 7px; color: var(--ink-faint) }
+.kb-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px }
+.kb-chip { border: 1px solid var(--line-strong); background: var(--bg-card); color: var(--ink-soft); padding: 7px 14px; border-radius: 999px; font: 600 .88rem/1.2 var(--font); cursor: pointer; display: inline-flex; gap: 8px; align-items: center }
+.kb-chip:hover { border-color: var(--accent); color: var(--ink) }
+.kb-chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent) }
+.kb-dot { width: 9px; height: 9px; border-radius: 50% }
+.kb-dot.kb-s-geneesmiddel { background: var(--kb-ok) } .kb-dot.kb-s-supplement, .kb-dot.kb-s-cosmetica { background: var(--kb-info) } .kb-dot.kb-s-niet-toegelaten { background: var(--kb-warn) }
+.kb-count { color: var(--ink-faint); font-size: .92rem; margin: 14px 0 }
+.kb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 14px }
+.kb-card { position: relative; background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; transition: border-color .15s, transform .15s }
+.kb-card:hover { border-color: var(--accent); transform: translateY(-2px) }
+.kb-card h3 { margin: 0; font-size: 1.2rem }
+.kb-card h3 a { color: var(--ink); text-decoration: none }
+.kb-card h3 a::after { content: ''; position: absolute; inset: 0 }
+.kb-cls { font: 600 .74rem/1.3 var(--kb-mono); color: var(--accent); letter-spacing: .03em }
+.kb-card p { margin: 0; color: var(--ink-soft); font-size: .95rem; line-height: 1.5 }
+.kb-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line-strong); flex-wrap: wrap }
+.kb-pill { display: inline-flex; align-items: center; font: 700 .7rem/1 var(--font); letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; white-space: nowrap }
+.kb-s-geneesmiddel { background: rgba(111,207,151,.14); color: var(--kb-ok) }
+.kb-s-supplement, .kb-s-cosmetica { background: rgba(159,182,207,.14); color: var(--kb-info) }
+.kb-s-niet-toegelaten { background: rgba(227,128,90,.14); color: var(--kb-warn) }
+.kb-meter { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--ink-faint); white-space: nowrap }
+.kb-meter i { display: inline-block; width: 14px; height: 6px; border-radius: 2px; background: var(--line-strong); margin-left: 2px }
+.kb-meter i.on { background: var(--accent) }
+.kb-cmpbtn { position: relative; z-index: 1; border: 1px solid var(--line-strong); background: transparent; color: var(--ink-soft); border-radius: var(--radius-sm); padding: 5px 9px; font: 600 .8rem var(--font); cursor: pointer }
+.kb-cmpbtn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent) }
+.kb-empty { padding: 36px; text-align: center; color: var(--ink-faint); border: 1px dashed var(--line-strong); border-radius: var(--radius) }
+.kb-tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-card); margin-top: 18px }
+.kb-tablewrap table { border-collapse: collapse; width: 100%; min-width: 560px }
+.kb-tablewrap th, .kb-tablewrap td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: .94rem; color: var(--ink-soft) }
+.kb-tablewrap th[scope="row"] { font: 600 .72rem/1.6 var(--kb-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); width: 140px }
+.kb-tablewrap thead th { font-size: 1.1rem; color: var(--ink) }
+.kb-tablewrap tr:last-child > * { border-bottom: 0 }
+.kb-tray { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--accent); color: var(--on-accent); padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap; font-weight: 700 }
+.kb-tray a { background: var(--bg); color: var(--ink); padding: 8px 14px; border-radius: var(--radius-sm); text-decoration: none }
+.kb-tray button { background: transparent; color: inherit; border: 1px solid currentColor; border-radius: var(--radius-sm); padding: 7px 12px; font: inherit; cursor: pointer }
+.kb-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px 36px; margin-top: 20px }
+.kb-cols > div { min-width: 0 }
+.kb-cols p { margin: 8px 0 0; color: var(--ink-soft) }
+.kb-gloss { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); margin: 20px 0 0; border-top: 1px solid var(--line) }
+.kb-gloss dt, .kb-gloss dd { margin: 0; padding: 13px 0; border-bottom: 1px solid var(--line) }
+.kb-gloss dt { font-weight: 700; padding-right: 20px }
+.kb-gloss dd { color: var(--ink-soft) }
+.kb-steps { counter-reset: s; list-style: none; padding: 0; margin: 20px 0 0; border-top: 1px solid var(--line) }
+.kb-steps li { counter-increment: s; display: grid; grid-template-columns: 52px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid var(--line) }
+.kb-steps li::before { content: counter(s); font-size: 1.9rem; font-weight: 800; line-height: 1; color: var(--accent) }
+.kb-steps h3 { margin: 0; font-size: 1.05rem }
+.kb-steps p { margin: 4px 0 0; color: var(--ink-soft) }
+.kb-tech { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 14px; margin-top: 20px }
+.kb-tech article { border-top: 2px solid var(--accent); background: var(--bg-card); padding: 18px; border-radius: 0 0 var(--radius) var(--radius); min-width: 0 }
+.kb-tech h3 { margin: 6px 0 0; font-size: 1.05rem }
+.kb-tech p { margin: 8px 0 0; color: var(--ink-soft); font-size: .94rem }
+.kb-tech .kb-lim { color: var(--ink-faint); font-size: .86rem }
+.kb details { border-bottom: 1px solid var(--line); padding: 14px 0 }
+.kb details:first-of-type { border-top: 1px solid var(--line); margin-top: 20px }
+.kb summary { cursor: pointer; font-weight: 700 }
+.kb details p { margin: 10px 0 0; color: var(--ink-soft); max-width: 70ch }
+.kb-dlg { width: min(720px, calc(100% - 24px)); max-height: calc(100% - 32px); border: 1px solid var(--line-strong); border-radius: 14px; padding: 0; background: var(--bg-card); color: var(--ink) }
+.kb-dlg::backdrop { background: rgba(0,0,0,.7) }
+.kb-dlg__in { padding: 24px; display: grid; gap: 16px }
+.kb-dlg__head { display: flex; justify-content: space-between; gap: 16px; align-items: start }
+.kb-dlg h2 { margin: 6px 0 0 }
+.kb-dlg h3 { margin: 0; font-size: 1rem }
+.kb-dlg p { margin: 4px 0 0; color: var(--ink-soft) }
+.kb-close { border: 1px solid var(--line-strong); background: transparent; color: var(--ink); border-radius: var(--radius-sm); width: 40px; height: 40px; font-size: 1.3rem; cursor: pointer; flex: none }
+.kb-seq { display: flex; flex-wrap: wrap; gap: 4px; font: 600 .82rem/1 var(--kb-mono) }
+.kb-seq span { min-width: 28px; height: 28px; display: grid; place-items: center; border: 1.5px solid var(--accent); border-radius: 50%; padding: 0 4px }
+.kb-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--line) }
+.kb-facts div { padding: 12px 10px 12px 0; display: grid; gap: 6px; min-width: 0; justify-items: start; font-size: .92rem }
+.kb-facts div + div { padding-left: 12px; border-left: 1px solid var(--line) }
+.kb-srcs { display: flex; flex-wrap: wrap; gap: 8px }
+.kb-srcs a { font-size: .86rem; border: 1px solid var(--line-strong); padding: 6px 10px; border-radius: var(--radius-sm); text-decoration: none }
+.kb-actions { display: flex; flex-wrap: wrap; gap: 8px }
+.kb-toast { position: fixed; left: 50%; bottom: 80px; translate: -50% 0; background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700; z-index: 70 }
+@media (prefers-reduced-motion: reduce) { .kb-card { transition: none } .kb-card:hover { transform: none } }
+@media (max-width: 760px) {
+  .kb-hero__grid { grid-template-columns: 1fr }
+  .kb-facts { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .kb-facts div:nth-child(3) { padding-left: 0; border-left: 0 }
+  .kb-facts div:nth-child(n+3) { border-top: 1px solid var(--line) }
+  .kb-gloss { grid-template-columns: 1fr }
+  .kb-gloss dt { border-bottom: 0; padding-bottom: 0 }
+  .kb-search kbd { display: none }
+}
+</style>
+</head>
+<body>
+{{HEADER}}<main id="main" class="kb">
+  <div class="container"><nav class="crumb" aria-label="Kruimelpad"><a href="/index.html">Home</a><span>/</span>Peptide-kennisbank</nav></div>
+
+  <div class="kb-hero">
+    <div class="container kb-hero__grid">
+      <div>
+        <div class="kb-chain" aria-hidden="true"><span>G</span><i></i><span>E</span><i></i><span>P</span><i></i><span>P</span><i></i><span>P</span><i></i><span>G</span><i></i><span>K</span></div>
+        <h1>Peptide-kennisbank</h1>
+        <p>Per peptide zie je wat het is, of het in de EU is toegelaten, hoe sterk het wetenschappelijk bewijs is en waar je de bronnen zelf kunt nalezen. Achtergrondartikelen vind je op <a href="/blog/">onze blog</a>.</p>
+      </div>
+      <div>
+        <div class="kb-label" style="margin-bottom:10px">Peptides per status · klik om te filteren</div>
+        <div class="kb-tally" id="kb-tally"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section--tight" id="peptides">
+    <div class="container">
+      <div class="kb-tools">
+        <label class="kb-search" for="kb-q">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5" stroke-linecap="round"/></svg>
+          <input id="kb-q" type="search" placeholder="Zoek een peptide, bv. BPC-157 of GLP-1" autocomplete="off" aria-label="Zoek in de kennisbank">
+          <kbd>/</kbd>
+        </label>
+      </div>
+      <div class="kb-filters" id="kb-f-status" aria-label="Filter op status"></div>
+      <div class="kb-filters" id="kb-f-thema" aria-label="Filter op thema"></div>
+      <div class="kb-count" id="kb-count" aria-live="polite"></div>
+      <div class="kb-grid" id="kb-grid"></div>
+    </div>
+  </section>
+
+  <section class="section--tight section--alt" id="vergelijk">
+    <div class="container">
+      <div class="kb-label">Naast elkaar</div>
+      <h2 style="margin-top:8px">Vergelijk tot 3 peptides</h2>
+      <p style="color:var(--ink-soft);max-width:60ch;margin:0">Tik bij een peptide op <b>Vergelijk</b>. Tot je zelf kiest, staat hier een voorbeeld.</p>
+      <div class="kb-tablewrap" id="kb-cmp"></div>
+    </div>
+  </section>
+
+  <section class="section--tight" id="basis">
+    <div class="container">
+      <div class="kb-label">Basiskennis</div>
+      <h2 style="margin-top:8px">De begrippen die je overal tegenkomt</h2>
+      <dl class="kb-gloss">
+        <dt>Aminozuur</dt><dd>De bouwsteen van peptiden en eiwitten. Elk aminozuur heeft een lettercode, zoals G (glycine) en K (lysine).</dd>
+        <dt>Peptide</dt><dd>Een korte keten van ongeveer 2 tot 50 aminozuren. Langere ketens noemen we eiwitten.</dd>
+        <dt>Sequentie</dt><dd>De volgorde van aminozuren in lettercodes. BPC-157 is bijvoorbeeld GEPPPGKPADDAGLV.</dd>
+        <dt>Receptor</dt><dd>Een eiwit op of in een cel waar een peptide aan bindt, zoals een sleutel in een slot.</dd>
+        <dt>Agonist</dt><dd>Een stof die een receptor activeert. Semaglutide is een GLP-1-receptoragonist.</dd>
+        <dt>Analoog</dt><dd>Een aangepaste versie van een lichaamseigen peptide, vaak om hem langer te laten werken.</dd>
+        <dt>Halfwaardetijd</dt><dd>De tijd waarin de helft van een stof uit het bloed verdwenen is.</dd>
+        <dt>HPLC en LC-MS</dt><dd>Laboratoriumtechnieken om de zuiverheid en identiteit van een peptide te meten. Het resultaat staat in een certificaat van analyse (CoA).</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section--tight section--alt" id="regels">
+    <div class="container">
+      <div class="kb-label">Regelgeving NL/EU</div>
+      <h2 style="margin-top:8px">Geneesmiddel, supplement, cosmetica of onderzoeksstof</h2>
+      <div class="kb-cols" id="kb-regels"></div>
+      <div class="kb-cols">
+        <div><h3>Sport en doping</h3><p>WADA-categorie S0 verbiedt elke stof die nergens is toegelaten voor menselijk gebruik. Daarnaast staan onder meer groeihormoon-secretagogen en insuline (zonder dispensatie) op de lijst. Check bij twijfel de Dopingautoriteit.</p></div>
+        <div><h3>Reclame en claims</h3><p>Voor supplementen mogen alleen door de EU goedgekeurde gezondheidsclaims worden gebruikt. Reclame voor receptgeneesmiddelen richting consumenten is in Nederland verboden.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" id="onderzoek">
+    <div class="container">
+      <div class="kb-label">Onderzoek lezen</div>
+      <h2 style="margin-top:8px">Vijf vragen bij elke studie</h2>
+      <ol class="kb-steps">
+        <li><div><h3>Mens, muis of petrischaal?</h3><p>Dier- en celstudies zijn een begin. Ze zeggen weinig over effecten bij mensen.</p></div></li>
+        <li><div><h3>Hoeveel deelnemers?</h3><p>Twaalf deelnemers zegt minder dan twaalfduizend.</p></div></li>
+        <li><div><h3>Was er een controlegroep?</h3><p>Gerandomiseerd en placebogecontroleerd (RCT) is de gouden standaard.</p></div></li>
+        <li><div><h3>Wie betaalde het?</h3><p>Financiering en belangen staan onderaan elke publicatie.</p></div></li>
+        <li><div><h3>Is het herhaald?</h3><p>Systematische reviews en meta-analyses bekijken alle studies samen.</p></div></li>
+      </ol>
+      <p style="color:var(--ink-soft);margin-top:16px">Ons bewijslabel: <b>Sterk</b> = grote gerandomiseerde studies bij mensen. <b>Matig</b> = kleinere of wisselende humane studies. <b>Beperkt</b> = vooral dier- of laboratoriumonderzoek.</p>
+    </div>
+  </section>
+
+  <section class="section--tight section--alt" id="tech">
+    <div class="container">
+      <div class="kb-label">Tech &amp; tools</div>
+      <h2 style="margin-top:8px">De nieuwste snufjes rond onderzoek en gezondheid</h2>
+      <div class="kb-tech">
+        <article><div class="kb-label">Sensor</div><h3>Continue glucosemeter (CGM)</h3><p>Sensor op de bovenarm die dag en nacht glucose meet en naar je telefoon stuurt. Veel gebruikt in GLP-1-onderzoek.</p><p class="kb-lim">Grens: meet weefselvocht en loopt iets achter op bloed.</p></article>
+        <article><div class="kb-label">Wearable</div><h3>Smart ring en smartwatch</h3><p>Volgen slaap, rusthartslag, hartslagvariabiliteit en huidtemperatuur.</p><p class="kb-lim">Grens: goed voor trends, geen medische diagnose.</p></article>
+        <article><div class="kb-label">Slimme pen</div><h3>Connected injectiepen</h3><p>Registreert tijdstip en hoeveelheid en synchroniseert met een app. In gebruik bij insuline.</p><p class="kb-lim">Grens: werkt alleen met compatibele pennen.</p></article>
+        <article><div class="kb-label">AI</div><h3>AI-zoektools voor literatuur</h3><p>Doorzoeken miljoenen artikelen en vatten studies samen in gewone taal.</p><p class="kb-lim">Grens: kan fouten maken. Lees de bron zelf.</p></article>
+        <article><div class="kb-label">Lab</div><h3>HPLC en massaspectrometrie</h3><p>Meten zuiverheid en molecuulmassa. Zo controleer je of een peptide is wat het label zegt.</p><p class="kb-lim">Tip: check of het batchnummer op het rapport overeenkomt.</p></article>
+        <article><div class="kb-label">Database</div><h3>Openbare registers</h3><p>EMA, ClinicalTrials.gov en het EU Clinical Trials Register tonen toegelaten middelen en lopende studies.</p><p class="kb-lim">Tip: zoek op de stofnaam, niet op de merknaam.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" id="faq">
+    <div class="container">
+      <div class="kb-label">Vragen</div>
+      <h2 style="margin-top:8px">Veelgestelde vragen over de kennisbank</h2>
+      <details><summary>Geven jullie doseringsadvies?</summary><p>Nee. Deze kennisbank is educatief. Voor gebruik van een geneesmiddel ga je naar je arts of apotheker.</p></details>
+      <details><summary>Wat betekent "niet toegelaten"?</summary><p>Er is in de EU geen handelsvergunning als geneesmiddel. De stof is dus niet door een geneesmiddelenautoriteit beoordeeld op werkzaamheid en veiligheid en is niet bedoeld voor menselijk gebruik.</p></details>
+      <details><summary>Wat zegt het bewijslabel?</summary><p>Het label geeft aan hoe sterk het gepubliceerde onderzoek is, niet of een stof werkt of veilig is voor jou.</p></details>
+      <details><summary>Hoe vaak wordt de kennisbank bijgewerkt?</summary><p>We lopen de status van alle peptides minstens elk kwartaal na. Laatste controle: oktober 2026.</p></details>
+      <details><summary>Ik mis een peptide. Kan ik die aanvragen?</summary><p>Ja, via de <a href="/contact.html">contactpagina</a> of een bericht op Facebook of Instagram (@peptideman.nl).</p></details>
+    </div>
+  </section>
+
+  <div class="container" style="padding-bottom:40px">
+    <div class="callout" role="note"><strong>Educatieve inhoud.</strong> Deze kennisbank is geen medisch advies en vervangt geen arts of apotheker. Regelgeving kan veranderen; controleer altijd de actuele bron bij het EMA, CBG of de Dopingautoriteit.</div>
+  </div>
+</main>
+
+<div class="kb-tray" id="kb-tray" hidden></div>
+<div class="kb-toast" id="kb-toast" role="status" hidden></div>
+<dialog class="kb-dlg" id="kb-dlg" aria-labelledby="kb-dlg-title"><div class="kb-dlg__in" id="kb-dlg-body"></div></dialog>
+
+{{FOOTER}}<script src="/kennisbank/data.js"></script>
+<script>
+(() => {
+  const P = window.PEPTIDES, S = window.STATUS, B = window.BEWIJS
+  const $ = s => document.querySelector(s)
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('pm_kb_' + k); return v ? JSON.parse(v) : d } catch { return d } },
+    set(k, v) { try { localStorage.setItem('pm_kb_' + k, JSON.stringify(v)) } catch {} },
+  }
+  const state = { q: '', status: null, thema: null, cmp: store.get('cmp', []).filter(id => P.some(p => p.id === id)) }
+  const themas = [...new Set(P.map(p => p.thema))]
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+  const wada = v => v === true ? 'Verboden' : v === false ? 'Niet op de lijst' : 'Onduidelijk, check de lijst'
+
+  const meter = n => `<span class="kb-meter" title="Bewijs: ${B[n]}">${B[n]}<span>${[1, 2, 3].map(i => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span></span>`
+  const pill = s => `<span class="kb-pill kb-s-${s}">${S[s].label}</span>`
+
+  $('#kb-tally').innerHTML = Object.keys(S).map(k => `<button type="button" data-s="${k}"><span>${S[k].label}</span><b>${P.filter(p => p.status === k).length}</b></button>`).join('')
+  $('#kb-tally').onclick = e => { const b = e.target.closest('button'); if (!b) return; state.status = b.dataset.s; render(); $('#peptides').scrollIntoView({ behavior: 'smooth' }) }
+
+  function filters() {
+    $('#kb-f-status').innerHTML = `<button class="kb-chip" type="button" data-s="" aria-pressed="${!state.status}">Alle statussen</button>` +
+      Object.keys(S).map(k => `<button class="kb-chip" type="button" data-s="${k}" aria-pressed="${state.status === k}"><span class="kb-dot kb-s-${k}"></span>${S[k].label}</button>`).join('')
+    $('#kb-f-thema').innerHTML = `<button class="kb-chip" type="button" data-t="" aria-pressed="${!state.thema}">Alle thema's</button>` +
+      themas.map(t => `<button class="kb-chip" type="button" data-t="${esc(t)}" aria-pressed="${state.thema === t}">${esc(t)}</button>`).join('')
+  }
+  $('#kb-f-status').onclick = e => { const b = e.target.closest('button'); if (b) { state.status = b.dataset.s || null; render() } }
+  $('#kb-f-thema').onclick = e => { const b = e.target.closest('button'); if (b) { state.thema = b.dataset.t || null; render() } }
+
+  function matches(p) {
+    if (state.status && p.status !== state.status) return false
+    if (state.thema && p.thema !== state.thema) return false
+    if (!state.q) return true
+    const hay = norm([p.naam, p.klasse, p.thema, p.kort, p.werking, S[p.status].label, p.seq || ''].join(' '))
+    return norm(state.q).split(/\s+/).every(w => hay.includes(w))
+  }
+
+  function render() {
+    filters()
+    const list = P.filter(matches).sort((a, b) => a.naam.localeCompare(b.naam, 'nl'))
+    $('#kb-count').textContent = `${list.length} van ${P.length} peptides`
+    $('#kb-grid').innerHTML = list.length ? list.map(p => `
+      <article class="kb-card">
+        <div class="kb-cls">${esc(p.klasse)}</div>
+        <h3><a href="#${p.id}">${esc(p.naam)}</a></h3>
+        <p>${esc(p.kort)}</p>
+        <div class="kb-meta">${pill(p.status)}${meter(p.bewijs)}
+          <button class="kb-cmpbtn" type="button" data-cmp="${p.id}" aria-pressed="${state.cmp.includes(p.id)}">Vergelijk</button></div>
+      </article>`).join('') : `<div class="kb-empty">Geen peptide gevonden voor "${esc(state.q)}". Probeer een andere naam of wis de filters.</div>`
+    renderCmp()
+  }
+  $('#kb-grid').addEventListener('click', e => { const t = e.target.closest('[data-cmp]'); if (t) toggleCmp(t.dataset.cmp) })
+
+  function toggleCmp(id) {
+    if (state.cmp.includes(id)) state.cmp = state.cmp.filter(x => x !== id)
+    else if (state.cmp.length >= 3) { toast('Je kunt maximaal 3 peptides vergelijken'); return }
+    else state.cmp = [...state.cmp, id]
+    store.set('cmp', state.cmp)
+    render()
+    if ($('#kb-dlg').open) openDetail(id)
+  }
+
+  function renderCmp() {
+    const items = (state.cmp.length ? state.cmp : ['semaglutide', 'collageenpeptiden', 'bpc-157']).map(id => P.find(p => p.id === id))
+    const rows = [
+      ['Status', p => pill(p.status)], ['Bewijs', p => meter(p.bewijs)], ['Klasse', p => esc(p.klasse)], ['Lengte', p => esc(p.lengte)],
+      ['Werking', p => esc(p.werking)], ['Onderzoek', p => esc(p.onderzoek)], ['Regels', p => esc(p.regels)], ['WADA', p => wada(p.wada)],
+    ]
+    $('#kb-cmp').innerHTML = `<table><thead><tr><th scope="col"><span class="kb-label">${state.cmp.length ? 'Jouw keuze' : 'Voorbeeld'}</span></th>${items.map(p => `<th scope="col"><a href="#${p.id}" style="color:inherit">${esc(p.naam)}</a></th>`).join('')}</tr></thead>
+      <tbody>${rows.map(([l, f]) => `<tr><th scope="row">${l}</th>${items.map(p => `<td>${f(p)}</td>`).join('')}</tr>`).join('')}</tbody></table>`
+    const tray = $('#kb-tray')
+    tray.hidden = state.cmp.length === 0
+    tray.innerHTML = `<span>${state.cmp.length} van 3 gekozen</span><a href="#vergelijk">Bekijk vergelijking</a><button type="button" id="kb-cmp-clear">Wissen</button>`
+    $('#kb-cmp-clear').onclick = () => { state.cmp = []; store.set('cmp', []); render() }
+  }
+
+  const sources = p => [
+    ['PubMed-studies', `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(p.naam.replace(/\s*\(.*\)/, ''))}`],
+    ['Lopende studies', `https://clinicaltrials.gov/search?term=${encodeURIComponent(p.naam.replace(/\s*\(.*\)/, ''))}`],
+    ['EMA', `https://www.ema.europa.eu/en/search?search_api_fulltext=${encodeURIComponent(p.naam.replace(/\s*\(.*\)/, ''))}`],
+    ['WADA-lijst', 'https://www.wada-ama.org/en/prohibited-list'],
+  ]
+
+  function openDetail(id) {
+    const p = P.find(x => x.id === id)
+    if (!p) return
+    const inCmp = state.cmp.includes(p.id)
+    $('#kb-dlg-body').innerHTML = `
+      <div class="kb-dlg__head"><div><div class="kb-label">${esc(p.thema)} · ${esc(p.klasse)}</div><h2 id="kb-dlg-title">${esc(p.naam)}</h2></div>
+        <button class="kb-close" type="button" id="kb-dlg-close" aria-label="Sluiten">×</button></div>
+      ${p.seq ? `<div><div class="kb-label" style="margin-bottom:8px">Sequentie</div><div class="kb-seq" aria-label="Sequentie ${p.seq}">${[...p.seq].map(c => `<span>${c}</span>`).join('')}</div></div>` : ''}
+      <div class="kb-facts"><div><span class="kb-label">Status</span>${pill(p.status)}</div><div><span class="kb-label">Bewijs</span>${meter(p.bewijs)}</div><div><span class="kb-label">Lengte</span><span>${esc(p.lengte)}</span></div><div><span class="kb-label">WADA</span><span>${wada(p.wada)}</span></div></div>
+      <p style="font-size:1.08rem;color:var(--ink);margin:0">${esc(p.kort)}</p>
+      <div><h3>Werking</h3><p>${esc(p.werking)}</p></div>
+      <div><h3>Onderzoek</h3><p>${esc(p.onderzoek)}</p></div>
+      <div><h3>Regels</h3><p>${esc(p.regels)}</p></div>
+      ${p.status === 'niet-toegelaten' ? '<div class="callout">Geen EU-handelsvergunning als geneesmiddel: niet beoordeeld door een geneesmiddelenautoriteit en niet bedoeld voor menselijk gebruik.</div>' : ''}
+      <div><h3 style="margin-bottom:8px">Zelf de bronnen checken</h3><div class="kb-srcs">${sources(p).map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener">${l} ↗</a>`).join('')}</div></div>
+      <div class="kb-actions"><button class="btn btn--primary btn--sm" type="button" id="kb-dlg-copy">Kopieer link</button><button class="btn btn--ghost btn--sm" type="button" id="kb-dlg-cmp" aria-pressed="${inCmp}">${inCmp ? 'Uit vergelijking halen' : 'Toevoegen aan vergelijking'}</button></div>`
+    const dlg = $('#kb-dlg')
+    if (!dlg.open) dlg.showModal()
+    if (location.hash !== '#' + id) history.pushState(null, '', '#' + id)
+    $('#kb-dlg-close').onclick = () => dlg.close()
+    $('#kb-dlg-cmp').onclick = () => toggleCmp(p.id)
+    $('#kb-dlg-copy').onclick = () => {
+      const url = location.href.split('#')[0] + '#' + p.id
+      navigator.clipboard.writeText(url).then(() => toast('Link gekopieerd'), () => toast(url))
+    }
+  }
+  $('#kb-dlg').addEventListener('close', () => { if (P.some(p => '#' + p.id === location.hash)) history.pushState(null, '', location.pathname + '#peptides') })
+  $('#kb-dlg').addEventListener('click', e => { if (e.target === e.currentTarget) e.currentTarget.close() })
+
+  function route() {
+    const id = location.hash.slice(1)
+    if (P.some(p => p.id === id)) openDetail(id)
+    else if ($('#kb-dlg').open) $('#kb-dlg').close()
+  }
+  window.addEventListener('popstate', route)
+  window.addEventListener('hashchange', route)
+
+  let tt
+  function toast(msg) { const t = $('#kb-toast'); t.textContent = msg; t.hidden = false; clearTimeout(tt); tt = setTimeout(() => (t.hidden = true), 2200) }
+
+  $('#kb-regels').innerHTML = Object.keys(S).map(k => `<div>${pill(k)}<p>${S[k].uitleg}</p><p style="font-size:.9rem">Bijvoorbeeld: ${P.filter(p => p.status === k).slice(0, 3).map(p => `<a href="#${p.id}">${esc(p.naam)}</a>`).join(', ')}</p></div>`).join('')
+
+  const q = $('#kb-q')
+  q.addEventListener('input', () => { state.q = q.value.trim(); render() })
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const first = $('#kb-grid .kb-card [data-cmp]'); if (first) openDetail(first.dataset.cmp) } })
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== q && !$('#kb-dlg').open && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus() }
+  })
+
+  render()
+  route()
+})()
+</script>
+</body>
+</html>

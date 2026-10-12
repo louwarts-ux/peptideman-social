@@ -1,6 +1,7 @@
 // Peptide-kennisbank. Educatief: geen doseringen, geen genezings- of behandelclaims.
 // status: geneesmiddel | supplement | cosmetica | niet-toegelaten
 // bewijs: 3 = sterk (grote RCT's), 2 = matig (kleine humane studies), 1 = beperkt (vooral dier/lab)
+// wada: true = verboden, false = niet op de lijst, null = onduidelijk (check zelf; S0 verbiedt elke stof zonder toelating)
 // Controleer regelgeving periodiek; laatst nagelopen: oktober 2026.
 window.PEPTIDES = [
   {
@@ -29,11 +30,11 @@ window.PEPTIDES = [
   },
   {
     id: 'retatrutide', naam: 'Retatrutide', klasse: 'GIP/GLP-1/glucagon-receptoragonist', thema: 'Metabool',
-    status: 'niet-toegelaten', bewijs: 2, lengte: 'Gemodificeerde peptide', seq: null, wada: false,
+    status: 'niet-toegelaten', bewijs: 2, lengte: 'Gemodificeerde peptide', seq: null, wada: true,
     kort: 'Experimentele "triple agonist" die in klinisch onderzoek wordt getest.',
     werking: 'Activeert drie hormoonreceptoren: GIP, GLP-1 en glucagon.',
     onderzoek: 'Fase 2-resultaten gepubliceerd; fase 3-onderzoek loopt. Check de actuele stand bij EMA.',
-    regels: 'Nog geen handelsvergunning op het moment van schrijven. Wat online wordt verkocht is niet gecontroleerd.',
+    regels: 'Nog geen handelsvergunning op het moment van schrijven. Als experimenteel middel valt het onder WADA-categorie S0.',
   },
   {
     id: 'insuline', naam: 'Insuline', klasse: 'Peptidehormoon', thema: 'Metabool',
@@ -77,11 +78,11 @@ window.PEPTIDES = [
   },
   {
     id: 'melanotan-2', naam: 'Melanotan II', klasse: 'α-MSH-analoog', thema: 'Huid & haar',
-    status: 'niet-toegelaten', bewijs: 1, lengte: '7 aminozuren (cyclisch)', seq: null, wada: false,
+    status: 'niet-toegelaten', bewijs: 1, lengte: '7 aminozuren (cyclisch)', seq: null, wada: true,
     kort: 'Online verkocht als "bruiningsmiddel". Niet toegelaten en meermaals voor gewaarschuwd.',
     werking: 'Activeert melanocortinereceptoren, niet selectief.',
     onderzoek: 'Kleine oude studies. Meldingen van bijwerkingen, waaronder veranderingen van moedervlekken.',
-    regels: 'Geen handelsvergunning. Toezichthouders in Europa waarschuwen tegen gebruik.',
+    regels: 'Geen handelsvergunning. Toezichthouders in Europa waarschuwen tegen gebruik. Valt onder WADA-categorie S0.',
   },
   {
     id: 'collageenpeptiden', naam: 'Collageenpeptiden', klasse: 'Gehydrolyseerd collageen', thema: 'Huid & haar',
@@ -93,7 +94,7 @@ window.PEPTIDES = [
   },
   {
     id: 'ghk-cu', naam: 'GHK-Cu', klasse: 'Koperpeptide', thema: 'Huid & haar',
-    status: 'cosmetica', bewijs: 1, lengte: '3 aminozuren + koper', seq: 'GHK', wada: false,
+    status: 'cosmetica', bewijs: 1, lengte: '3 aminozuren + koper', seq: 'GHK', wada: null,
     kort: 'Tripeptide met een koperion, veel gebruikt in serums.',
     werking: 'Bindt koper. In laboratoriumstudies beïnvloedt het genen die met huidstructuur te maken hebben.',
     onderzoek: 'Vooral cel- en kleine huidstudies.',
@@ -165,7 +166,7 @@ window.PEPTIDES = [
   },
   {
     id: 'thymosine-alfa-1', naam: 'Thymosine α1', klasse: 'Immunopeptide', thema: 'Overig',
-    status: 'niet-toegelaten', bewijs: 2, lengte: '28 aminozuren', seq: null, wada: false,
+    status: 'niet-toegelaten', bewijs: 2, lengte: '28 aminozuren', seq: null, wada: null,
     kort: 'In sommige landen buiten Europa toegelaten, in de EU niet.',
     werking: 'Beïnvloedt de rijping en activiteit van T-cellen.',
     onderzoek: 'Klinische studies, vooral in Azië, met wisselende kwaliteit.',
@@ -173,7 +174,7 @@ window.PEPTIDES = [
   },
   {
     id: 'selank', naam: 'Selank', klasse: 'Tuftsine-analoog', thema: 'Overig',
-    status: 'niet-toegelaten', bewijs: 1, lengte: '7 aminozuren', seq: 'TKPRPGP', wada: false,
+    status: 'niet-toegelaten', bewijs: 1, lengte: '7 aminozuren', seq: 'TKPRPGP', wada: null,
     kort: 'Neusspray die in Rusland is geregistreerd. Buiten Rusland nauwelijks onderzocht.',
     werking: 'Mechanisme niet goed opgehelderd.',
     onderzoek: 'Vooral Russische studies, weinig onafhankelijke herhaling.',
@@ -181,11 +182,43 @@ window.PEPTIDES = [
   },
   {
     id: 'semax', naam: 'Semax', klasse: 'ACTH(4-10)-analoog', thema: 'Overig',
-    status: 'niet-toegelaten', bewijs: 1, lengte: '7 aminozuren', seq: 'MEHFPGP', wada: false,
+    status: 'niet-toegelaten', bewijs: 1, lengte: '7 aminozuren', seq: 'MEHFPGP', wada: null,
     kort: 'Net als Selank een Russische neusspray, met vergelijkbare onderzoeksbeperkingen.',
     werking: 'Afgeleid van een fragment van het hormoon ACTH.',
     onderzoek: 'Vooral Russische studies.',
     regels: 'Geen EU-handelsvergunning.',
+  },
+  {
+    id: 'kpv', naam: 'KPV', klasse: 'α-MSH-fragment (tripeptide)', thema: 'Herstel',
+    status: 'niet-toegelaten', bewijs: 1, lengte: '3 aminozuren', seq: 'KPV', wada: true,
+    kort: 'Het laatste stukje van het hormoon α-MSH, onderzocht vanwege ontstekingsremmende eigenschappen.',
+    werking: 'Lijkt in cellen ontstekingssignalen (o.a. NF-κB) te dempen, deels zonder de pigmentreceptoren te activeren.',
+    onderzoek: 'Cel- en dierstudies, onder meer naar darmontsteking. Geen gepubliceerde klinische studies van betekenis.',
+    regels: 'Geen handelsvergunning. Valt als niet-toegelaten stof onder WADA-categorie S0.',
+  },
+  {
+    id: 'mots-c', naam: 'MOTS-c', klasse: 'Mitochondriaal peptide', thema: 'Metabool',
+    status: 'niet-toegelaten', bewijs: 1, lengte: '16 aminozuren', seq: null, wada: true,
+    kort: 'Peptide dat in de mitochondriën wordt gecodeerd, onderzocht in relatie tot stofwisseling en beweging.',
+    werking: 'Beïnvloedt in diermodellen de energiehuishouding van spiercellen, onder meer via AMPK.',
+    onderzoek: 'Vooral muisstudies en metingen van lichaamseigen MOTS-c bij mensen. Geen klinische studies met toediening van betekenis.',
+    regels: 'Geen handelsvergunning. Valt onder WADA-categorie S0; AMPK-activatoren staan bovendien onder S4.',
+  },
+  {
+    id: 'ss-31', naam: 'SS-31 (elamipretide)', klasse: 'Mitochondriaal gericht tetrapeptide', thema: 'Overig',
+    status: 'niet-toegelaten', bewijs: 2, lengte: '4 aminozuren', seq: null, wada: null,
+    kort: 'Hecht zich aan het binnenmembraan van mitochondriën. Een van de weinige peptiden uit deze hoek met klinische studies.',
+    werking: 'Bindt aan cardiolipine in het mitochondriale membraan en zou zo de energieproductie stabiliseren.',
+    onderzoek: 'Klinische studies bij zeldzame mitochondriale aandoeningen met wisselende uitkomsten.',
+    regels: 'Geen EU-handelsvergunning. In de VS voorwaardelijk toegelaten voor het zeldzame Barth-syndroom; controleer de actuele status.',
+  },
+  {
+    id: 'ahk-cu', naam: 'AHK-Cu', klasse: 'Koperpeptide', thema: 'Huid & haar',
+    status: 'cosmetica', bewijs: 1, lengte: '3 aminozuren + koper', seq: 'AHK', wada: null,
+    kort: 'Familielid van GHK-Cu, vooral bekend uit haarverzorgingsproducten.',
+    werking: 'In laboratoriumstudies beïnvloedt het cellen van de haarzakjes.',
+    onderzoek: 'Vrijwel alleen cel- en weefselstudies.',
+    regels: 'Gebruikt als cosmetisch ingrediënt voor uitwendig gebruik. Injecteerbare varianten zijn niet toegelaten.',
   },
 ]
 

@@ -3,7 +3,7 @@
 Tools for the Peptideman social media workflow.
 
 - `facebook/`: new Facebook page setup, profile and cover images, five carousels with captions (see `facebook/README.md`)
-- `kennisbank/`: the peptide knowledge base website the page links to
+- `kennisbank/`: content and page source of the peptide knowledge base on peptideman.nl/kennisbank/ (`bouw.mjs` writes it into the peptideman-site repo)
 
 ## Mods
 

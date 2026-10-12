@@ -36,13 +36,13 @@ Educatieve inhoud, geen medisch advies.
       { type: 'categorie', label: 'Geneesmiddel', tone: 'ok', title: 'Getoetst en op recept', body: 'Beoordeeld door het EMA of CBG op werkzaamheid, veiligheid en kwaliteit. Alleen via arts en apotheek.', voorbeeld: 'Semaglutide, insuline' },
       { type: 'categorie', label: 'Supplement', tone: 'info', title: 'Voeding, geen medicijn', body: 'Valt onder de Warenwet. Geen toetsing vooraf op werkzaamheid. Gezondheidsclaims mogen alleen als de EU ze heeft goedgekeurd.', voorbeeld: 'Collageenpeptiden' },
       { type: 'categorie', label: 'Cosmetica', tone: 'info', title: 'Alleen voor op de huid', body: 'Valt onder de EU-cosmeticaverordening. Bedoeld voor uitwendig gebruik in crèmes en serums.', voorbeeld: 'GHK-Cu, Matrixyl' },
-      { type: 'categorie', label: 'Research chemical', tone: 'warn', title: '"Niet voor menselijk gebruik"', body: 'Geen handelsvergunning. Zuiverheid, inhoud en veiligheid zijn niet gecontroleerd.', voorbeeld: 'BPC-157, TB-500' },
+      { type: 'categorie', label: 'Research chemical', tone: 'warn', title: '"Niet voor menselijk gebruik"', body: 'Geen toelating als geneesmiddel. Niet beoordeeld door een geneesmiddelenautoriteit; de kwaliteit verschilt sterk per leverancier.', voorbeeld: 'BPC-157, TB-500' },
       { type: 'tekst', title: 'Sporter? Let op de dopinglijst', body: 'Het WADA verbiedt onder meer BPC-157, TB-500 en groeihormoon-secretagogen, ook buiten wedstrijden.', fact: 'Check altijd de WADA-lijst' },
       { type: 'eind', title: 'Per peptide de status zien?', sub: 'In de kennisbank staat bij elke peptide of hij toegelaten is.' },
     ],
     caption: `Geneesmiddel, supplement of research chemical? 🏷️
 
-Dezelfde term "peptide" kan iets heel anders betekenen. Een geneesmiddel is getoetst door het EMA of CBG. Een supplement valt onder de Warenwet. Een research chemical is nergens op gecontroleerd.
+Dezelfde term "peptide" kan iets heel anders betekenen. Een geneesmiddel is getoetst door het EMA of CBG. Een supplement valt onder de Warenwet. Een research chemical heeft geen toelating als geneesmiddel of voeding.
 
 Swipe voor de verschillen en voorbeelden.
 📚 Per peptide de status: peptideman.nl/kennisbank
@@ -82,7 +82,7 @@ Sla deze carrousel op en gebruik hem als checklist.
       { type: 'profiel', naam: 'Collageenpeptiden', klasse: 'Gehydrolyseerd collageen', status: 'Supplement', tone: 'info', bewijs: 'Matig', body: 'Kleine stukjes collageen uit voeding. Er zijn studies naar huid en gewrichten, met wisselende uitkomsten.', lengte: 'Mengsel' },
       { type: 'profiel', naam: 'GHK-Cu', klasse: 'Koperpeptide', status: 'Cosmetica', tone: 'info', bewijs: 'Beperkt', body: 'Tripeptide met koper, veel gebruikt in huidverzorging. Vooral lab- en kleine huidstudies.', lengte: '3 aminozuren' },
       { type: 'profiel', naam: 'BPC-157', klasse: 'Synthetisch maagpeptide', status: 'Niet toegelaten', tone: 'warn', bewijs: 'Beperkt', body: 'Populair online, maar vrijwel alleen onderzocht bij dieren. Geen handelsvergunning en op de WADA-dopinglijst.', lengte: '15 aminozuren' },
-      { type: 'eind', title: '20+ peptides in de kennisbank', sub: 'Zoek op naam, filter op status en vergelijk ze naast elkaar.' },
+      { type: 'eind', title: '25+ peptides in de kennisbank', sub: 'Zoek op naam, filter op status en vergelijk ze naast elkaar.' },
     ],
     caption: `5 peptides uitgelicht 🧬
 
@@ -120,11 +120,11 @@ Welke gadget gebruik jij al? 👇
 
 // Losse beelden: profielfoto, omslagfoto en het vastgezette welkomstbericht
 export const welkom = {
-  caption: `Welkom bij Peptideman 👋
+  caption: `Welkom bij PeptideMan 👋
 
-Wij maken peptides begrijpelijk. Onafhankelijk, met bronnen en zonder hype.
+Wij maken peptides begrijpelijk. Met bronnen en zonder hype.
 
-📚 Kennisbank met 20+ peptides: status, bewijs en bronnen
+📚 Kennisbank met 25+ peptides: status, bewijs en bronnen
 🖼️ Elke week een nieuwe carrousel
 📲 De nieuwste tech rond onderzoek en gezondheid
 
