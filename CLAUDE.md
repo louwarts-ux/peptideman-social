@@ -1,3 +1,4 @@
 ## Vaste skills
 - Na alles wat zichtbaar is gemaakt of aangepast (pagina, component, post, ontwerp, tekst): draai altijd de skill `taste` en voer de fixes door voordat je oplevert, met een korte voor/na.
 - Bij elke animatie, overgang of hover-effect: gebruik de skill `animate`. Bestaande beweging aanpassen: check met `review-animations`. Huisstijl is zakelijk en rustig: weinig beweging, alleen met een duidelijk doel, altijd `prefers-reduced-motion` respecteren.
+- Voor ontwerpreview en afwerking (critique, audit, polish, layout, typeset, clarify, quieter, distill): gebruik de skill `impeccable`. De launcher in `scripts/` is bewust niet geïnstalleerd; volg dus het pad "Launcher unavailable" uit de SKILL.md en lees PRODUCT.md/DESIGN.md direct. Bij dit project gaat de PeptideMan-huisstijl altijd voor en geldt "refinement preserves": verfijnen binnen de bestaande stijl, geen nieuwe visuele wereld zonder dat David erom vraagt.
