@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Jensen Huang over jouw kennis</title>
+<style>
+  :root{--bg:#0B0B0D;--gold:#C9A227;--text:#B7B1A3;--light:#F5F2EA;--surface:#141417;--border:#3A3A42}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1000px;height:1500px;background:var(--bg)}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);position:relative;overflow:hidden}
+  .head{position:absolute;top:96px;left:80px;right:80px}
+  .eyebrow{font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  h1{margin-top:22px;font-size:76px;line-height:1.05;color:var(--light);font-weight:700;letter-spacing:-.02em}
+  h1 span{color:var(--gold)}
+  .sub{margin-top:22px;font-size:28px}
+  svg{position:absolute;inset:0}
+  .card{position:absolute;width:270px;transform:translate(-50%,-50%);background:var(--surface);border:2px solid var(--border);border-radius:8px;padding:22px 24px}
+  .card b{display:block;font-size:34px;color:var(--light);font-weight:700}
+  .card i{display:block;font-style:normal;font-size:22px;margin-top:8px}
+  .card.key{background:var(--gold);border-color:var(--gold)}
+  .card.key b,.card.key i{color:var(--bg)}
+  .hub{position:absolute;left:500px;top:760px;width:230px;height:230px;margin:-115px;border-radius:50%;border:3px solid var(--gold);background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .hub b{font-size:44px;color:var(--light)}
+  .hub i{font-style:normal;font-size:20px;margin-top:6px;text-align:center;line-height:1.3}
+  .take{position:absolute;left:80px;right:80px;top:1215px;border-top:2px solid var(--border);padding-top:36px;font-size:36px;line-height:1.3;color:var(--light);font-weight:600}
+  .take span{color:var(--gold)}
+  .foot{position:absolute;left:80px;right:80px;bottom:64px;display:flex;align-items:center;gap:16px;font-size:24px}
+  .logo{width:44px;height:44px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center}
+  .foot .url{margin-left:auto;color:var(--gold)}
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="eyebrow">AI in je bedrijf</div>
+    <h1>Jensen Huang over <span>jouw kennis</span></h1>
+    <div class="sub">Zo beschreef Huang een AI-agent: vijf onderdelen.</div>
+  </div>
+
+  <svg width="1000" height="1500" viewBox="0 0 1000 1500" aria-hidden="true">
+    <g stroke="#3A3A42" stroke-width="3">
+      <line x1="500" y1="760" x2="500" y2="460" stroke="#C9A227"/>
+      <line x1="500" y1="760" x2="814" y2="660"/>
+      <line x1="500" y1="760" x2="694" y2="1045"/>
+      <line x1="500" y1="760" x2="306" y2="1045"/>
+      <line x1="500" y1="760" x2="186" y2="660"/>
+    </g>
+  </svg>
+
+  <div class="hub"><b>Agent</b><i>zo beschreef<br>Huang een agent</i></div>
+
+  <div class="card key" style="left:500px;top:460px"><b>Kennis</b><i>de kennis van je bedrijf</i></div>
+  <div class="card" style="left:814px;top:660px"><b>Model</b><i>het taalmodel</i></div>
+  <div class="card" style="left:694px;top:1045px"><b>Tools</b><i>systemen waarmee hij werkt</i></div>
+  <div class="card" style="left:306px;top:1045px"><b>Sandbox</b><i>afgeschermde omgeving</i></div>
+  <div class="card" style="left:186px;top:660px"><b>Harness</b><i>regie en geheugen</i></div>
+
+  <div class="take">Model, tools en sandbox kan iedereen kopen.<br><span>De kennis van je bedrijf niet.</span></div>
+
+  <div class="foot"><div class="logo">P</div>PeptideMan<span class="url">peptideman.nl</span></div>
+</body>
+</html>

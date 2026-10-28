@@ -29,3 +29,22 @@ Develop:
 claude plugin validate mods/caption-check
 claude plugin test mods/caption-check
 ```
+
+## Agents
+
+Vier Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit dezelfde vijf onderdelen: een model, regie (de werkwijze), een sandbox (wat hij wel en niet mag), kennis en tools. De kennis staat op één plek, `kennis/peptideman.md`; pas die aan als er iets verandert, dan weten alle agents het.
+
+| Agent | Doet | Mag |
+|---|---|---|
+| `bibliotheek-schrijver` | Schrijft Bibliotheek-posts met PubMed-bron naar `posts/` | Lezen, schrijven, Firecrawl |
+| `claimcheck` | Toetst teksten op gezondheidsclaims en doseeradvies | Alleen lezen |
+| `onderzoeker` | Concurrenten, trends en bronnen, verslag naar `onderzoek/` | Lezen, schrijven, Firecrawl |
+| `planner` | Zet goedgekeurde posts klaar in Metricool | Alleen inplannen ter beoordeling |
+
+Werkwijze voor een post:
+
+1. "Laat de bibliotheek-schrijver een Mythe vs Feit maken over BPC-157." Het bestand krijgt `claimcheck: open`.
+2. "Laat de claimcheck dat bestand nakijken." Bij **GOED** zet Claude in het bestand `claimcheck: GOED`.
+3. "Laat de planner hem inplannen op Pinterest." Je keurt hem daarna goed in Metricool.
+
+Claude kiest de juiste agent ook zelf op basis van de beschrijving. Bekijk ze met `/agents`. De tools van Firecrawl en Metricool staan met hun volledige naam in de agents; heet een connector bij jou anders, pas dan de regel `tools:` aan.
