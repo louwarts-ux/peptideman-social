@@ -43,8 +43,9 @@ Vier Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit dez
 
 Werkwijze voor een post:
 
-1. "Laat de bibliotheek-schrijver een Mythe vs Feit maken over BPC-157." Het bestand krijgt `claimcheck: open`.
+1. "Laat de bibliotheek-schrijver een Mythe vs Feit maken over BPC-157." Het bestand krijgt `claimcheck: open` en `beeld-url: open`, en er komt een HTML-beeld in `posts/media/`. Zet dat om met `node scripts/render.js posts/media/<naam>.html`.
 2. "Laat de claimcheck dat bestand nakijken." Bij **GOED** zet Claude in het bestand `claimcheck: GOED`.
-3. "Laat de planner hem inplannen op Pinterest." Je keurt hem daarna goed in Metricool.
+3. Zet de PNG online en vul de openbare link in bij `beeld-url`. Pinterest en TikTok weigeren een post zonder beeld.
+4. "Laat de planner hem inplannen op Pinterest." Je keurt hem daarna goed in Metricool.
 
 Claude kiest de juiste agent ook zelf op basis van de beschrijving. Bekijk ze met `/agents`. De tools van Firecrawl en Metricool staan met hun volledige naam in de agents; heet een connector bij jou anders, pas dan de regel `tools:` aan.

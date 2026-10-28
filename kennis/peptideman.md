@@ -17,6 +17,9 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 
 ## Social
 - Actieve kanalen: TikTok en Pinterest. Facebook en Instagram liggen stil. Inplannen via Metricool.
+- Metricool: merk-ID 6948479, tijdzone Europe/Amsterdam. Pinterest-bord voor de Bibliotheek: ID 967922213604666698. Pin-link: https://peptideman.nl.
+- Bibliotheek-pins gaan om 11:00 de deur uit, één per dag. Metricool geeft voor Pinterest geen beste tijden; neem dan de eerste vrije dag om 11:00.
+- Pinterest en TikTok eisen een beeld met een openbare link. Zonder `beeld-url` kan een post niet in Metricool.
 - Bibliotheek-reeks: korte, educatieve posts over peptideonderzoek in vier pijlers: Weetje, Vraag van de dag, Mythe vs Feit, Video.
 
 ## Regels voor alle teksten
