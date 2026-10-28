@@ -20,6 +20,7 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - Metricool: merk-ID 6948479, tijdzone Europe/Amsterdam. Pinterest-bord voor de Bibliotheek: ID 967922213604666698. Pin-link: https://peptideman.nl.
 - Bibliotheek-pins gaan om 11:00 de deur uit, één per dag. Metricool geeft voor Pinterest geen beste tijden; neem dan de eerste vrije dag om 11:00.
 - Pinterest en TikTok eisen een beeld met een openbare link. Zonder `beeld-url` kan een post niet in Metricool.
+- Beelden staan online via de aparte Netlify-site peptideman-media-hspj (site-ID aad221e0-ec80-4ecc-9987-3d34bcc78464), los van de webshop. Link: https://peptideman-media-hspj.netlify.app/social/<naam>.png. Deploy alleen een map met de PNG's in `social/`, nooit de hele repo.
 - Bibliotheek-reeks: korte, educatieve posts over peptideonderzoek in vier pijlers: Weetje, Vraag van de dag, Mythe vs Feit, Video.
 
 ## Regels voor alle teksten
