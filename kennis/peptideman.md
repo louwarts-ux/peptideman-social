@@ -8,7 +8,7 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - Verzending vanuit Nederland met PostNL en DHL: €6,95 per bestelling, gratis vanaf €150.
 - Concurrenten: Peptidekoning, NexGen, Dutch Peptide.
 - Contact: peptideman.nl · info@peptideman.nl
-- Schrijf in het Nederlands. Merknaam: PeptideMan.
+- Schrijf in het Nederlands. Merknaam: PeptideMan (niet Peptideman).
 
 ## Huisstijl
 - Donker met goud: achtergrond #0B0B0D, goud #C9A227, tekst #B7B1A3, lichte tekst #F5F2EA, vlakken #141417, randen #3A3A42.
@@ -17,7 +17,31 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 
 ## Social
 - Actieve kanalen: TikTok en Pinterest. Facebook en Instagram liggen stil. Inplannen via Metricool.
-- Bibliotheek-reeks: korte, educatieve posts over peptideonderzoek in vier pijlers: Weetje, Vraag van de dag, Mythe vs Feit, Video.
+- Metricool: merk-ID 6948479, tijdzone Europe/Amsterdam. Pinterest-bord voor de Bibliotheek: ID 967922213604666698. Pin-link: https://peptideman.nl.
+- Bibliotheek-pins gaan om 11:00 de deur uit, één per dag. Metricool geeft voor Pinterest geen beste tijden; neem dan de eerste vrije dag om 11:00.
+- Pinterest en TikTok eisen een beeld met een openbare link. Zonder `beeld-url` kan een post niet in Metricool.
+- Beelden staan online via de aparte Netlify-site peptideman-media-hspj (site-ID aad221e0-ec80-4ecc-9987-3d34bcc78464), los van de webshop. Link: https://peptideman-media-hspj.netlify.app/social/<naam>.png. Deploy alleen een map met de PNG's in `social/`, nooit de hele repo.
+- Bibliotheek-reeks: korte, educatieve posts over peptideonderzoek in vijf pijlers: Weetje, Vraag van de dag, Mythe vs Feit, Video en Labwerk.
+- **Labwerk** is de pijler waarmee PeptideMan opvalt: laat zien hoe zuiverheid gemeten wordt. Denk aan een HPLC-chromatogram uitgelegd, wat er in een Janoshik-rapport staat, wat "99%" echt betekent, hoe je een vervalst rapport herkent. Concurrenten roepen "getest"; PeptideMan legt het uit. Geen claims nodig, wel vertrouwen.
+
+## Wat werkt (bijgewerkt door de analist, stand 28 okt 2026)
+Nog weinig data: 4 TikTok-posts, Pinterest nog geen cijfers. Behandel dit als werkhypotheses.
+- TikTok: de fotopost "Welkom bij PeptideMan" (14 okt) haalde 41.942 weergaven, 19 likes, 2 shares. De carrousel "Wat zijn peptides?" haalde 6 en 7 weergaven: twee keer dezelfde post geplaatst (22 en 25 okt). Een video van 15 s (8 okt) haalde 243.
+- Plaats nooit twee keer dezelfde post op TikTok; TikTok drukt dubbele inhoud weg.
+- Links in een TikTok-caption zijn niet klikbaar; laat ze weg (zet "link in bio").
+
+## Per kanaal
+**Pinterest is een zoekmachine.**
+- Pin-titel = een zoekvraag die mensen typen: "Wat is BPC-157?", "Hoe werkt een HPLC-test?". Niet "PeptideMan Bibliotheek - X".
+- Het zoekwoord staat in de eerste zin van de beschrijving.
+- Eén vaste beeldstijl (sjabloon in `posts/media/`), zodat pins herkenbaar zijn in de feed.
+- Link naar de meest passende pagina, liefst een artikel in de kennisbank, niet altijd de homepage.
+
+**TikTok draait om de eerste seconde.**
+- Het eerste beeld is één prikkelende uitspraak in grote letters, bijvoorbeeld "99% zuiver? Zo lees je het rapport." of "Dit peptide komt uit maagsap".
+- Fotocarrousel: 4 à 6 beelden van 1080×1920, één gedachte per beeld, laatste beeld: "Volg voor meer uit het lab".
+- Caption kort (maximaal 150 tekens), 3 à 5 hashtags, geen link.
+- Elke post is nieuw: nooit een eerdere post herhalen.
 
 ## Regels voor alle teksten
 - Geen gezondheidsclaims: niets over genezen, afvallen, spiergroei of verjonging bij mensen.
