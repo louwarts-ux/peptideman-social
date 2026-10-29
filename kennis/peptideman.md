@@ -43,6 +43,17 @@ Nog weinig data: 4 TikTok-posts, Pinterest nog geen cijfers. Behandel dit als we
 - Caption kort (maximaal 150 tekens), 3 à 5 hashtags, geen link.
 - Elke post is nieuw: nooit een eerdere post herhalen.
 
+## Video zonder ban (TikTok en Pinterest)
+Peptiden vallen bij beide platforms onder gereguleerde of gevoelige producten. Video's die op verkoop of gebruik lijken, worden onderdrukt of verwijderd en kunnen het account een strike geven. Educatief labwerk komt wel door. Daarom:
+- **Onderwerp**: uitleg over onderzoek en meten (HPLC, LC-MS, aminozuren, wat "99% zuiver" betekent). Nooit "wat doet X met je lichaam".
+- **Beeld**: donker lab, apparatuur, chromatogrammen, abstracte moleculen, handen in labhandschoenen. Nooit naalden, spuiten, huid, lichamen, spieren, voor-en-na, weegschalen, pillen of iemand die iets inneemt.
+- **Geen verkoop in de video**: geen prijzen, korting, "bestel", "link in bio om te kopen", geen productfoto als hoofdbeeld. Merknaam en "Volg voor meer uit het lab" mag.
+- **Tekst en stem**: dezelfde regels als alle teksten. Elke video eindigt met "Uitsluitend voor onderzoek."
+- **AI-label**: AI-video's krijgen bij uploaden op TikTok het label "AI-gegenereerde content" (verplicht voor realistische AI-beelden; zonder label kan TikTok de video verwijderen). Pinterest zet zelf een AI-label; niet weghalen.
+- **Geluid**: alleen eigen gegenereerde muziek en stem (ElevenLabs). Geen trending nummers onder een bedrijfsaccount.
+- **Variatie**: nooit dezelfde video twee keer; elke video een nieuw onderwerp of nieuwe hook.
+- **Lengte en vorm**: TikTok 9:16, 8 à 15 seconden, hook in de eerste 2 seconden. Pinterest 2:3 of 9:16, max 15 seconden, titel als zoekvraag.
+
 ## Regels voor alle teksten
 - Geen gezondheidsclaims: niets over genezen, afvallen, spiergroei of verjonging bij mensen.
 - Geen doseeradvies, gebruiksinstructies of injectie-informatie voor mensen.

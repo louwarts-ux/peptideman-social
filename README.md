@@ -30,13 +30,24 @@ claude plugin validate mods/caption-check
 claude plugin test mods/caption-check
 ```
 
+## Snel starten
+
+Typ in Claude Code in deze repo:
+
+- `/post <onderwerp>`: post schrijven, controleren, beeld maken en klaarzetten in Metricool.
+- `/video <onderwerp>`: social-veilige video (AI-beeld, Nederlandse stem, eigen muziek), gecontroleerd en klaar.
+- `/week`: cijfers bekijken en een week content klaarzetten.
+
+De regels voor video staan in `kennis/peptideman.md` onder "Video zonder ban".
+
 ## Agents
 
-Vijf Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit dezelfde vijf onderdelen: een model, regie (de werkwijze), een sandbox (wat hij wel en niet mag), kennis en tools. De kennis staat op één plek, `kennis/peptideman.md`; pas die aan als er iets verandert, dan weten alle agents het.
+Zes Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit dezelfde vijf onderdelen: een model, regie (de werkwijze), een sandbox (wat hij wel en niet mag), kennis en tools. De kennis staat op één plek, `kennis/peptideman.md`; pas die aan als er iets verandert, dan weten alle agents het.
 
 | Agent | Doet | Mag |
 |---|---|---|
 | `bibliotheek-schrijver` | Schrijft Bibliotheek-posts met PubMed-bron naar `posts/` | Lezen, schrijven, Firecrawl |
+| `videomaker` | Maakt video's met ElevenLabs (Seedance 2.5 / Kling 4.0, stem eleven_v4, eigen muziek) | ElevenLabs-flows, schrijven in `posts/` |
 | `claimcheck` | Toetst teksten op gezondheidsclaims en doseeradvies | Alleen lezen |
 | `onderzoeker` | Concurrenten, trends en bronnen, verslag naar `onderzoek/` | Lezen, schrijven, Firecrawl |
 | `planner` | Zet goedgekeurde posts klaar in Metricool | Alleen inplannen ter beoordeling |
