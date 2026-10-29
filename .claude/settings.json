@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/render.js:*)",
+      "mcp__Firecrawl__firecrawl_search",
+      "mcp__Firecrawl__firecrawl_scrape",
+      "mcp__Metricool_Social_Media_Management__getBrandSettings",
+      "mcp__Metricool_Social_Media_Management__getBestTimeToPostByNetwork",
+      "mcp__Metricool_Social_Media_Management__getScheduledPosts",
+      "mcp__Metricool_Social_Media_Management__getAnalyticsAvailableMetrics",
+      "mcp__Metricool_Social_Media_Management__getAnalyticsDataByMetrics",
+      "mcp__Metricool_Social_Media_Management__createScheduledPostForReview",
+      "mcp__ElevenLabs__creative_get_brand_kit",
+      "mcp__ElevenLabs__creative_list_brand_kits",
+      "mcp__ElevenLabs__creative_get_model_guide",
+      "mcp__ElevenLabs__creative_list_voices",
+      "mcp__ElevenLabs__creative_create_flow",
+      "mcp__ElevenLabs__creative_add_flow_node",
+      "mcp__ElevenLabs__creative_connect_flow_nodes",
+      "mcp__ElevenLabs__creative_update_node",
+      "mcp__ElevenLabs__creative_get_flow_node",
+      "mcp__ElevenLabs__creative_get_flow_run_status",
+      "mcp__ElevenLabs__creative_get_generations",
+      "mcp__ElevenLabs__creative_add_flow_asset_node"
+    ],
+    "ask": [
+      "mcp__ElevenLabs__creative_run_flow_nodes",
+      "mcp__ElevenLabs__creative_generate_video"
+    ]
+  }
+}
