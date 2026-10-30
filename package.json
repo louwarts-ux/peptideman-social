@@ -1,0 +1,9 @@
+{
+  "name": "peptideman-social",
+  "private": true,
+  "description": "Werkplaats voor de social media van PeptideMan",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "pm": "node scripts/pm.js"
+  }
+}
