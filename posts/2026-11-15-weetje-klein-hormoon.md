@@ -1,11 +1,11 @@
 kanaal: TikTok
 pijler: Weetje
 titel: Een peptidehormoon van maar 9 aminozuren
-eerste-beeld: Dit hormoon is maar 9 aminozuren lang.
-beeldtekst: Dit hormoon is maar 9 aminozuren lang. Oxytocine: Cys-Tyr-Ile-Gln-Asn-Cys-Pro-Leu-Gly-NH2, met een zwavelbrug tussen aminozuur 1 en 6.
+eerste-beeld: Dit hormoon past in 9 letters.
+beeldtekst: 9 aminozuren. Dit hormoon past in 9 letters. Oxytocine: elke letter is één aminozuur.
 
 caption: |
-  Dit hormoon is maar 9 aminozuren lang. Bron: overzichtsartikel. Uitsluitend voor onderzoek.
+  Oxytocine in 9 letters: CYIQNCPLG. Elke letter is één aminozuur. Bron: Int J Mol Sci 2023 (PubMed 36768879). Uitsluitend voor onderzoek.
 
 hashtags: #peptideonderzoek #aminozuren #biochemie #wetenschap
 

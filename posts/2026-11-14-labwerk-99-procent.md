@@ -2,10 +2,10 @@ kanaal: TikTok
 pijler: Labwerk
 titel: Wat 99% op een testrapport betekent
 eerste-beeld: 99% zuiver? Zo lees je het rapport.
-beeldtekst: 99% zuiver? Zo lees je het rapport. Het getal is een piekoppervlak in een HPLC-grafiek. Geen hoeveelheid peptide.
+beeldtekst: 99% zuiver? Zo lees je het rapport. 99% betekent: 99% van het gemeten signaal hoort bij de hoofdstof. Het zegt niet hoeveel er in het potje zit.
 
 caption: |
-  99% zuiver? Zo lees je het rapport: piekoppervlak, geen hoeveelheid. Link in bio. Uitsluitend voor onderzoek.
+  Wat betekent 99% op een testrapport? Niet wat je denkt. Link in bio. Uitsluitend voor onderzoek.
 
 hashtags: #labwerk #HPLC #zuiverheid #peptideonderzoek
 

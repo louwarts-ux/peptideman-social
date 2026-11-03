@@ -1,11 +1,11 @@
 kanaal: Pinterest
 pijler: Labwerk
-pin-titel: Wat laat LC-MS zien dat HPLC niet laat zien?
+pin-titel: Wat is LC-MS en wat meet het?
 pin-link: https://peptideman.nl
-beeldtekst: LC-MS meet de massa. HPLC meet de zuiverheid.
+beeldtekst: LC-MS. De massa controleert de identiteit. HPLC: hoe zuiver is het? Wat zit er nog meer in?
 
 caption: |
-  LC-MS laat de massa van een peptide zien, en dat bevestigt de identiteit. HPLC laat zien hoeveel er naast de hoofdstof in het monster zit. Een methodehoofdstuk (2015) beschrijft LC-MS en MALDI-TOF-MS om identiteit en zuiverheid van synthetische peptiden te controleren.
+  Wat is LC-MS? Deze techniek meet de massa van een peptide; daarmee controleer je of het de juiste stof is. HPLC laat zien wat er nog meer in het monster zit. Een methodehoofdstuk (2015) beschrijft LC-MS voor synthetische peptiden.
 
   Soort bron: methodehoofdstuk, geen studie bij mensen.
 
