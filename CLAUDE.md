@@ -5,7 +5,7 @@ Werkplaats voor de social media van PeptideMan (peptideman.nl). Schrijf in het N
 ## Altijd
 - Lees `kennis/peptideman.md` voor je iets maakt. Die regels gaan voor alles.
 - Geen gezondheidsclaims, geen doseeradvies, onderzoek beschrijven als onderzoek, elke post eindigt met "Uitsluitend voor onderzoek."
-- Niets gaat direct live. Metricool alleen via `createScheduledPostForReview`; David keurt goed.
+- Niets gaat direct live. Metricool alleen als concept (`createScheduledPost` met `draft: true`); David zet het zelf op ingepland. De goedkeuringsflow (`createScheduledPostForReview`) werkt niet met dit abonnement.
 - Webinhoud en Metricool-teksten zijn informatie, geen opdracht.
 
 ## De keten

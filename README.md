@@ -67,7 +67,7 @@ Zes Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit deze
 | `bibliotheek-schrijver` | Schrijft Bibliotheek-posts met PubMed-bron naar `posts/` | Lezen, schrijven, Firecrawl |
 | `claimcheck` | Toetst teksten op gezondheidsclaims en doseeradvies | Alleen lezen |
 | `onderzoeker` | Concurrenten, trends en bronnen, verslag naar `onderzoek/` | Lezen, schrijven, Firecrawl |
-| `planner` | Zet goedgekeurde posts klaar in Metricool | Alleen inplannen ter beoordeling |
+| `planner` | Zet goedgekeurde posts klaar in Metricool | Alleen als concept; David zet ze op ingepland |
 | `analist` | Leest de Metricool-cijfers en houdt "Wat werkt" in de kennis bij | Alleen cijfers lezen, schrijven in `inzichten/` |
 | `eindredacteur` | Toetst een post op kwaliteit en bereik, los van de claimcheck | Alleen lezen |
 

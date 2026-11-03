@@ -15,5 +15,5 @@ De keten, met een poort na elke stap. Ga pas door als de poort open is.
    - claimcheck GOED: zet `claimcheck: GOED` in het bestand.
 4. **Verifiëren.** Draai `node scripts/pm.js check <bestand>`. Elke ✗ is een stop.
 5. **Beeld.** `node scripts/render.js posts/media/<naam>.html` (TikTok: `1080 1920`). Bekijk de PNG zelf. Zet het beeld online volgens de kennis (alleen de map `social/` naar de media-site) en vul `beeld-url` in. Lukt online zetten niet, stop dan hier en zeg wat er nog moet.
-6. **Inplannen.** Laat de `planner` de post klaarzetten ter beoordeling. Zet daarna `ingepland: <datum tijd>` in het bestand.
+6. **Inplannen.** Laat de `planner` de post als concept klaarzetten in Metricool. Zet daarna `ingepland: <datum tijd> (concept)` in het bestand.
 7. **Bewijs.** Geef terug: bestand, oordeel claimcheck en eindredacteur, uitkomst van `pm check`, beeld-url, en datum en tijd in Metricool. Wat is overgeslagen, zeg je ook.

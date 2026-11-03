@@ -44,6 +44,22 @@ test('Metricool: direct publiceren is dicht, review met schone tekst mag', () =>
   assert.strictEqual(beoordeel({ tool_name: `${M}createScheduledPostForReview`, tool_input: { info: info() } }), null)
 })
 
+test('Metricool: een concept (draft: true) mag, zonder draft blijft het dicht', () => {
+  assert.strictEqual(beoordeel({ tool_name: `${M}createScheduledPost`, tool_input: { info: info({ draft: true }) } }), null)
+  assert.match(beoordeel({ tool_name: `${M}createScheduledPost`, tool_input: { info: info() } }), /Direct publiceren is dicht/)
+  assert.match(beoordeel({ tool_name: `${M}createScheduledPost`, tool_input: { info: info({ draft: false }) } }), /Direct publiceren is dicht/)
+  assert.match(beoordeel({ tool_name: `${M}createScheduledPost`, tool_input: { info: info({ draft: 'true' }) } }), /Direct publiceren is dicht/)
+})
+
+test('Metricool: ook een concept moet schoon zijn', () => {
+  const reden = beoordeel({
+    tool_name: `${M}createScheduledPost`,
+    tool_input: { info: info({ draft: true, media: [], text: 'Afvallen met peptiden' }) },
+  })
+  assert.match(reden, /geen beeld/)
+  assert.match(reden, /afvalclaim/)
+})
+
 test('Metricool: geen beeld, stil kanaal of claim wordt tegengehouden', () => {
   const reden = beoordeel({
     tool_name: `${M}createScheduledPostForReview`,

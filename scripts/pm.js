@@ -56,8 +56,9 @@ function check(bestanden) {
   return fouten
 }
 
-// Gereedschap dat nooit in een agent hoort: publiceert direct of verwijdert
-const GEVAARLIJK = /(__createScheduledPost\b(?!ForReview)|__updateScheduledPost|delete|trash|send_message|share_file)/i
+// Gereedschap dat nooit in een agent hoort: publiceert direct of verwijdert.
+// createScheduledPost staat hier niet: de poort-hook laat die alleen door als concept (draft: true).
+const GEVAARLIJK = /(__updateScheduledPost|delete|trash|send_message|share_file)/i
 const GEHEIMEN = [
   [/sk-(ant-)?[A-Za-z0-9_-]{20,}/, 'API-sleutel'],
   [/ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}/, 'GitHub-token'],

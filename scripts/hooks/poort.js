@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // PreToolUse-poort: houdt deterministisch tegen wat nooit mag, wat de agent ook denkt.
 // - Schrijven in posts/*.md: de nieuwe inhoud moet door `checkPost` komen.
-// - Metricool: direct publiceren is dicht; klaarzetten en wijzigen alleen met een schone tekst en beeld.
+// - Metricool: direct publiceren is dicht; klaarzetten (ter beoordeling of als concept) en wijzigen
+//   alleen met een schone tekst en beeld.
 // Exit 2 blokkeert de tool; de melding op stderr gaat terug naar Claude.
 const fs = require('fs')
 const path = require('path')
@@ -27,15 +28,18 @@ function beoordeel({ tool_name: tool, tool_input: input = {} }, projectDir = pro
     return fout.length ? `Post ${rel} houdt zich niet aan de regels:\n- ${fout.join('\n- ')}` : null
   }
 
-  if (tool === `${METRICOOL}createScheduledPost`) {
-    return 'Direct publiceren is dicht. Gebruik createScheduledPostForReview zodat David de post eerst goedkeurt.'
-  }
-  if (tool === `${METRICOOL}createScheduledPostForReview` || tool === `${METRICOOL}updateScheduledPost`) {
+  const klaarzetten = [`${METRICOOL}createScheduledPost`, `${METRICOOL}createScheduledPostForReview`, `${METRICOOL}updateScheduledPost`]
+  if (klaarzetten.includes(tool)) {
     let info
     try {
       info = typeof input.info === 'string' ? JSON.parse(input.info) : input.info ?? {}
     } catch {
       return 'Kan "info" niet lezen als JSON.'
+    }
+    // Het Metricool-abonnement heeft geen goedkeuringsflow, dus een concept (draft: true) is de
+    // andere veilige route: dat gaat nooit vanzelf live, David zet het zelf op ingepland.
+    if (tool === `${METRICOOL}createScheduledPost` && info.draft !== true) {
+      return 'Direct publiceren is dicht. Zet de post klaar als concept ("draft": true) of met createScheduledPostForReview, zodat David hem eerst goedkeurt.'
     }
     const netwerken = (info.providers ?? []).map(p => p.network)
     const problemen = []
