@@ -17,4 +17,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/18079725/ (Coin I, Beyermann M, Bienert M.
 
 beeld: posts/media/2026-11-13-vraag-peptidesynthese.png
 beeld-url: open
-claimcheck: open
+claimcheck: GOED

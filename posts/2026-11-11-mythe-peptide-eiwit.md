@@ -17,4 +17,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/32965931/ (Protein Structure and Function,
 
 beeld: posts/media/2026-11-11-mythe-peptide-eiwit.png
 beeld-url: open
-claimcheck: open
+claimcheck: GOED

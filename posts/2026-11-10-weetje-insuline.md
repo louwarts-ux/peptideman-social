@@ -1,6 +1,6 @@
 kanaal: Pinterest
 pijler: Weetje
-pin-titel: Wat was het eerste eiwit met een bekende aminozuurvolgorde?
+pin-titel: Wat is insuline? Het eerste eiwit waarvan de volgorde bekend werd
 pin-link: https://peptideman.nl
 beeldtekst: Insuline. Fred Sanger leidde de volgorde af en kreeg in 1958 zijn eerste Nobelprijs voor Scheikunde.
 
@@ -17,4 +17,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/33610859/ (Flier JS, Kahn CR. Mol Metab 20
 
 beeld: posts/media/2026-11-10-weetje-insuline.png
 beeld-url: open
-claimcheck: open
+claimcheck: GOED

@@ -14,4 +14,4 @@ soort-bron: methodeartikel (analytische chemie, synthetisch standaardpeptide), g
 
 beeld: posts/media/2026-11-14-labwerk-99-procent.png
 beeld-url: open
-claimcheck: open
+claimcheck: GOED

@@ -14,4 +14,4 @@ soort-bron: overzichtsartikel (geschiedenis en fysiologie), geen eigen experimen
 
 beeld: posts/media/2026-11-15-weetje-klein-hormoon.png
 beeld-url: open
-claimcheck: open
+claimcheck: GOED

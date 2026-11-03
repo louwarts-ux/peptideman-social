@@ -17,4 +17,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/26424265/ (Prabhala BK, Mirza O, Højrup P
 
 beeld: posts/media/2026-11-12-labwerk-lcms.png
 beeld-url: open
-claimcheck: open
+claimcheck: GOED
