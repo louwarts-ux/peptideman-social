@@ -24,10 +24,12 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - Bibliotheek-reeks: korte, educatieve posts over peptideonderzoek in vijf pijlers: Weetje, Vraag van de dag, Mythe vs Feit, Video en Labwerk.
 - **Labwerk** is de pijler waarmee PeptideMan opvalt: laat zien hoe zuiverheid gemeten wordt. Denk aan een HPLC-chromatogram uitgelegd, wat er in een Janoshik-rapport staat, wat "99%" echt betekent, hoe je een vervalst rapport herkent. Concurrenten roepen "getest"; PeptideMan legt het uit. Geen claims nodig, wel vertrouwen.
 
-## Wat werkt (bijgewerkt door de analist, stand 28 okt 2026)
-Nog weinig data: 4 TikTok-posts, Pinterest nog geen cijfers. Behandel dit als werkhypotheses.
-- TikTok: de fotopost "Welkom bij PeptideMan" (14 okt) haalde 41.942 weergaven, 19 likes, 2 shares. De carrousel "Wat zijn peptides?" haalde 6 en 7 weergaven: twee keer dezelfde post geplaatst (22 en 25 okt). Een video van 15 s (8 okt) haalde 243.
-- Plaats nooit twee keer dezelfde post op TikTok; TikTok drukt dubbele inhoud weg.
+## Wat werkt (bijgewerkt door de analist, stand 3 nov 2026)
+Nog weinig data: 4 unieke TikTok-posts (8 t/m 30 okt), reacties overal 0. Pinterest: de analytics geven nog geen cijfers terug (7 pins gepubliceerd, 25 okt t/m 2 nov), dus nog niets te zeggen. Behandel dit als werkhypotheses.
+- TikTok: de fotopost "Welkom bij PeptideMan" (14 okt) haalde 41.945 weergaven, 19 likes, 2 shares, 0 reacties. Eén uitschieter met lage betrokkenheid (0,05% likes); oorzaak onbekend. De carrousel "Wat zijn peptides?" haalde 8 en 6 weergaven: twee keer dezelfde post geplaatst (22 en 25 okt). Video's: 244 weergaven en 5 likes (8 okt, geen caption) en 223 weergaven en 0 likes (30 okt, productpost Retatrutide).
+- Plaats nooit twee keer dezelfde post op TikTok; TikTok drukt dubbele inhoud weg (2 posts, 8 en 6 weergaven). Er staat nog een derde plaatsing in de planner (21 nov); schrappen.
+- Een productpost met productnaam en werkingsmechanisme haalde geen likes (n=1) en zit dicht tegen de regels aan; houd TikTok educatief.
+- Pinterest: twee Bibliotheek-pins (TB-500 en GHK-Cu profiel) faalden met "400 Invalid request", vermoedelijk door te lange beschrijving (nog niet bevestigd). Hou beschrijvingen kort.
 - Links in een TikTok-caption zijn niet klikbaar; laat ze weg (zet "link in bio").
 
 ## Per kanaal

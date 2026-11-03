@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Labwerk HPLC</title>
+<style>
+:root{--bg:#0B0B0D;--gold:#C9A227;--text:#B7B1A3;--light:#F5F2EA;--surface:#141417;--border:#3A3A42}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1000px;height:1500px;background:var(--bg)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);position:relative;overflow:hidden}
+.tag{position:absolute;top:96px;left:80px;font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{position:absolute;top:150px;left:80px;right:80px;font-size:108px;line-height:1.02;color:var(--light);font-weight:800;letter-spacing:-.03em}
+h1 span{color:var(--gold)}
+.lead{position:absolute;top:390px;left:80px;right:80px;font-size:52px;line-height:1.15;color:var(--light);font-weight:600}
+.lead span{color:var(--gold)}
+.chart{position:absolute;top:520px;left:80px;width:840px;height:500px;background:var(--surface);border:2px solid var(--border);border-radius:8px}
+.chart svg{display:block;width:100%;height:100%}
+.big{position:absolute;top:1060px;left:80px;right:80px;background:var(--surface);border:2px solid var(--border);border-radius:8px;padding:30px 36px;font-size:32px;line-height:1.4}
+.big b{color:var(--light)}
+.src{position:absolute;left:80px;right:80px;top:1290px;font-size:22px;line-height:1.4}
+.foot{position:absolute;left:80px;right:80px;bottom:64px;display:flex;align-items:center;gap:16px;font-size:24px}
+.logo{width:44px;height:44px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center}
+.foot .url{margin-left:auto;color:var(--gold)}
+</style></head><body>
+<div class="tag">Labwerk · Bibliotheek</div>
+<h1>Hoe werkt een <span>HPLC-test?</span></h1>
+<div class="lead">Stoffen komen als <span>aparte pieken</span> uit de kolom</div>
+<div class="chart">
+<svg viewBox="0 0 836 496" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<line x1="50" y1="400" x2="800" y2="400" stroke="#3A3A42" stroke-width="3"/>
+<line x1="50" y1="60" x2="50" y2="400" stroke="#3A3A42" stroke-width="3"/>
+<path d="M50 400 L150 400 C165 400 170 372 185 372 C200 372 205 400 220 400 L300 400 C320 400 325 340 345 340 C365 340 370 400 390 400 L430 400 C470 400 480 110 520 110 C560 110 570 400 610 400 L650 400 C665 400 670 380 685 380 C700 380 705 400 720 400 L800 400" fill="none" stroke="#B7B1A3" stroke-width="4" stroke-linejoin="round"/>
+<path d="M430 400 C470 400 480 110 520 110 C560 110 570 400 610 400 Z" fill="#C9A227" fill-opacity=".25"/>
+<path d="M430 400 C470 400 480 110 520 110 C560 110 570 400 610 400" fill="none" stroke="#C9A227" stroke-width="6" stroke-linejoin="round"/>
+<text x="520" y="78" text-anchor="middle" font-size="30" font-weight="700" fill="#C9A227">hoofdpiek</text>
+<text x="335" y="322" text-anchor="middle" font-size="24" fill="#B7B1A3">andere stoffen</text>
+<text x="800" y="450" text-anchor="end" font-size="26" fill="#B7B1A3">tijd →</text>
+</svg>
+</div>
+<div class="big">De <b>grote piek</b> is de hoofdstof, het peptide. Kleine pieken zijn <b>andere stoffen</b>.</div>
+<div class="src">Bron: Moore GJ, Life Sci 1982;30(12) · PubMed 7070207<br>Uitsluitend voor onderzoek.</div>
+<div class="foot"><div class="logo">P</div>PeptideMan<span class="url">peptideman.nl</span></div>
+</body></html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Labwerk LC-MS</title>
+<style>
+:root{--bg:#0B0B0D;--gold:#C9A227;--text:#B7B1A3;--light:#F5F2EA;--surface:#141417;--border:#3A3A42}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1000px;height:1500px;background:var(--bg)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);position:relative;overflow:hidden}
+.tag{position:absolute;top:96px;left:80px;font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{position:absolute;top:150px;left:80px;right:80px;font-size:150px;line-height:1;color:var(--light);font-weight:800;letter-spacing:-.03em}
+.lead{position:absolute;top:330px;left:80px;right:80px;font-size:56px;line-height:1.15;color:var(--light);font-weight:600}
+.lead span{color:var(--gold)}
+.cards{position:absolute;top:560px;left:80px;right:80px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--surface);border:2px solid var(--border);border-radius:8px;padding:36px 32px;height:400px;position:relative}
+.card.gold{border-color:var(--gold)}
+.card .k{font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.card .n{font-size:80px;font-weight:800;color:var(--light);letter-spacing:-.03em;margin-top:18px;line-height:1}
+.card .d{font-size:32px;line-height:1.3;color:var(--text);margin-top:20px}
+.card svg{position:absolute;left:32px;right:32px;bottom:30px;width:calc(100% - 64px);height:110px}
+.big{position:absolute;top:1030px;left:80px;right:80px;background:var(--surface);border:2px solid var(--border);border-radius:8px;padding:34px 36px;font-size:34px;line-height:1.4}
+.big b{color:var(--light)}
+.src{position:absolute;left:80px;right:80px;top:1260px;font-size:22px;line-height:1.4}
+.foot{position:absolute;left:80px;right:80px;bottom:64px;display:flex;align-items:center;gap:16px;font-size:24px}
+.logo{width:44px;height:44px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center}
+.foot .url{margin-left:auto;color:var(--gold)}
+</style></head><body>
+<div class="tag">Labwerk · Bibliotheek</div>
+<h1>LC-MS</h1>
+<div class="lead">De <span>massa</span> controleert de identiteit</div>
+<div class="cards">
+<div class="card gold"><div class="k">LC-MS</div><div class="n">Massa</div><div class="d">Welke stof is het?</div>
+<svg viewBox="0 0 300 110" preserveAspectRatio="none"><g stroke="#C9A227" stroke-width="6" stroke-linecap="round"><line x1="30" y1="105" x2="30" y2="70"/><line x1="90" y1="105" x2="90" y2="55"/><line x1="150" y1="105" x2="150" y2="8"/><line x1="210" y1="105" x2="210" y2="60"/><line x1="270" y1="105" x2="270" y2="78"/></g></svg></div>
+<div class="card"><div class="k">HPLC</div><div class="n">Zuiver?</div><div class="d">Wat zit er nog meer in?</div>
+<svg viewBox="0 0 300 110" preserveAspectRatio="none"><path d="M0 105 L60 105 Q80 105 90 95 Q100 105 120 105 L150 105 Q170 105 180 10 Q190 105 210 105 L300 105" fill="none" stroke="#B7B1A3" stroke-width="5" stroke-linejoin="round"/></svg></div>
+</div>
+<div class="big">Een methodehoofdstuk beschrijft <b>LC-MS</b> om synthetische peptiden te controleren.</div>
+<div class="src">Bron: Prabhala BK et al., Methods Mol Biol 2015;1348 · PubMed 26424265<br>Uitsluitend voor onderzoek.</div>
+<div class="foot"><div class="logo">P</div>PeptideMan<span class="url">peptideman.nl</span></div>
+</body></html>
