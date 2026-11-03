@@ -16,7 +16,7 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - Uitstraling: zakelijk en rustig.
 
 ## Social
-- Actieve kanalen: TikTok en Pinterest. Facebook en Instagram liggen stil. Inplannen via Metricool.
+- Actieve kanalen: TikTok, Pinterest en Instagram (@peptideman.nl, 80 berichten en 21 volgers op 3 nov 2026). Facebook ligt stil. De keten (poort, planner) plant nog alleen TikTok en Pinterest in via Metricool; Instagram valt daar nog buiten.
 - Metricool: merk-ID 6948479, tijdzone Europe/Amsterdam. Pinterest-bord voor de Bibliotheek: ID 967922213604666698. Pin-link: https://peptideman.nl.
 - Bibliotheek-pins gaan om 11:00 de deur uit, één per dag. Metricool geeft voor Pinterest geen beste tijden; neem dan de eerste vrije dag om 11:00.
 - Pinterest en TikTok eisen een beeld met een openbare link. Zonder `beeld-url` kan een post niet in Metricool.
