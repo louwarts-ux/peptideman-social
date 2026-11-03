@@ -6,7 +6,7 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - PeptideMan (peptideman.nl) is een Nederlandse webshop die onderzoekspeptiden online verkoopt aan particulieren.
 - Positionering: zuivere peptiden voor onderzoek, per batch onafhankelijk getest door Janoshik (HPLC/LC-MS), uitsluitend voor onderzoek.
 - Verzending vanuit Nederland met PostNL en DHL: €6,95 per bestelling, gratis vanaf €150.
-- Concurrenten: Peptidekoning, NexGen, Dutch Peptide.
+- Concurrenten: NexGen (nextgenpeptides.nl), Dutch Peptide (dutchpeptide.com; niet verwarren met dutch-peptides.nl, "Dutch Peptides"), Peptidekoning (peptidekoning.to, was peptidekoning.com). Peptidekoning was op 3 nov 2026 niet bereikbaar, kreeg van de IGJ een verkoopverbod op drie afslankmiddelen (NOS) en staat op Trustpilot onder hetzelfde bedrijf als NexGen (NEXTGEN GROUP B.V., Utrecht). Andere Nederlandse shops op "peptides kopen": fit-peptides.com, peptidenederland.com, bropeptides.com (deelt zijn assortiment in naar vetverbranding, spierherstel en anti-aging; geen voorbeeld), peptidenstore.com, peptidemeester.org, peptidesvoordelig.nl.
 - Contact: peptideman.nl · info@peptideman.nl
 - Schrijf in het Nederlands. Merknaam: PeptideMan (niet Peptideman).
 
@@ -16,13 +16,20 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - Uitstraling: zakelijk en rustig.
 
 ## Social
-- Actieve kanalen: TikTok en Pinterest. Facebook en Instagram liggen stil. Inplannen via Metricool.
+- Actieve kanalen: TikTok, Pinterest en Instagram (@peptideman.nl, 80 berichten en 21 volgers op 3 nov 2026). Facebook ligt stil. De keten (poort, planner) plant nog alleen TikTok en Pinterest in via Metricool; Instagram valt daar nog buiten.
 - Metricool: merk-ID 6948479, tijdzone Europe/Amsterdam. Pinterest-bord voor de Bibliotheek: ID 967922213604666698. Pin-link: https://peptideman.nl.
 - Bibliotheek-pins gaan om 11:00 de deur uit, één per dag. Metricool geeft voor Pinterest geen beste tijden; neem dan de eerste vrije dag om 11:00.
 - Pinterest en TikTok eisen een beeld met een openbare link. Zonder `beeld-url` kan een post niet in Metricool.
 - Beelden staan online via de aparte Netlify-site peptideman-media-hspj (site-ID aad221e0-ec80-4ecc-9987-3d34bcc78464), los van de webshop. Link: https://peptideman-media-hspj.netlify.app/social/<naam>.png. Deploy alleen een map met de PNG's in `social/`, nooit de hele repo.
 - Bibliotheek-reeks: korte, educatieve posts over peptideonderzoek in vijf pijlers: Weetje, Vraag van de dag, Mythe vs Feit, Video en Labwerk.
 - **Labwerk** is de pijler waarmee PeptideMan opvalt: laat zien hoe zuiverheid gemeten wordt. Denk aan een HPLC-chromatogram uitgelegd, wat er in een Janoshik-rapport staat, wat "99%" echt betekent, hoe je een vervalst rapport herkent. Concurrenten roepen "getest"; PeptideMan legt het uit. Geen claims nodig, wel vertrouwen.
+
+## Vindbaarheid (rankingCoach, ingericht 3 nov 2026)
+- Zoekwoorden: peptiden kopen, research peptiden, onderzoekspeptiden, peptiden nederland, peptide webshop, zuivere peptiden, getest peptide, hplc getest, bpc-157, janoshik getest. Geen gezondheidswoorden zoals afvallen, spieropbouw, herstel of anti-aging.
+- Bedrijfscategorieën: geen supplementen-, gezondheids-, beauty-, coach-, genezer-, laboratorium- of onderzoeksinstituutcategorie; PeptideMan test niet zelf (dat doet Janoshik). Wel iets als leverancier van chemicaliën of laboratoriumbenodigdheden, en webwinkel.
+- Gevolgde concurrenten: nextgenpeptides.nl en dutchpeptide.com, plus één uit de lijst hierboven. Peptidekoning werd geweigerd (site onbereikbaar).
+- Profielen: website https://peptideman.nl · Instagram https://www.instagram.com/peptideman.nl · Threads https://www.threads.net/@peptideman.nl · Facebook-pagina "peptideman.nl" via deellink https://www.facebook.com/share/1FFsdiU53X/ (de echte gebruikersnaam is nog niet bekend). Let op: facebook.com/PeptideMan is een Maleisisch bedrijf, niet van ons.
+- Open punten (3 nov 2026): de Instagram-categorie staat op "Gezondheid/beauty"; wijzigen naar bijvoorbeeld "Onderwijs". Op Instagram staat een BPC-157-post met Canva-voorbeeldtekst ("Discover the Power of BPC-157", "reallygreatsite.com"); weghalen of vervangen.
 
 ## Wat werkt (bijgewerkt door de analist, stand 3 nov 2026)
 Nog weinig data: 4 unieke TikTok-posts (8 t/m 30 okt), reacties overal 0. Pinterest: de analytics geven nog geen cijfers terug (7 pins gepubliceerd, 25 okt t/m 2 nov), dus nog niets te zeggen. Behandel dit als werkhypotheses.
