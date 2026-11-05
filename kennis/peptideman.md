@@ -31,6 +31,17 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - Profielen: website https://peptideman.nl · Instagram https://www.instagram.com/peptideman.nl · Threads https://www.threads.net/@peptideman.nl · Facebook-pagina "peptideman.nl" via deellink https://www.facebook.com/share/1FFsdiU53X/ (de echte gebruikersnaam is nog niet bekend). Let op: facebook.com/PeptideMan is een Maleisisch bedrijf, niet van ons.
 - Open punten (3 nov 2026): de Instagram-categorie staat op "Gezondheid/beauty"; wijzigen naar bijvoorbeeld "Onderwijs". Op Instagram staat een BPC-157-post met Canva-voorbeeldtekst ("Discover the Power of BPC-157", "reallygreatsite.com"); weghalen of vervangen.
 
+## Website-artikelen (SEO)
+Eigen versie van wat diensten als AutoSEO doen: artikelen in de kennisbank van peptideman.nl die gevonden worden in Google en in AI-zoekmachines. Keten: `/seo-plan` → `/artikel-maken` (agent `seo-schrijver` → claimcheck + eindredacteur → `node scripts/artikel.js export`) → David zet het als concept in de webshop en publiceert.
+- Eén artikel per zoekwoord, uit `seo/plan.md`. Labwerk-onderwerpen eerst.
+- 800 à 1500 woorden, één H1 met het zoekwoord, minstens drie H2's als zoekvraag, korte alinea's.
+- De eerste alinea geeft het antwoord in twee à drie zinnen, met het zoekwoord: Google-fragmenten en AI-zoekmachines citeren die.
+- SEO-titel maximaal 60 tekens, meta-beschrijving 120 à 155 tekens, beide met het zoekwoord. Slug in kleine letters met streepjes.
+- 1 à 3 PubMed-bronnen, met soort onderzoek (cel, dier, mens). Twee à vier interne links naar bestaande pagina's van peptideman.nl.
+- Afsluiten met "Veelgestelde vragen" (3 à 5, wordt FAQ-schema) en "Uitsluitend voor onderzoek."
+- Dezelfde regels als voor alle teksten; de poort-hook toetst `artikelen/*.md`.
+- Meten: nog geen koppeling met Google Search Console. Tot die er is, kijkt David zelf naar klikken en vertoningen per artikel.
+
 ## Wat werkt (bijgewerkt door de analist, stand 3 nov 2026)
 Nog weinig data: 4 unieke TikTok-posts (8 t/m 30 okt), reacties overal 0. Pinterest: de analytics geven nog geen cijfers terug (7 pins gepubliceerd, 25 okt t/m 2 nov), dus nog niets te zeggen. Behandel dit als werkhypotheses.
 - TikTok: de fotopost "Welkom bij PeptideMan" (14 okt) haalde 41.945 weergaven, 19 likes, 2 shares, 0 reacties. Eén uitschieter met lage betrokkenheid (0,05% likes); oorzaak onbekend. De carrousel "Wat zijn peptides?" haalde 8 en 6 weergaven: twee keer dezelfde post geplaatst (22 en 25 okt). Video's: 244 weergaven en 5 likes (8 okt, geen caption) en 223 weergaven en 0 likes (30 okt, productpost Retatrutide).

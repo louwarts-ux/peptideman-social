@@ -23,9 +23,12 @@ plan → schrijven → claimcheck → eindredactie → beeld → inplannen → m
 
 `/post-maken` loopt de hele keten voor één post door. `/controle` is de eindcontrole.
 
+## Website-artikelen (SEO)
+`/seo-plan` vult `seo/plan.md` met zoekwoorden; `/artikel-maken` schrijft één artikel (agent `seo-schrijver`), laat het toetsen door claimcheck en eindredacteur en zet het om naar HTML met `node scripts/artikel.js export artikelen/<slug>.md`. Niets gaat direct live: David zet het als concept in de webshop en publiceert.
+
 ## Wat de hooks afdwingen
 `.claude/settings.json` zet twee hooks aan:
-- **poort** (`scripts/hooks/poort.js`): weigert een `posts/*.md` die de regels breekt, weigert direct publiceren in Metricool en weigert een Metricool-post met een claim, zonder beeld of op een stil kanaal.
+- **poort** (`scripts/hooks/poort.js`): weigert een `posts/*.md` of `artikelen/*.md` die de regels breekt, weigert direct publiceren in Metricool en weigert een Metricool-post met een claim, zonder beeld of op een stil kanaal.
 - **sessie-start** (`scripts/hooks/sessie-start.js`): toont bij elke start de stand van de posts, de vorige sessie en de sterke lessen.
 
 Weigert de poort iets, pas dan de tekst aan. Zet de hook niet uit.

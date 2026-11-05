@@ -119,4 +119,73 @@ function volgendeStap(post, fout = []) {
   return 'klaar'
 }
 
-module.exports = { parsePost, checkText, checkPost, volgendeStap, hashtagsVan, KANALEN }
+// ---------- Website-artikelen (SEO) ----------
+// Een artikel is `artikelen/<slug>.md`: velden bovenaan, dan een regel `---`, dan de tekst in Markdown.
+const ARTIKEL_VELDEN = ['zoekwoord', 'titel', 'meta', 'slug', 'bronnen', 'claimcheck']
+// Zoekwoorden die PeptideMan bewust niet najaagt (kennis: "Vindbaarheid")
+const VERBODEN_ZOEKWOORD = /\b(afvallen|afslank\w*|vetverbranding|spieropbouw|spiergroei|herstel|anti-?aging|verjong\w*|kopen zonder recept|dosering|dosis|kuur|injecteren|bijwerkingen)\b/i
+
+function parseArtikel(text) {
+  const lines = text.split(/\r?\n/)
+  const scheiding = lines.findIndex(l => l.trim() === '---')
+  const kop = scheiding === -1 ? text : lines.slice(0, scheiding).join('\n')
+  const tekst = scheiding === -1 ? '' : lines.slice(scheiding + 1).join('\n').trim()
+  return { velden: parsePost(kop), tekst }
+}
+
+const woorden = s => (s.match(/[\p{L}\p{N}][\p{L}\p{N}'-]*/gu) ?? []).length
+const zonderMarkdown = s => s.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[#*_>`]/g, '')
+
+function checkArtikel(text) {
+  const { velden, tekst } = parseArtikel(text)
+  const fout = []
+  const letOp = []
+  for (const veld of ARTIKEL_VELDEN) if (!velden[veld]) fout.push(`veld "${veld}" ontbreekt`)
+  if (!tekst) fout.push('geen artikeltekst onder de regel "---"')
+
+  const publiek = [velden.titel, velden.meta, tekst].filter(Boolean).join('\n')
+  const regels = checkText(zonderMarkdown(publiek))
+  fout.push(...regels.fout)
+  letOp.push(...regels.letOp)
+
+  const zw = (velden.zoekwoord ?? '').toLowerCase()
+  const zwFout = VERBODEN_ZOEKWOORD.exec(zw)
+  if (zwFout) fout.push(`zoekwoord "${velden.zoekwoord}" bevat "${zwFout[0]}": geen gezondheidswoorden (kennis, Vindbaarheid)`)
+  if (velden.slug && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(velden.slug)) fout.push(`slug "${velden.slug}": alleen kleine letters, cijfers en streepjes`)
+
+  const titel = [...(velden.titel ?? '')].length
+  if (titel > 60) letOp.push(`titel is ${titel} tekens; Google kapt af na ongeveer 60`)
+  const meta = [...(velden.meta ?? '')].length
+  if (meta && (meta < 110 || meta > 160)) letOp.push(`meta-beschrijving is ${meta} tekens; mik op 120 à 155`)
+
+  const h1 = tekst.match(/^# .+$/gm) ?? []
+  if (tekst && h1.length !== 1) fout.push(`${h1.length} H1-koppen; precies één`)
+  const h2 = (tekst.match(/^## .+$/gm) ?? []).length
+  if (tekst && h2 < 3) letOp.push(`${h2} tussenkoppen (H2); advies minstens 3`)
+  const aantal = woorden(zonderMarkdown(tekst))
+  if (tekst && aantal < 800) letOp.push(`${aantal} woorden; advies 800 à 1500`)
+
+  if (zw) {
+    // Elk woord van het zoekwoord moet erin staan; de volgorde mag de Nederlandse zin volgen
+    const delen = zw.split(/\s+/).filter(Boolean)
+    const bevat = s => delen.every(d => s.toLowerCase().includes(d))
+    const eerste = zonderMarkdown(tekst.split(/\n\s*\n/).find(a => a.trim() && !a.startsWith('#')) ?? '')
+    if (!bevat(velden.titel ?? '')) letOp.push('zoekwoord staat niet in de titel')
+    if (!bevat(velden.meta ?? '')) letOp.push('zoekwoord staat niet in de meta-beschrijving')
+    if (!bevat(eerste)) letOp.push('zoekwoord staat niet in de eerste alinea')
+  }
+
+  const bronnen = velden.bronnen ?? ''
+  if (bronnen && !/https:\/\//.test(bronnen)) fout.push('bronnen bevat geen link')
+  else if (bronnen && !/pubmed\.ncbi\.nlm\.nih\.gov\/\d+/.test(bronnen)) letOp.push('geen PubMed-bron; alleen goed voor een methode- of Labwerk-artikel')
+  if (tekst && !/\]\((https:\/\/(www\.)?peptideman\.nl|\/)/.test(tekst)) letOp.push('geen interne link naar peptideman.nl')
+
+  const stap = fout.length ? 'herstellen'
+    : velden.claimcheck !== 'GOED' ? 'claimcheck'
+    : !velden.export ? 'exporteren (node scripts/artikel.js export)'
+    : !velden.online ? 'als concept op de website zetten (David publiceert)'
+    : 'klaar'
+  return { velden, tekst, woorden: aantal, fout, letOp, stap }
+}
+
+module.exports = { parsePost, checkText, checkPost, volgendeStap, hashtagsVan, KANALEN, parseArtikel, checkArtikel }

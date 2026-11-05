@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 // PreToolUse-poort: houdt deterministisch tegen wat nooit mag, wat de agent ook denkt.
 // - Schrijven in posts/*.md: de nieuwe inhoud moet door `checkPost` komen.
+// - Schrijven in artikelen/*.md: de nieuwe inhoud moet door `checkArtikel` komen.
 // - Metricool: direct publiceren is dicht; klaarzetten (ter beoordeling of als concept) en wijzigen
 //   alleen met een schone tekst en beeld.
 // Exit 2 blokkeert de tool; de melding op stderr gaat terug naar Claude.
 const fs = require('fs')
 const path = require('path')
-const { checkPost, checkText, KANALEN } = require('../lib/regels')
+const { checkPost, checkText, checkArtikel, KANALEN } = require('../lib/regels')
 
 const METRICOOL = 'mcp__Metricool_Social_Media_Management__'
 
@@ -23,6 +24,10 @@ function nieuweInhoud(tool, input) {
 function beoordeel({ tool_name: tool, tool_input: input = {} }, projectDir = process.cwd()) {
   if (['Write', 'Edit', 'MultiEdit'].includes(tool)) {
     const rel = path.relative(projectDir, path.resolve(projectDir, input.file_path ?? '')).split(path.sep).join('/')
+    if (/^artikelen\/[^/]+\.md$/.test(rel)) {
+      const { fout } = checkArtikel(nieuweInhoud(tool, input))
+      return fout.length ? `Artikel ${rel} houdt zich niet aan de regels:\n- ${fout.join('\n- ')}` : null
+    }
     if (!/^posts\/[^/]+\.md$/.test(rel)) return null
     const { fout } = checkPost(nieuweInhoud(tool, input))
     return fout.length ? `Post ${rel} houdt zich niet aan de regels:\n- ${fout.join('\n- ')}` : null

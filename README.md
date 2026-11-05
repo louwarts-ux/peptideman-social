@@ -15,8 +15,9 @@ plan → schrijven → claimcheck + eindredactie → beeld → inplannen → met
 | Regels | `CLAUDE.md`, `kennis/peptideman.md` | Altijd geladen; de kennis is de enige bron van waarheid |
 | Regels als code | `scripts/lib/regels.js` | Claims, dosering, disclaimer, bron, hashtags, kanaalregels: hetzelfde getoetst door hooks en `pm check` |
 | Hooks | `.claude/settings.json` | **poort** weigert een post die de regels breekt en elke Metricool-post die direct live gaat, een claim bevat, geen beeld heeft of naar een stil kanaal gaat. **sessie-start** geeft bij elke start de stand, de vorige sessie en de sterke lessen mee |
-| Agents | `.claude/agents/` | Zes specialisten met elk een eigen sandbox (zie hieronder) |
-| Skills | `.claude/skills/` | `/weekplan`, `/post-maken`, `/controle`, `/leren`, `/sessie-opslaan`, `/sessie-hervatten` |
+| Agents | `.claude/agents/` | Zeven specialisten met elk een eigen sandbox (zie hieronder) |
+| SEO-artikelen | `seo/plan.md`, `artikelen/`, `scripts/artikel.js` | Eigen AutoSEO: zoekwoordenplan, artikel met PubMed-bronnen en FAQ, dezelfde regels en poort, export naar HTML met schema.org; David publiceert |
+| Skills | `.claude/skills/` | `/seo-plan`, `/artikel-maken`, `/weekplan`, `/post-maken`, `/controle`, `/leren`, `/sessie-opslaan`, `/sessie-hervatten` |
 | Geheugen | `geheugen/` | Sessienotities en lessen met een zekerheid van 0 tot 1; sterke lessen gaan, na akkoord, naar de kennis |
 | Shield | `node scripts/pm.js shield` | Scant agents op gevaarlijke tools, controleert of de poort aanstaat, zoekt naar tokens en prompt-injectie in de repo |
 
@@ -60,7 +61,7 @@ claude plugin test mods/caption-check
 
 ## Agents
 
-Zes Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit dezelfde vijf onderdelen: een model, regie (de werkwijze), een sandbox (wat hij wel en niet mag), kennis en tools. De kennis staat op één plek, `kennis/peptideman.md`; pas die aan als er iets verandert, dan weten alle agents het.
+Zeven Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit dezelfde vijf onderdelen: een model, regie (de werkwijze), een sandbox (wat hij wel en niet mag), kennis en tools. De kennis staat op één plek, `kennis/peptideman.md`; pas die aan als er iets verandert, dan weten alle agents het.
 
 | Agent | Doet | Mag |
 |---|---|---|
@@ -69,7 +70,8 @@ Zes Claude Code-subagents in `.claude/agents/`. Elke agent is opgebouwd uit deze
 | `onderzoeker` | Concurrenten, trends en bronnen, verslag naar `onderzoek/` | Lezen, schrijven, Firecrawl |
 | `planner` | Zet goedgekeurde posts klaar in Metricool | Alleen als concept; David zet ze op ingepland |
 | `analist` | Leest de Metricool-cijfers en houdt "Wat werkt" in de kennis bij | Alleen cijfers lezen, schrijven in `inzichten/` |
-| `eindredacteur` | Toetst een post op kwaliteit en bereik, los van de claimcheck | Alleen lezen |
+| `eindredacteur` | Toetst een post of artikel op kwaliteit en bereik, los van de claimcheck | Alleen lezen |
+| `seo-schrijver` | Schrijft SEO-artikelen met PubMed-bronnen, interne links en FAQ naar `artikelen/` | Lezen, schrijven, Firecrawl |
 
 Werkwijze voor een post:
 

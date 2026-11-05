@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 // pm: het gereedschap achter de PeptideMan-werkwijze.
 //   node scripts/pm.js status          waar staat elke post, wat is de volgende stap
-//   node scripts/pm.js check [post...] posts toetsen aan de regels (zonder argument: alle)
+//   node scripts/pm.js check [bestand...] posts en artikelen toetsen aan de regels (zonder argument: alle)
 //   node scripts/pm.js shield          agents, hooks en repo scannen op risico's
 //   node scripts/pm.js doctor          is alles aanwezig en aangesloten
 // Exitcode 1 als check, shield of doctor een fout vindt.
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-const { checkPost } = require('./lib/regels')
+const { checkPost, checkArtikel } = require('./lib/regels')
 
 const ROOT = path.resolve(__dirname, '..')
 const lees = rel => fs.readFileSync(path.join(ROOT, rel), 'utf8')
@@ -19,11 +19,26 @@ function posts() {
   return lijst('posts', /\.md$/).map(f => ({ bestand: `posts/${f}`, ...checkPost(lees(`posts/${f}`)) }))
 }
 
+function artikelen() {
+  return lijst('artikelen', /\.md$/).map(f => ({ bestand: `artikelen/${f}`, ...checkArtikel(lees(`artikelen/${f}`)) }))
+}
+
+function toets(bestand) {
+  const tekst = fs.readFileSync(bestand, 'utf8')
+  return { bestand, ...(/(^|[\\/])artikelen[\\/][^\\/]+\.md$/.test(bestand) ? checkArtikel(tekst) : checkPost(tekst)) }
+}
+
 function status() {
   const regels = ['## Posts']
   const alle = posts()
   if (!alle.length) regels.push('Nog geen posts.')
   for (const p of alle) regels.push(`- ${p.bestand} (${p.post.kanaal ?? '?'}, ${p.post.pijler ?? '?'}): volgende stap ${p.stap}`)
+
+  const arts = artikelen()
+  if (arts.length) {
+    regels.push('', '## Website-artikelen')
+    for (const a of arts) regels.push(`- ${a.bestand} (${a.velden.zoekwoord ?? '?'}, ${a.woorden} woorden): volgende stap ${a.stap}`)
+  }
 
   const inzichten = lijst('inzichten', /^\d{4}-\d{2}-\d{2}\.md$/)
   regels.push('', '## Analyse', inzichten.length ? `Laatste verslag: inzichten/${inzichten.at(-1)}` : 'Nog geen verslag van de analist.')
@@ -45,7 +60,7 @@ function status() {
 }
 
 function check(bestanden) {
-  const doel = bestanden.length ? bestanden.map(b => ({ bestand: b, ...checkPost(fs.readFileSync(b, 'utf8')) })) : posts()
+  const doel = bestanden.length ? bestanden.map(toets) : [...posts(), ...artikelen()]
   let fouten = 0
   for (const p of doel) {
     console.log(`${p.fout.length ? '✗' : '✓'} ${p.bestand}: volgende stap ${p.stap}`)
@@ -129,7 +144,7 @@ function doctor() {
   for (const s of lijst('.claude/skills', /./)) {
     ;(bestaat(`.claude/skills/${s}/SKILL.md`) ? ok : fouten).push(`skill ${s}`)
   }
-  for (const p of posts()) if (p.fout.length) fouten.push(`${p.bestand}: ${p.fout.length} regelfout(en), zie pm check`)
+  for (const p of [...posts(), ...artikelen()]) if (p.fout.length) fouten.push(`${p.bestand}: ${p.fout.length} regelfout(en), zie pm check`)
   for (const o of ok) console.log(`✓ ${o}`)
   for (const f of fouten) console.log(`✗ ${f}`)
   return fouten.length
