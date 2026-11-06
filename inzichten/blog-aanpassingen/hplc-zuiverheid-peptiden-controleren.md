@@ -14,7 +14,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn. "HPLC-z
 
 **Nieuw:**
 
-> Bij PeptideMan staat voor 16 van de 18 producten het Janoshik-rapport van de geteste batch online, met de gemeten zuiverheid en het batchnummer van die batch. Op 15 van die 16 rapporten staat een zuiverheidswaarde; die ligt steeds op 99% of hoger. Per product is één batch getest, dus je flacon kan uit een latere batch komen. De analysemethode staat niet op het rapport. Je vindt de documenten op de pagina met [analysecertificaten](https://peptideman.nl/certificaten.html). Daar zie je welke van de gegevens uit de checklist hierboven in onze rapporten staan en welke niet. De analyses worden uitgevoerd door Janoshik; PeptideMan test niet zelf.
+> Bij PeptideMan staat voor 16 van de 18 producten het Janoshik-rapport van de geteste batch online, met het batchnummer en, op 15 van de 16 rapporten, de gemeten zuiverheid. Op 15 van die 16 rapporten staat een zuiverheidswaarde; die ligt steeds op 99% of hoger. Per product is één batch getest, dus je flacon kan uit een latere batch komen. De analysemethode staat niet op het rapport. Je vindt de documenten op de pagina met [analysecertificaten](https://peptideman.nl/certificaten.html). Daar zie je welke van de gegevens uit de checklist hierboven in onze rapporten staan en welke niet. De analyses worden uitgevoerd door Janoshik; PeptideMan test niet zelf.
 
 *Waarom:* "HPLC-zuiverheid" suggereert dat de rapporten HPLC als methode noemen; dat doen ze niet. De link naar `kwaliteit.html` belooft uitleg over "hoe de analyses worden uitgevoerd", terwijl die pagina nog niet is nagekeken en de rapporten geen methode vermelden. "Op de productpagina" is vervangen door "online", omdat niet bevestigd is dat het certificaat (ook) op de productpagina staat.
 
@@ -29,4 +29,4 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn. "HPLC-z
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED onder voorbehoud van de 15/16-zin.

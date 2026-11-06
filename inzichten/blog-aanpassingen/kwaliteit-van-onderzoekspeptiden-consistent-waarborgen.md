@@ -44,7 +44,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 
 **Nieuw:**
 
-> Een waarschuwingssignaal is een leverancier die geen analyses kan laten zien of geen antwoord geeft op vragen over testmethoden. PeptideMan laat per product één batch analyseren door Janoshik; je flacon kan uit een latere batch komen. Op onze [certificatenpagina](https://peptideman.nl/certificaten.html) zie je welke van deze gegevens in onze rapporten staan en welke niet.
+> Een waarschuwingssignaal is een leverancier die geen analyses kan laten zien of geen antwoord geeft op vragen over testmethoden. Voor 16 van de 18 producten laat PeptideMan één batch analyseren door Janoshik; je flacon kan uit een latere batch komen. Op onze [certificatenpagina](https://peptideman.nl/certificaten.html) zie je welke van deze gegevens in onze rapporten staan en welke niet.
 
 *(Naar `certificaten.html` en niet naar `kwaliteit.html`, omdat nog niet is nagekeken wat `kwaliteit.html` zegt. De oude zin noemt vaagheid over testmethoden een waarschuwingssignaal en linkt dan naar eigen rapporten zonder methode.)*
 
@@ -69,4 +69,4 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 - Wat er op `kwaliteit.html` staat (punt 4).
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN (licht); punten verwerkt.

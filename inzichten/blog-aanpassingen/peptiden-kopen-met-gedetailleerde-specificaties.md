@@ -68,9 +68,27 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 
 **Nieuw:**
 
-> PeptideMan verzendt vanuit Nederland en publiceert voor 16 van de 18 producten het certificaat van één geteste batch. Je vial kan uit een latere batch komen.
+> PeptideMan verzendt vanuit Nederland en publiceert voor 16 van de 18 producten het certificaat van één geteste batch. Je vial kan uit een latere batch komen. Op onze certificatenpagina zie je welke van deze gegevens in onze rapporten staan en welke niet.
 
-## 7. FAQ "Waarom moet een analysecertificaat batchspecifiek zijn?": laatste zin
+## 7. Lijst transparante leverancier: "Directe sourcing" schrappen
+
+**Oud:**
+
+> - **Directe sourcing:** minder schakels in de keten maken tracering eenvoudiger.
+
+**Nieuw:** regel schrappen. De lijst staat direct boven de PeptideMan-zin, en directe inkoop is niet bevestigd.
+
+## 8. Lijst transparante leverancier: geen "HPLC-certificaten"
+
+**Oud:**
+
+> - **Volledige documentatie:** HPLC-certificaten, batchnummers en waar mogelijk stabiliteitsgegevens.
+
+**Nieuw:**
+
+> - **Volledige documentatie:** analysecertificaten, batchnummers en waar mogelijk stabiliteitsgegevens.
+
+## 9. FAQ "Waarom moet een analysecertificaat batchspecifiek zijn?": laatste zin
 
 **Oud:**
 
@@ -83,13 +101,14 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 ## Niet aangepast
 - De opening ("Voor 16 van de 18 producten is het analysecertificaat van een geteste batch openbaar") klopt al.
 - De uitleg over HPLC, MS, het COA, de controlestappen en opslag blijft staan als algemene uitleg.
-- "Directe sourcing" in de lijst van een transparante leverancier blijft als algemene norm; het is na punt 6 niet meer aan PeptideMan gekoppeld. PeptideMan zelf claimt het in dit artikel niet.
 - De bron (Drug Discov Today, 2015) blijft.
 
 ## Na te gaan door David
 - Staat er op elke flacon een batchnummer? Dan kan in punt 6 terug: "PeptideMan vermeldt op elk product een batchnummer."
 - Wat staat er op `kwaliteit.html` (punt 4)?
+- Staat er opslaginformatie op het productetiket? Het artikel verwijst twee keer naar "de opslaginformatie op het productetiket".
+- Koopt PeptideMan rechtstreeks bij fabrikanten? Zo ja, dan kan "Directe sourcing" (punt 7) terug.
 - Diermodellen schrappen: voorleggen aan de jurist (staat al op de lijst in het claimcheck-verslag).
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN (licht); punten verwerkt.

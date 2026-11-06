@@ -14,7 +14,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 
 **Nieuw:**
 
-> Een CoA laat zien of de geanalyseerde batch voldoet aan de gespecificeerde eisen. Het is geen garantie voor elk denkbaar aspect van kwaliteit. Op onze pagina met [certificaten van analyse](https://peptideman.nl/certificaten.html) vind je de rapporten van de batch die per product is getest; de analysemethode staat daar niet op vermeld. Je vial kan uit een latere batch komen.
+> Een CoA laat zien of de geanalyseerde batch voldoet aan de gespecificeerde eisen. Het is geen garantie voor elk denkbaar aspect van kwaliteit. Op onze pagina met [certificaten van analyse](https://peptideman.nl/certificaten.html) vind je voor 16 van de 18 producten het rapport van één geteste batch; de analysemethode staat daar niet op vermeld. Je vial kan uit een latere batch komen.
 
 ## 2. "Vraag welke methode is gebruikt", gevolgd door link naar kwaliteit.html
 
@@ -60,4 +60,4 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 - Wat er op `kwaliteit.html` staat (punt 2).
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN (licht); punten verwerkt.

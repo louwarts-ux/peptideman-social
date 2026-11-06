@@ -14,7 +14,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn. De tite
 
 **Nieuw:**
 
-> Welke gegevens wij per product hebben, zie je op de pagina [analysecertificaten](https://peptideman.nl/certificaten.html): de gemeten waarden van één geteste batch, zonder vermelding van de analysemethode. Je vial kan uit een latere batch komen.
+> Voor 16 van de 18 producten zie je op de pagina [analysecertificaten](https://peptideman.nl/certificaten.html) de gemeten waarden van één geteste batch, zonder vermelding van de analysemethode. Je vial kan uit een latere batch komen.
 
 ## 2. Transport: link naar kwaliteit.html vervangen
 
@@ -66,8 +66,9 @@ Met een 301-redirect van de oude naar de nieuwe URL, en de sitemap en interne li
 
 ## Na te gaan door David
 - Of de Janoshik-rapporten bewaarcondities vermelden (punt 3).
+- Of de productpagina bewaarinformatie geeft (punt 3); dat is niet bevestigd. Zo niet, dan "de productpagina" vervangen door een verwijzing naar de werkvoorschriften van het eigen laboratorium.
 - Wat er op `kwaliteit.html` staat (punt 2).
 - Of de slug wordt gewijzigd (punt 4).
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN (licht); punten verwerkt.

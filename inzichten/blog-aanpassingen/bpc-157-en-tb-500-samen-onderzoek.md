@@ -85,7 +85,7 @@ Voor de NO-route, de groeihormoonreceptor en NF-κB staat nergens in de blog of 
 
 ## Na te gaan door David
 - Bronnen voor de NO-route, de groeihormoonreceptor en NF-κB (punt 3), of schrappen.
-- Noemt de samenvatting van PMID 21030672 de FAK-paxilline-route? (punt 2)
+- ~~Noemt de samenvatting van PMID 21030672 de FAK-paxilline-route?~~ Ja: op 6 nov via PubMed (eutils) nagekeken; de samenvatting noemt FAK en paxilline.
 - Staan BPC-157 (10 mg) en TB-500 (10 mg) bij de 16 producten met een rapport? De TB-500-intro zegt "Specificaties en analysegegevens vind je op de pagina van TB-500".
 
 ## Controle
