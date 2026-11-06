@@ -15,3 +15,4 @@ soort-bron: methodeartikel (analytische chemie, synthetisch standaardpeptide), g
 beeld: posts/media/2026-11-14-labwerk-99-procent.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-14-labwerk-99-procent.png
 claimcheck: GOED
+ingepland: 2026-11-14 08:00 (concept)

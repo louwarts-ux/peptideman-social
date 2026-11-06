@@ -30,6 +30,14 @@ test('zonder openbare beeld-url is de volgende stap beeld online zetten', () => 
   assert.strictEqual(stap, 'beeld online zetten')
 })
 
+test('waarschuwt bij een Pinterest-beschrijving boven 500 tekens, zonder fout', () => {
+  assert.ok(!checkPost(voorbeeld).letOp.some(l => l.includes('Pinterest-beschrijving')))
+  const lang = voorbeeld.replace(/^caption: \|\n/m, `caption: |\n  ${'Een lange zin over onderzoek. '.repeat(20)}\n`)
+  const { fout, letOp } = checkPost(lang)
+  assert.deepStrictEqual(fout, [])
+  assert.ok(letOp.some(l => /Pinterest-beschrijving is \d+ tekens, advies maximaal 500/.test(l)))
+})
+
 test('met ingepland erbij is de post klaar', () => {
   const { fout, stap } = checkPost(`${voorbeeld.trimEnd()}\ningepland: 2026-11-07 11:00 (concept)\n`)
   assert.deepStrictEqual(fout, [])

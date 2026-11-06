@@ -18,3 +18,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/26424265/ (Prabhala BK, Mirza O, Højrup P
 beeld: posts/media/2026-11-12-labwerk-lcms.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-12-labwerk-lcms.png
 claimcheck: GOED
+ingepland: 2026-11-12 11:00 (concept)

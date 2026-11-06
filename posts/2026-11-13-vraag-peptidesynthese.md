@@ -18,3 +18,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/18079725/ (Coin I, Beyermann M, Bienert M.
 beeld: posts/media/2026-11-13-vraag-peptidesynthese.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-13-vraag-peptidesynthese.png
 claimcheck: GOED
+ingepland: 2026-11-13 11:00 (concept)

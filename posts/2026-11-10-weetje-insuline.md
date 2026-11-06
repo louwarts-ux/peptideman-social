@@ -18,3 +18,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/33610859/ (Flier JS, Kahn CR. Mol Metab 20
 beeld: posts/media/2026-11-10-weetje-insuline.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-10-weetje-insuline.png
 claimcheck: GOED
+ingepland: 2026-11-10 11:00 (concept)

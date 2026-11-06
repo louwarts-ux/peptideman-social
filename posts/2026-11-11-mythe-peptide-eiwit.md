@@ -18,3 +18,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/32965931/ (Protein Structure and Function,
 beeld: posts/media/2026-11-11-mythe-peptide-eiwit.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-11-mythe-peptide-eiwit.png
 claimcheck: GOED
+ingepland: 2026-11-11 11:00 (concept)

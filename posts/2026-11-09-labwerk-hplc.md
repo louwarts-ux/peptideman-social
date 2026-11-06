@@ -19,3 +19,4 @@ beeld: posts/media/2026-11-09-labwerk-hplc.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-09-labwerk-hplc.png
 claimcheck: GOED
 soort-bron: methodeartikel (1982, Life Sci). Abstract: reversed-phase HPLC is een snelle en effectieve techniek om de zuiverheid van synthetische peptiden te beoordelen en om milligramhoeveelheden synthetische peptiden te zuiveren; voorbeelden zijn angiotensines en neurohypofysaire hormonen. Geen studie bij mensen.
+ingepland: 2026-11-09 11:00 (concept)

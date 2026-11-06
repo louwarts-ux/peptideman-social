@@ -15,3 +15,4 @@ soort-bron: overzichtsartikel (geschiedenis en fysiologie), geen eigen experimen
 beeld: posts/media/2026-11-15-weetje-klein-hormoon.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-15-weetje-klein-hormoon.png
 claimcheck: GOED
+ingepland: 2026-11-15 08:00 (concept)
