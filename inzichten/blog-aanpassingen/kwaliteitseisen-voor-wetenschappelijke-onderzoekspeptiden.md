@@ -107,4 +107,4 @@ Titel en meta blijven. Het artikel stelt een strenge norm (chromatogram, methode
 - Jurist: diermodellen als toepassing (punt 1 en 6 halen ze weg).
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

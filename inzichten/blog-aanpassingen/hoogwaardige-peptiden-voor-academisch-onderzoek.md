@@ -53,4 +53,4 @@ Titel, meta en de rest van het artikel blijven. Alle wijzigingen zitten in de se
 - Staat er op elke vial een batchnummer? (de sectie over degradatie noemt "een leesbaar batchnummer" als controlepunt bij ontvangst)
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

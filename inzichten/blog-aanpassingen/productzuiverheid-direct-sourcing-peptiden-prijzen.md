@@ -47,4 +47,4 @@ De checklist vraagt om methode, chromatogram en MS; de eigen rapporten vermelden
 - Wat staat er op `kwaliteit.html`? (punt 1 verwijst nu naar `certificaten.html`)
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.
