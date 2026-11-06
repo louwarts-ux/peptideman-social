@@ -73,3 +73,22 @@ test('meer dan vijf hashtags en een stil kanaal', () => {
   assert.ok(fout.some(f => f.includes('7 hashtags')))
   assert.ok(fout.some(f => f.includes('alleen TikTok en Pinterest')))
 })
+
+test('overclaims over het testen: "per batch" en "elke batch" zijn fout, HPLC-methode is let op', () => {
+  const ok = 'Uitsluitend voor onderzoek.'
+  for (const zin of [
+    'Elke batch wordt getest door Janoshik.',
+    'Per batch onafhankelijk getest.',
+    'Wij testen elke batch.',
+    'Zo wordt het per batch geborgd.',
+  ]) {
+    const { fout } = checkText(`${zin} ${ok}`)
+    assert.ok(fout.some(f => /één batch getest/.test(f)), zin)
+  }
+  const { fout, letOp } = checkText(`Van 16 producten is een batch met HPLC geanalyseerd. ${ok}`)
+  assert.deepStrictEqual(fout, [])
+  assert.ok(letOp.some(l => /geen analysemethode/.test(l)))
+  const schoon = checkText(`Voor 16 van de 18 producten staat het rapport van één geteste batch online. Een HPLC-test scheidt stoffen in pieken. ${ok}`)
+  assert.deepStrictEqual(schoon.fout, [])
+  assert.deepStrictEqual(schoon.letOp, [])
+})
