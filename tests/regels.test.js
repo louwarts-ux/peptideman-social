@@ -4,7 +4,11 @@ const fs = require('fs')
 const path = require('path')
 const { parsePost, checkPost, checkText } = require('../scripts/lib/regels')
 
+// Een echte post als voorbeeld, teruggezet naar de stand vóór inplannen, zodat de tests niet
+// afhangen van hoe ver die post in de keten is.
 const voorbeeld = fs.readFileSync(path.join(__dirname, '../posts/2026-10-28-weetje-bpc-157.md'), 'utf8')
+  .replace(/^ingepland:.*\n?/m, '')
+  .replace(/^beeld-url: .*$/m, 'beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-10-28-weetje-bpc-157.png')
 
 test('leest velden en een caption-blok', () => {
   const post = parsePost(voorbeeld)
@@ -24,6 +28,12 @@ test('zonder openbare beeld-url is de volgende stap beeld online zetten', () => 
   const { fout, stap } = checkPost(zonderUrl)
   assert.deepStrictEqual(fout, [])
   assert.strictEqual(stap, 'beeld online zetten')
+})
+
+test('met ingepland erbij is de post klaar', () => {
+  const { fout, stap } = checkPost(`${voorbeeld.trimEnd()}\ningepland: 2026-11-07 11:00 (concept)\n`)
+  assert.deepStrictEqual(fout, [])
+  assert.strictEqual(stap, 'klaar')
 })
 
 test('vangt claims en doseeradvies', () => {
