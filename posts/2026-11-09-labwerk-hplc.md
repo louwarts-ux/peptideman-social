@@ -16,6 +16,6 @@ hashtags: #HPLC #peptideonderzoek #labwerk #zuiverheid #PeptideMan
 bron: https://pubmed.ncbi.nlm.nih.gov/7070207/ (Moore GJ, Life Sci 1982;30(12). "Reversed phase high pressure liquid chromatography for the identification and purification of neuropeptides")
 
 beeld: posts/media/2026-11-09-labwerk-hplc.png
-beeld-url: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-09-labwerk-hplc.png
 claimcheck: GOED
 soort-bron: methodeartikel (1982, Life Sci). Abstract: reversed-phase HPLC is een snelle en effectieve techniek om de zuiverheid van synthetische peptiden te beoordelen en om milligramhoeveelheden synthetische peptiden te zuiveren; voorbeelden zijn angiotensines en neurohypofysaire hormonen. Geen studie bij mensen.
