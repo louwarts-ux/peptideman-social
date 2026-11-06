@@ -80,14 +80,49 @@ De eigen rapporten gaan tot 99,9%, en er staat geen bron bij. **Bron toevoegen o
 
 *(Staat er wel een accreditatienummer op de rapporten en is Janoshik geaccrediteerd, dan blijft punt 5 staan.)*
 
+## 8. Alleen als de Janoshik-rapporten geen chromatogram bevatten: "Geen chromatogram"
+
+**Oud** (lijst "Hoe herken je een vervalst of generiek CoA?", punt 2):
+
+> 2. **Geen chromatogram**: alleen een getal als 'zuiverheid: 98%' zonder onderliggende data is een waarschuwingssignaal.
+
+**Nieuw:** punt uit de lijst halen, en onder "Let daarnaast op" (zie punt 1) toevoegen:
+
+> Een percentage zonder chromatogram zegt minder; vraag of de onderliggende gegevens beschikbaar zijn.
+
+*(Bevatten de rapporten wel een chromatogram, dan blijft punt 2 staan.)*
+
+## 9. Alleen als chromatogram of accreditatie ontbreekt: FAQ "Hoe controleer je of een analysecertificaat echt is?"
+
+**Oud:**
+
+> Kijk of het batchnummer overeenkomt met je levering, of er een chromatogram bij zit en of het laboratorium bestaat. Zoek het accreditatienummer op in het register van de accreditatie-instelling en neem bij twijfel contact op met het laboratorium zelf.
+
+**Nieuw:**
+
+> Kijk bij welke batch het certificaat hoort en of het laboratorium bestaat, en neem bij twijfel contact op met het laboratorium zelf. Een percentage zonder chromatogram zegt minder; vraag of de onderliggende gegevens beschikbaar zijn. Noemt het rapport een accreditatienummer, zoek dat dan op in het register van de accreditatie-instelling.
+
+*(Zelfde voorwaarde als punt 7 en 8. Een batchnummer dat afwijkt van je levering betekent niet dat het certificaat vals is; het kan bij een eerder geteste batch horen.)*
+
+## 10. Alleen als Janoshik niet geaccrediteerd is of de rapporten geen accreditatie noemen: kern
+
+**Oud** (onder "Wat is de kern?", tweede alinea):
+
+> Controleer of het CoA bij jouw batch hoort, of het laboratorium bestaat en geaccrediteerd is, en of de ruwe analysegegevens beschikbaar zijn.
+
+**Nieuw:**
+
+> Controleer bij welke batch het CoA hoort, of het laboratorium bestaat, en of de ruwe analysegegevens beschikbaar zijn.
+
 ## Niet aangepast
 - De lijst "Welke gegevens staan op een volledig CoA?", de accreditatie-uitleg en de uitleg over HPLC, MS en opslag blijven als algemene uitleg. Punt 3 en 4 zeggen eerlijk wat de eigen rapporten bevatten.
 - FAQ en bronnen zijn in orde.
 
 ## Na te gaan door David
 - Is Janoshik ISO/IEC 17025-geaccrediteerd, en staat er een accreditatienummer op de rapporten? (punt 7)
+- Staat er een HPLC-chromatogram op de Janoshik-rapporten? (punt 8 en 9; punt 9 en 10 hangen ook van de accreditatievraag af)
 - Bron voor "99,9% is ongebruikelijk", of punt 4 schrappen (punt 2).
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.

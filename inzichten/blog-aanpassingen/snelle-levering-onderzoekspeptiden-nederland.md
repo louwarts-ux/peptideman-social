@@ -44,7 +44,7 @@ Titel, H1, disclaimers, de opslaguitleg, de juridische sectie en de bron blijven
 
 > Hoe korter de keten tussen producent en leverancier, hoe beter de herkomst van een batch te volgen is. Vraag een leverancier daarom waar het materiaal is geproduceerd.
 
-*(De oude tekst leest als een beschrijving van PeptideMan. Als David bevestigt dat PeptideMan rechtstreeks bij de producent inkoopt, kan het als feit terug. Overweeg dan ook de kop "Directe inkoop en voorraadbeheer" aan te passen, bijvoorbeeld naar "Herkomst en voorraad".)*
+*(De oude tekst leest als een beschrijving van PeptideMan. Als David bevestigt dat PeptideMan rechtstreeks bij de producent inkoopt, kan het als feit terug.)*
 
 ## 4. "Hoe wij dit aanpakken" direct na HPLC en MS
 
@@ -124,6 +124,28 @@ Titel, H1, disclaimers, de opslaguitleg, de juridische sectie en de bron blijven
 
 > Vraag een analysecertificaat met HPLC-chromatogram en massaspectrometrie, en vraag bij welke batch het hoort.
 
+## 10. Kop "Directe inkoop en voorraadbeheer"
+
+**Oud:**
+
+> ### Directe inkoop en voorraadbeheer
+
+**Nieuw:**
+
+> ### Herkomst van het materiaal
+
+*(Nu doorvoeren, los van de vraag over directe inkoop: de tekst onder de kop gaat na punt 3 niet meer over inkoop of voorraad.)*
+
+## 11. Kern: "kwaliteit aantoonbaar … HPLC- en massaspectrometriegegevens"
+
+**Oud** (onder "Wat is de kern?"):
+
+> Snelle levering is vooral waardevol als de kwaliteit aantoonbaar is: met HPLC- en massaspectrometriegegevens, traceerbare batches en juiste opslag blijven je experimenten betrouwbaar.
+
+**Nieuw:**
+
+> Snelle levering is vooral waardevol als de kwaliteit te controleren is: met een analysecertificaat, een bekende geteste batch en juiste opslag blijven je experimenten betrouwbaar.
+
 ## Niet aangepast
 - De CoA-tabel met rode vlaggen en de checklist met acht punten blijven als algemene uitleg; punt 4 zegt eerlijk wat de eigen rapporten bevatten.
 - "Veelgevraagde peptiden liggen in Nederland op voorraad" blijft: verzending vanuit Nederland is bevestigd.
@@ -137,4 +159,4 @@ Titel, H1, disclaimers, de opslaguitleg, de juridische sectie en de bron blijven
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.

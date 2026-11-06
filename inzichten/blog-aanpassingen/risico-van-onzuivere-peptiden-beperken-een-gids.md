@@ -38,7 +38,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 
 **Nieuw:**
 
-> - Het certificaat noemt geen batchnummer of geen lab.
+> - Het certificaat noemt geen batchnummer.
 >
 > Let daarnaast op: controleer of het certificaat bij jouw batch hoort of bij een eerder geteste batch; dat laatste zegt minder over jouw materiaal.
 
@@ -68,11 +68,36 @@ In de blog en in `posts/` staat geen PubMed-bron over endotoxinen. **Bron toevoe
 
 > - **Endotoxinen:** lipopolysachariden uit de celwand van bacteriën. Ze zijn niet zichtbaar in een HPLC-zuiverheid; daarvoor is een aparte test nodig.
 
+## 6. Verificatietabel: actie bij een certificaat van een eerdere batch
+
+**Oud** (tabel onder Stap 5, rijen 2 en 3):
+
+> | Batchtraceerbaarheid | Synthesedatum, houdbaarheid, batchcode | Hoog | Batch niet in experiment opnemen |
+> | CoA-bevestiging bij lab | Echtheid van de analyse | Hoog | Batch niet in experiment opnemen |
+
+**Nieuw:**
+
+> | Batchtraceerbaarheid | Synthesedatum, houdbaarheid, batchcode | Hoog | Vastleggen of het certificaat bij jouw batch hoort of bij een eerder geteste batch. |
+> | CoA-bevestiging bij lab | Echtheid van de analyse | Hoog | Vastleggen of het certificaat bij jouw batch hoort of bij een eerder geteste batch. |
+
+*(Bij PeptideMan kan de flacon uit een latere batch komen dan de geteste. "Batch niet in experiment opnemen" zou de lezer dan aanraden het eigen product niet te gebruiken.)*
+
+## 7. Stap 3: vraag aan het lab over het batchnummer van het certificaat
+
+**Oud** (Stap 3, eerste vraag):
+
+> - Is op deze datum een analyse uitgevoerd op dit batchnummer?
+
+**Nieuw:**
+
+> - Is op deze datum een analyse uitgevoerd op het batchnummer van het certificaat?
+
 ## Niet aangepast
 - De CoA-tabel, de vijf verificatiestappen en de opslaguitleg blijven als algemene uitleg voor de lezer. Punt 1 en 2 zeggen eerlijk wat de eigen rapporten bevatten.
 - De TFA-uitspraak heeft al een bron (PMID 10567002 in de bronnenlijst).
 
 ## Na te gaan door David
+- Wat staat er op het etiket en in de productinformatie (batchnummer, synthesedatum, houdbaarheidsdatum)? Het eerste waarschuwingssignaal luidt: "Er staat geen batchnummer, synthesedatum of houdbaarheidsdatum op het etiket of in de productinformatie." Ontbreken synthese- of houdbaarheidsdatum bij PeptideMan, vervang het dan door: "Er staat geen batchnummer op het etiket of in de productinformatie."
 - Staat er een batchnummer op elke flacon? Het artikel vraagt de lezer het batchnummer op het etiket met het CoA te vergelijken (tabel, stap 4, FAQ).
 - Is Janoshik ISO/IEC 17025-geaccrediteerd? Het artikel noemt accreditatie als controlepunt.
 - Verpakking: zit er een droogmiddel bij (stap 4 "of er een droogmiddel aanwezig is")?
@@ -80,4 +105,4 @@ In de blog en in `posts/` staat geen PubMed-bron over endotoxinen. **Bron toevoe
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.

@@ -14,7 +14,7 @@ Titel, meta, H1, disclaimers en de uitleg over HPLC, MS en stabiliteit blijven z
 
 **Nieuw:**
 
-> Voor 16 van de 18 producten staat het Janoshik-rapport van één geteste batch online. De rapporten vermelden de zuiverheid en gemeten onzuiverheden van die batch; de analysemethode staat er niet op. Je flacon kan uit een latere batch komen. We vermelden alleen wat daadwerkelijk gemeten is.
+> Voor 16 van de 18 producten staat het Janoshik-rapport van één geteste batch online. Op 15 van die 16 rapporten staat een zuiverheidswaarde; de analysemethode staat er op geen enkel rapport. Je flacon kan uit een latere batch komen. We vermelden alleen wat daadwerkelijk gemeten is.
 
 ## 2. "Hoe we analyses inrichten"
 
@@ -93,10 +93,10 @@ Titel, meta, H1, disclaimers en de uitleg over HPLC, MS en stabiliteit blijven z
 - De bronnen en de verwijzing naar een jurist zijn in orde.
 
 ## Na te gaan door David
-- "Op 16 van de 18 producten … gemeten onzuiverheden": staan de gemeten onzuiverheden echt op alle 16 rapporten?
+- Klopt "Op 15 van die 16 rapporten staat een zuiverheidswaarde" (punt 1)? Dit is nog niet bevestigd.
 - Staat er op elke flacon een batchnummer? Het artikel vraagt de lezer etiket en certificaat te vergelijken.
 - De tabel noemt "een duidelijk vervangingsbeleid" als criterium. Heeft PeptideMan er een?
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.

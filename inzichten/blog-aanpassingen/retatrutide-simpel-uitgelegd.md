@@ -14,7 +14,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 
 **Nieuw:**
 
-> Voor de meeste producten is een analysecertificaat van een geteste batch openbaar; die vind je op onze pagina met [analysecertificaten](https://peptideman.nl/certificaten.html). Je flacon kan uit een latere batch komen, en de rapporten vermelden de analysemethode niet.
+> Voor 16 van de 18 producten staat het Janoshik-rapport van één geteste batch op onze pagina met [analysecertificaten](https://peptideman.nl/certificaten.html). Je flacon kan uit een latere batch komen, en de rapporten vermelden de analysemethode niet.
 
 ## 2. Tabel: kwaliteitscontrole niet als eigen werkwijze
 
@@ -24,7 +24,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 
 **Nieuw:**
 
-> | Kwaliteitscontrole | Zuiverheid wordt doorgaans met HPLC gemeten, identiteit met massaspectrometrie |
+> | Gangbare analysemethoden | Zuiverheid meestal met HPLC, identiteit met massaspectrometrie |
 
 *(Algemene uitleg; de oude rij las als wat PeptideMan zelf laat doen, terwijl de rapporten geen methode vermelden.)*
 
@@ -46,11 +46,11 @@ In de blog en in `posts/` staat nog geen PubMed-bron over retatrutide (LY3437943
 
 > Een interessant detail: retatrutide opent de drie sloten niet allemaal even sterk. In laboratoriumexperimenten met celmodellen is gekeken hoe krachtig het peptide elke receptor activeert. Daaruit kwam naar voren dat de verhouding tussen de drie niet gelijk is. Juist die balans maakt het voor onderzoekers een interessant molecuul om te bestuderen.
 
-**Nieuw (zonder bron):**
+**Nieuw (zonder bron):** niets; deze vier zinnen vervallen. Van de alinea blijft alleen de verwijzing staan die er al achter staat ("Wil je dieper in de techniek duiken, dan vind je dat in ons uitgebreidere artikel over de werking van deze triple agonist in de kennisbank.").
 
-> Een interessant detail: in onderzoek is ook gekeken hoe sterk het peptide elke receptor afzonderlijk activeert. Die balans tussen de drie maakt het voor onderzoekers een interessant molecuul om te bestuderen.
+**Nieuw (met bron), als alternatief:**
 
-*(Met een PubMed-bron kan de oude tekst blijven, met de bron erachter.)*
+> In celmodellen is gekeken hoe sterk het peptide elke receptor afzonderlijk activeert [bron].
 
 **4b. Oud** (sectie "Hoe ziet het molecuul eruit?", punt 2):
 
@@ -66,7 +66,41 @@ In de blog en in `posts/` staat nog geen PubMed-bron over retatrutide (LY3437943
 
 > - **Preklinisch onderzoek:** studies in diermodellen, waarin onder meer is gekeken hoe lang het peptide in dat model aanwezig blijft.
 
-*(Bij voorkeur komt er onder het artikel een bronnenlijst met de oorspronkelijke celstudie, de dierstudie en een overzicht van het klinisch onderzoek. David of de schrijver zoekt die op PubMed op; daarna kunnen 4a en 4c in de oude vorm blijven.)*
+**4d. Oud** (zelfde lijst, eerste opsommingspunt):
+
+> - **In vitro-studies:** experimenten met cellen in een kweekschaaltje. Hier is vooral gekeken naar hoe sterk het peptide aan de drie receptoren bindt en welke signalen er in de cel ontstaan.
+
+**Nieuw (zonder bron):**
+
+> - **In vitro-studies:** experimenten met cellen in een kweekschaaltje.
+
+**4e. Oud** (zelfde lijst, derde opsommingspunt):
+
+> - **Klinisch onderzoek:** er lopen studies in mensen onder strikt gecontroleerde omstandigheden, binnen officiële onderzoeksprogramma's. Dat onderzoek is nog niet afgerond.
+
+**Nieuw:** bron toevoegen (bijvoorbeeld de registratie of publicatie van de studies), of David laat bevestigen dat dit op het moment van aanpassen nog klopt. Zonder bron of bevestiging:
+
+> - **Klinisch onderzoek:** er is ook onderzoek in mensen gedaan, binnen officiële onderzoeksprogramma's.
+
+*(Bij voorkeur komt er onder het artikel een bronnenlijst met de oorspronkelijke celstudie, de dierstudie en een overzicht van het klinisch onderzoek. David of de schrijver zoekt die op PubMed op; daarna kunnen 4a, 4c, 4d en 4e in de oude vorm blijven, met de bron erachter.)*
+
+## 5. Molecuulontwerp: bedoeling, geen resultaat
+
+**5a. Oud** (sectie "Hoe ziet het molecuul eruit?", punt 1):
+
+> Die maken het peptide minder gevoelig voor afbraak door enzymen.
+
+**Nieuw:**
+
+> Die zijn bedoeld om het peptide minder gevoelig te maken voor afbraak door enzymen.
+
+**5b. Oud** (conclusie):
+
+> Dankzij aanpassingen in de aminozuren en een vetzuurstaartje is het molecuul stabieler dan de natuurlijke hormonen waarop het is geïnspireerd.
+
+**Nieuw:**
+
+> Aanpassingen in de aminozuren en een vetzuurstaartje zijn bedoeld om het molecuul minder snel te laten afbreken dan de natuurlijke hormonen.
 
 ## Niet aangepast
 - De uitleg over receptoren, de bewaartips, "Wat retatrutide niet is" en de FAQ over dosering zijn in orde: geen claims, geen dosering.
@@ -75,7 +109,7 @@ In de blog en in `posts/` staat nog geen PubMed-bron over retatrutide (LY3437943
 ## Na te gaan door David
 - Staat er voor retatrutide 10 mg en 20 mg een Janoshik-rapport op `certificaten.html`, of hoort retatrutide bij de 2 van de 18 producten zonder rapport? Zo niet, dan punt 1 aanpassen naar: "Voor dit product staat nog geen analysecertificaat online."
 - PubMed-bronnen voor de cel-, dier- en klinische studies (punt 4).
-- Klopt "Klinisch onderzoek … nog niet afgerond" en "niet goedgekeurd als geneesmiddel" nog op het moment van aanpassen?
+- Klopt "er lopen studies in mensen … nog niet afgerond" (punt 4e) en "niet goedgekeurd als geneesmiddel" nog op het moment van aanpassen?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.

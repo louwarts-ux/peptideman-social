@@ -20,7 +20,7 @@ Titel, meta, H1, disclaimers en de andere secties blijven zoals ze zijn.
 
 ## 2. Bronnen toevoegen (het artikel heeft geen PubMed-bronnen)
 
-Deze bronnen staan al in `bpc-157-versus-tb-500-wetenschappelijk-onderzoek` en `bpc-157-peptide-onderzoek-werkingsmechanisme` en ondersteunen daar dezelfde beweringen.
+Deze bronnen staan al in andere artikelen en ondersteunen daar dezelfde beweringen: 27847966 komt uit `bpc-157-peptide-onderzoek-werkingsmechanisme`, de andere drie uit `bpc-157-versus-tb-500-wetenschappelijk-onderzoek`.
 
 **Oud** (slotregel, na de laatste FAQ):
 
@@ -33,7 +33,7 @@ Deze bronnen staan al in `bpc-157-versus-tb-500-wetenschappelijk-onderzoek` en `
 > - [Therapeutic potential of pro-angiogenic BPC157 is associated with VEGFR2 activation and up-regulation](https://pubmed.ncbi.nlm.nih.gov/27847966/) (J Mol Med (Berl), 2017): VEGFR2, diermodel en endotheelcellen
 > - [The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and cell migration](https://pubmed.ncbi.nlm.nih.gov/21030672/) (J Appl Physiol (1985), 2011): peesfibroblasten van ratten, in vitro
 > - [Thymosin beta4: actin-sequestering protein moonlights to repair injured tissues](https://pubmed.ncbi.nlm.nih.gov/16099219/) (Trends Mol Med, 2005): overzicht, actinebinding
-> - [Thymosin beta4 accelerates wound healing](https://pubmed.ncbi.nlm.nih.gov/10469335/) (J Invest Dermatol, 1999): ratmodel en keratinocyten, in vitro
+> - [Thymosin beta4 accelerates wound healing](https://pubmed.ncbi.nlm.nih.gov/10469335/) (J Invest Dermatol, 1999): ratmodel, en migratie van keratinocyten in vitro
 >
 > Uitsluitend voor laboratorium- en onderzoeksdoeleinden — niet voor menselijke of dierlijke consumptie.
 
@@ -79,14 +79,53 @@ Voor de NO-route, de groeihormoonreceptor en NF-κB staat nergens in de blog of 
 
 **Nieuw (zonder bron):** bullet schrappen.
 
+## 4. Celmigratie bij TB-500: wat de bron echt onderzocht
+
+**Oud** (bullet onder "Bestudeerde routes bij TB-500 en thymosine beta-4"):
+
+> - **Celmigratie:** in celmodellen, zoals scratch-assays met keratinocyten en endotheelcellen, werd onderzocht hoe het actine-bindende motief de beweeglijkheid van cellen beïnvloedt.
+
+**Nieuw:**
+
+> - **Celmigratie:** in migratietests met keratinocyten is voor het volledige Tβ4-eiwit onderzocht hoe het de beweeglijkheid van cellen beïnvloedt ([bron](https://pubmed.ncbi.nlm.nih.gov/10469335/)); of dit ook voor TB-500 geldt, is niet onderzocht.
+
+*(De samenvatting van PMID 10469335 is nagekeken: Tβ4 stimuleerde de migratie van keratinocyten in een Boyden-kamer. Er is geen scratch-assay en er zijn geen endotheelcellen gebruikt.)*
+
+## 5. Productlinks weg uit de alinea's over dier- en celonderzoek
+
+**5a. Oud** (sectie "BPC-157 in het kort", laatste zin van de tweede alinea):
+
+> Meer achtergrond vind je op de productpagina van [BPC-157 (10 mg) voor onderzoek](https://peptideman.nl/producten/bpc-157-10mg.html).
+
+**Nieuw:** niets; de zin vervalt.
+
+**5b. Oud** (sectie "TB-500 in het kort", laatste zin van de tweede alinea):
+
+> Specificaties en analysegegevens vind je op de pagina van [TB-500 (10 mg) voor onderzoek](https://peptideman.nl/producten/tb-500-10mg.html).
+
+**Nieuw:** niets; de zin vervalt.
+
+**5c. Oud** (sectie "Wat PeptideMan wel en niet doet", laatste zin):
+
+> De informatie in dit artikel beschrijft wat in de wetenschappelijke literatuur is bestudeerd en is geen aanbeveling voor welke toepassing dan ook.
+
+**Nieuw:**
+
+> De informatie in dit artikel beschrijft wat in de wetenschappelijke literatuur is bestudeerd en is geen aanbeveling voor welke toepassing dan ook. Specificaties staan op de productpagina's van [BPC-157 (10 mg)](https://peptideman.nl/producten/bpc-157-10mg.html) en [TB-500 (10 mg)](https://peptideman.nl/producten/tb-500-10mg.html).
+
+*(Een productlink direct na dier- en celonderzoek kan als aanprijzing worden gelezen. In de sectie over wat PeptideMan wel en niet doet staat hij los van het onderzoek, en zonder "analysegegevens", omdat nog niet vaststaat of TB-500 bij de 16 producten met rapport hoort.)*
+
 ## Niet aangepast
 - De checklist (HPLC, MS, batchnummer, opslag) blijft als algemene uitleg; punt 1 zegt eerlijk wat de eigen rapporten bevatten.
-- De productlinks naar BPC-157 en TB-500 staan in de korte introducties, niet naast effect- of weefselonderzoek; die blijven. De FAQ en "Wat PeptideMan wel en niet doet" zijn in orde.
+- De FAQ en de rest van "Wat PeptideMan wel en niet doet" zijn in orde.
 
 ## Na te gaan door David
 - Bronnen voor de NO-route, de groeihormoonreceptor en NF-κB (punt 3), of schrappen.
 - ~~Noemt de samenvatting van PMID 21030672 de FAK-paxilline-route?~~ Ja: op 6 nov via PubMed (eutils) nagekeken; de samenvatting noemt FAK en paxilline.
-- Staan BPC-157 (10 mg) en TB-500 (10 mg) bij de 16 producten met een rapport? De TB-500-intro zegt "Specificaties en analysegegevens vind je op de pagina van TB-500".
+- Staan BPC-157 (10 mg) en TB-500 (10 mg) bij de 16 producten met een rapport?
+
+## Voor de jurist
+- Productlinks naar BPC-157 en TB-500 op een pagina met bronnen over weefselherstel (brontitels met "healing"; Geneesmiddelenwet, presentatie). Punt 5 haalt de links weg bij het onderzoek, maar ze staan nog op dezelfde pagina.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.
