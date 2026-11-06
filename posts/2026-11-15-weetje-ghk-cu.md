@@ -19,3 +19,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/21780203/ (Hureau C et al. Chemistry 2011.
 beeld: posts/media/2026-11-15-weetje-ghk-cu.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-15-weetje-ghk-cu.png
 claimcheck: GOED
+ingepland: 2026-11-15 11:00 (concept)
