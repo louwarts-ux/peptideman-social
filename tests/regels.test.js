@@ -16,6 +16,13 @@ test('leest velden en een caption-blok', () => {
 test('de bestaande post komt door de regels', () => {
   const { fout, stap } = checkPost(voorbeeld)
   assert.deepStrictEqual(fout, [])
+  assert.strictEqual(stap, 'inplannen')
+})
+
+test('zonder openbare beeld-url is de volgende stap beeld online zetten', () => {
+  const zonderUrl = voorbeeld.replace(/^beeld-url: .*$/m, 'beeld-url: open')
+  const { fout, stap } = checkPost(zonderUrl)
+  assert.deepStrictEqual(fout, [])
   assert.strictEqual(stap, 'beeld online zetten')
 })
 
