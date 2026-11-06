@@ -6,7 +6,9 @@
 - `inzichten/2026-11-06-claude-seo-veiligheid.md`: SkillSpector + broncode, oordeel CAUTION. Alleen lokaal, zonder extensies of Google-koppeling, en niet in deze repo installeren.
 - `inzichten/2026-11-06-seo-audit.md`: techniek goed, maar niet in de top 20 op "peptiden kopen", "research peptiden" en "janoshik getest". Top 5: Trustpilot-profiel verwijderd terwijl de knop op elke productpagina staat (gecontroleerd); bacteriostatisch water en spuiten plus filterlabels (jurist); certificaten.html spreekt de rest van de site tegen over de methode (gecontroleerd); 56 blogartikelen samenvoegen tot 10 à 12; certificaatpagina's indexeerbaar maken.
 - `inzichten/2026-11-06-blog-claimcheck.md`: 17 GOED, 38 AANPASSEN, 1 AFKEUREN (`peptiden-voor-wetenschappelijk-onderzoek-kopen`: BPC-157-kooplink na dieronderzoek naar weefselherstel). Hoofdpatroon: "per batch", "met HPLC", en normen waar PeptideMan zelf niet aan voldoet.
-- `kennis/peptideman.md` regel 7: "per batch getest (HPLC/LC-MS)" vervangen door "één geteste batch per product, methode niet op het rapport". Tests 21/21.
+- `kennis/peptideman.md` regel 7: "per batch getest (HPLC/LC-MS)" vervangen door "één geteste batch per product, methode niet op het rapport".
+- `geheugen/lessen.md`: twee nieuwe lessen (testclaims over PeptideMan; Firecrawl en ±10 artikelen per agent), les over eigen assortiment naar 0,5.
+- `scripts/lib/regels.js` + test: "per batch" en "elke batch getest" zijn fout (poort weigert), "met HPLC geanalyseerd" is let op. Tests 22/22, `pm check` alles klaar.
 - Niets aan de website en niets in Metricool gewijzigd.
 
 **Open**
@@ -17,7 +19,7 @@
 - Open uit de vorige sessie blijft staan (concepten inplannen, oude posts weggooien, ~18 nov foto-experiment).
 
 **Besluiten**
-- Claude SEO niet in deze repo. David besloot regel 7 in de kennis aan te passen.
+- Claude SEO niet in deze repo. David besloot regel 7 in de kennis aan te passen en de testclaim-regel in de poort op te nemen.
 
 **Let op**
 - curl naar peptideman.nl wordt door de proxy geblokkeerd (403); Firecrawl werkt wel. Hele artikelen overschrijven kost veel context: maximaal ±10 per agent. Eén artikel (syntheseroutes) werd door een filter tegengehouden; dat heb ik met gerichte citaten (`formats: query`) gecontroleerd.
