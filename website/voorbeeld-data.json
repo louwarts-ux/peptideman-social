@@ -1,0 +1,88 @@
+{
+  "_let_op": "Startdata voor de vijf hardlopers. Formules, massa's en PubChem-CID's zijn op 6 nov 2026 bij PubChem nagekeken. Prijzen, SKU's, batches en labrapporten zijn VOORBEELDEN: vervang ze door de echte gegevens. TB-500: controleer of PeptideMan het 7-aminozuurfragment (Ac-LKKTETQ) of het volledige thymosine bèta-4 verkoopt; de gegevens hieronder zijn van het fragment.",
+  "site": "https://peptideman.nl",
+  "verzending": { "tarief_cent": 695, "gratis_vanaf_cent": 15000 },
+  "auteurs": [
+    { "id": 1, "naam": "Redactie PeptideMan", "rol": "redactie", "profiel_url": "https://peptideman.nl/over-ons" }
+  ],
+  "peptiden": [
+    {
+      "slug": "bpc-157",
+      "naam": "BPC-157",
+      "synoniemen": ["Body Protection Compound 157", "Pentadecapeptide BPC 157"],
+      "sequentie": "Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val",
+      "aantal_aminozuren": 15,
+      "molecuulformule": "C62H98N16O22",
+      "molecuulmassa": 1419.5,
+      "pubchem_cid": 9941957,
+      "herkomst": "Afgeleid van een eiwit dat in menselijk maagsap is gevonden.",
+      "kort_antwoord": "BPC-157 is een synthetisch onderzoekspeptide van vijftien aminozuren, afgeleid van een eiwit uit menselijk maagsap. Het is vooral in dier- en celonderzoek bestudeerd.",
+      "bronnen": [8298609]
+    },
+    {
+      "slug": "tb-500",
+      "naam": "TB-500",
+      "synoniemen": ["Thymosine bèta-4 fragment 17-23", "Ac-LKKTETQ"],
+      "sequentie": "Ac-Leu-Lys-Lys-Thr-Glu-Thr-Gln",
+      "aantal_aminozuren": 7,
+      "molecuulformule": "C38H68N10O14",
+      "molecuulmassa": 889.0,
+      "pubchem_cid": 62707662,
+      "herkomst": "Synthetisch fragment van het eiwit thymosine bèta-4.",
+      "kort_antwoord": "TB-500 is een synthetisch onderzoekspeptide van zeven aminozuren: een kort fragment van het lichaamseigen eiwit thymosine bèta-4. Het is nergens als geneesmiddel goedgekeurd.",
+      "bronnen": []
+    },
+    {
+      "slug": "ghk-cu",
+      "naam": "GHK-Cu",
+      "synoniemen": ["Koperpeptide GHK-Cu", "Glycyl-L-histidyl-L-lysine koper(II)"],
+      "sequentie": "Gly-His-Lys · Cu(II)",
+      "aantal_aminozuren": 3,
+      "molecuulformule": "C14H23CuN6O4+",
+      "molecuulmassa": 402.92,
+      "pubchem_cid": 71587328,
+      "herkomst": "GHK komt van nature voor in bloedplasma en bindt sterk aan koper.",
+      "kort_antwoord": "GHK-Cu is het tripeptide glycine-histidine-lysine met een gebonden koperion. GHK komt van nature voor in bloedplasma en bindt sterk aan koper.",
+      "bronnen": [21780203]
+    },
+    {
+      "slug": "ipamorelin",
+      "naam": "Ipamorelin",
+      "synoniemen": ["NNC 26-0161"],
+      "sequentie": "Aib-His-D-2Nal-D-Phe-Lys-NH2",
+      "aantal_aminozuren": 5,
+      "molecuulformule": "C38H49N9O5",
+      "molecuulmassa": 711.9,
+      "pubchem_cid": 9831659,
+      "herkomst": "In 1998 beschreven door onderzoekers van Novo Nordisk.",
+      "kort_antwoord": "Ipamorelin is een synthetisch onderzoekspeptide van vijf bouwstenen, in 1998 beschreven door onderzoekers van Novo Nordisk. Het is nergens als geneesmiddel goedgekeurd.",
+      "bronnen": [9849822]
+    },
+    {
+      "slug": "epithalon",
+      "naam": "Epithalon",
+      "synoniemen": ["Epitalon", "AEDG-peptide"],
+      "sequentie": "Ala-Glu-Asp-Gly",
+      "aantal_aminozuren": 4,
+      "molecuulformule": "C14H22N4O9",
+      "molecuulmassa": 390.35,
+      "pubchem_cid": 219042,
+      "herkomst": "Afgeleid van een extract uit de pijnappelklier.",
+      "kort_antwoord": "Epithalon is een synthetisch onderzoekspeptide van vier aminozuren (Ala-Glu-Asp-Gly), afgeleid van een extract uit de pijnappelklier. Klinisch is het onbewezen.",
+      "bronnen": [42884164]
+    }
+  ],
+  "bronnen": [
+    { "pmid": 8298609, "titel": "A new gastric juice peptide, BPC. An overview of the stomach-stress-organoprotection hypothesis and beneficial effects of BPC", "auteurs": "Sikirić P, et al.", "tijdschrift": "J Physiol Paris", "jaar": 1993, "soort": "review", "onafhankelijk": false },
+    { "pmid": 21780203, "titel": "X-ray and solution structures of Cu(II) GHK and Cu(II) DAHK complexes: influence on their redox properties", "auteurs": "Hureau C, et al.", "tijdschrift": "Chemistry", "jaar": 2011, "soort": "chemie", "onafhankelijk": true },
+    { "pmid": 9849822, "titel": "Ipamorelin, the first selective growth hormone secretagogue", "auteurs": "Raun K, et al.", "tijdschrift": "Eur J Endocrinol", "jaar": 1998, "soort": "dier", "onafhankelijk": false },
+    { "pmid": 42884164, "titel": "Epitalon and Epithalamin: A Narrative Review of Mechanistic, Preclinical, and Clinical Evidence", "auteurs": "Jain A, et al.", "tijdschrift": "Int J Mol Sci", "jaar": 2026, "soort": "review", "onafhankelijk": true }
+  ],
+  "producten": [
+    { "peptide": "bpc-157",    "slug": "bpc-157-5mg",    "sku": "PM-BPC157-5",  "naam": "BPC-157 5 mg",    "hoeveelheid_mg": 5,  "prijs_cent": null, "voorraad": 0 },
+    { "peptide": "tb-500",     "slug": "tb-500-5mg",     "sku": "PM-TB500-5",   "naam": "TB-500 5 mg",     "hoeveelheid_mg": 5,  "prijs_cent": null, "voorraad": 0 },
+    { "peptide": "ghk-cu",     "slug": "ghk-cu-50mg",    "sku": "PM-GHKCU-50",  "naam": "GHK-Cu 50 mg",    "hoeveelheid_mg": 50, "prijs_cent": null, "voorraad": 0 },
+    { "peptide": "ipamorelin", "slug": "ipamorelin-5mg", "sku": "PM-IPA-5",     "naam": "Ipamorelin 5 mg", "hoeveelheid_mg": 5,  "prijs_cent": null, "voorraad": 0 },
+    { "peptide": "epithalon",  "slug": "epithalon-10mg", "sku": "PM-EPI-10",    "naam": "Epithalon 10 mg", "hoeveelheid_mg": 10, "prijs_cent": null, "voorraad": 0 }
+  ]
+}
