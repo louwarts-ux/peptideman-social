@@ -69,7 +69,7 @@ De zin "In de literatuur wordt ook beschreven dat resten TFA in celkweekexperime
 
 **Nieuw:**
 
-> Volg altijd de opslagcondities op de productpagina.
+> Volg altijd de opslagcondities die de leverancier voor het specifieke peptide opgeeft.
 
 **Oud** (FAQ "Kan de zuiverheid na ontvangst nog veranderen?"):
 
@@ -77,7 +77,9 @@ De zin "In de literatuur wordt ook beschreven dat resten TFA in celkweekexperime
 
 **Nieuw:**
 
-> Koel, droog, donker en afgesloten bewaren volgens de productpagina helpt om het materiaal binnen specificatie te houden.
+> Koel, droog, donker en afgesloten bewaren volgens de opgave van de leverancier helpt om het materiaal binnen specificatie te houden.
+
+*(Alternatief als David bevestigt dat de opslagcondities op elke productpagina staan: "op de productpagina" en "volgens de productpagina".)*
 
 ## 6. FAQ batchnummer: aandachtspunt toevoegen
 
@@ -96,8 +98,9 @@ De zin "In de literatuur wordt ook beschreven dat resten TFA in celkweekexperime
 ## Na te gaan door David
 - Klopt "op 15 van de 16 rapporten een zuiverheidswaarde, steeds 99% of hoger"? (niet bevestigd; stond er al)
 - Vermelden de Janoshik-rapporten opslagcondities? Zo ja, dan kan "op het COA" in punt 5 blijven.
+- Staat de opslagtemperatuur op de productpagina? Zo ja, dan kan punt 5 naar "op de productpagina" (alternatief).
 - Dit artikel overlapt sterk met `peptiden-zuiverheid-98-versus-99-uitgelegd` (claimcheck: samenvoegen overwegen, met 301 van het ene naar het andere; SEO-besluit).
 - Wat er op `kwaliteit.html` staat over batches.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

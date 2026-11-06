@@ -38,4 +38,4 @@ Titel, meta, H1, disclaimers, rekenvoorbeelden en bronnen blijven zoals ze zijn.
 - Wat er op `kwaliteit.html` staat over batches.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

@@ -14,9 +14,9 @@ Titel, meta, H1, disclaimers, bronnen en de algemene uitleg over direct sourcing
 
 **Nieuw:**
 
-> Volg de opslagtemperatuur op de productpagina.
+> Volg de opslagcondities die de leverancier voor het specifieke peptide opgeeft.
 
-*(Als David bevestigt dat elke productpagina de opslagtemperatuur van de fabrikant vermeldt, kan de oude zin blijven.)*
+*(Alternatief als David bevestigt dat de opslagtemperatuur op elke productpagina staat: "Volg de opslagtemperatuur op de productpagina." Vermeldt elke productpagina de temperatuur zoals opgegeven door de fabrikant, dan kan de oude zin blijven.)*
 
 ## 2. Na de CoA-checklist: eerlijk over de eigen certificaten
 
@@ -57,9 +57,9 @@ Bij een vraag of de documentatie volstaat voor een instelling is precies zijn be
 - De alinea over doorverkoop van oudere voorraad en "vraag om het oorspronkelijke certificaat van de fabrikant" is een algemene norm en staat niet naast een eigen link.
 
 ## Na te gaan door David
-- Vermeldt elke productpagina de opslagtemperatuur zoals opgegeven door de fabrikant? (punt 1)
+- Staat de opslagtemperatuur op de productpagina, zoals opgegeven door de fabrikant? Zo ja, dan kan in punt 1 de productpagina-versie of de oude zin. (punt 1)
 - Koopt PeptideMan rechtstreeks bij fabrikanten? Zo ja, dan kan dat er als feit bij; zo nee, dan wekt de titel "Direct sourcing … | PeptideMan" mogelijk een verkeerde indruk, en is een zin bovenaan het overwegen waard.
 - Wat er op `kwaliteit.html` staat over batches.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

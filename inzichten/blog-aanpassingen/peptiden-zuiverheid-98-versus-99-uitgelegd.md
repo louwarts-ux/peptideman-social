@@ -51,4 +51,4 @@ De zin "In celkweekexperimenten kunnen ze de uitkomst beïnvloeden of de pH vera
 - Dit artikel overlapt sterk met `98-procent-vs-99-procent-peptidezuiverheid-verschil` (claimcheck: samenvoegen overwegen, SEO-besluit).
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

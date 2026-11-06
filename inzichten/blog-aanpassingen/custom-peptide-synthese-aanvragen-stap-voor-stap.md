@@ -40,7 +40,15 @@ Het artikel zelf is goede algemene uitleg. Het probleem is dat titel, "dien de a
 
 > Custom peptide synthese aanvragen bij een syntheselab | PeptideMan
 
-*(Punt 1 lost het probleem in de tekst op; deze titel maakt het ook in Google duidelijk. SEO-keuze voor David.)*
+*(Deze titel klopt of PeptideMan nu wel of geen custom synthese aanbiedt, en maakt ook in Google duidelijk dat de aanvraag bij een syntheselab hoort.)*
+
+## 4. Geen PeptideMan-FAQ direct na de aanvraag
+
+**Oud** (laatste zin van de alinea onder de lijst bij "Welke gegevens horen in je aanvraag?", na "Bewaar een kopie van je aanvraag, …"):
+
+> Algemene vragen over PeptideMan worden beantwoord in de [veelgestelde vragen](https://peptideman.nl/faq.html).
+
+**Nieuw:** niets. Op deze plek wekt de zin de indruk dat je de aanvraag bij PeptideMan indient.
 
 ## Niet aangepast
 - De uitleg over specificaties, modificaties, zuiverheid, hoeveelheid, doorlooptijd en veelgemaakte fouten blijft. Met punt 1 staat er duidelijk dat de "aanvraag" en "offerte" bij een syntheselaboratorium horen.
@@ -51,4 +59,4 @@ Het artikel zelf is goede algemene uitleg. Het probleem is dat titel, "dien de a
 - Wat staat er op `kwaliteit.html`? (punt 2 verwijst nu alleen naar `certificaten.html`)
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.
