@@ -36,7 +36,7 @@ Titel, meta, H1, disclaimers en de opslaguitleg blijven zoals ze zijn. Aanpassin
 
 **Nieuw:**
 
-> De termijnen zijn indicatief en verschillen per sequentie. De opslaginformatie op de productpagina en de literatuur over het specifieke peptide gaan altijd voor.
+> De termijnen zijn indicatief en verschillen per sequentie. De literatuur over het specifieke peptide gaat altijd voor.
 
 **Oud** (FAQ "Hoe lang blijft een waterig peptidemonster stabiel?"):
 
@@ -70,15 +70,26 @@ Titel, meta, H1, disclaimers en de opslaguitleg blijven zoals ze zijn. Aanpassin
 
 *(PeptideMan controleert zelf geen batches; Janoshik heeft per product één batch getest. Naar `certificaten.html`, omdat `kwaliteit.html` nog niet is nagekeken.)*
 
+## 6. Zuiverheid op een CoA: geen "HPLC"
+
+**Oud** (onder "Welke fouten komen vaak voor bij het bewaren van peptiden?"):
+
+> De HPLC-zuiverheid op het CoA geldt voor het moment van analyse.
+
+**Nieuw:**
+
+> De zuiverheid op een CoA geldt voor het moment van analyse.
+
+*(De eigen rapporten vermelden de analysemethode niet. In de FAQ "Zegt de zuiverheid op het CoA iets over de toestand na opslag?" staat dezelfde zin met "Nee. " ervoor; vervang hem daar op dezelfde manier.)*
+
 ## Niet aangepast
 - De opslagtabel, de vries-dooi-uitleg en "Laat een koud flesje op kamertemperatuur komen" zijn labpraktijk voor opslag, geen gebruiksinstructie voor mensen.
-- "De HPLC-zuiverheid op het CoA geldt voor het moment van analyse" (twee keer) gaat over CoA's in het algemeen en blijft.
 - Bronnen (PMID 2687836, 20143256, 3805008) passen bij de beweringen over stabiliteit en deamidering/isomerisatie.
 
 ## Na te gaan door David
 - Vermelden de Janoshik-rapporten het tegenion, opslagcondities of een houdbaarheid? Zo ja, dan kunnen punt 2 en 3 het CoA weer noemen.
-- Staat er op de productpagina's opslaginformatie? Punt 3 verwijst ernaar; zo niet, dan "De literatuur over het specifieke peptide gaat altijd voor."
+- Staat er op de productpagina's opslaginformatie? Zo ja, dan kan punt 3 luiden: "De opslaginformatie op de productpagina en de literatuur over het specifieke peptide gaan altijd voor."
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.

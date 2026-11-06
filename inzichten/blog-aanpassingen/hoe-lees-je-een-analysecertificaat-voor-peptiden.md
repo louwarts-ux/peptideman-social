@@ -20,6 +20,8 @@ Titel, meta, H1, disclaimers en de uitleg over HPLC en massaspectrometrie blijve
 >
 > Een COA (Certificate of Analysis) is geen marketingmateriaal. Het is analytische documentatie. Idealiter hoort bij elke batch een eigen rapport, met eigen meetwaarden.
 
+*(De zin die in de alinea volgt, "Daarom is het belangrijk dat je weet welke onderdelen erin horen en hoe je ze met elkaar in verband brengt.", blijft staan.)*
+
 ## 2. Massaspectrometrie: minder stellig
 
 **Oud** (samenvatting onder "Hoe bevestigt massaspectrometrie de identiteit van een peptide?"):
@@ -80,7 +82,7 @@ De tweede rij vervalt. Onder de tabel, vóór "Een leverancier die open is over 
 
 **Nieuw:**
 
-> Welke certificaten PeptideMan publiceert, zie je op de pagina met [certificaten van analyse](https://peptideman.nl/certificaten.html). Bekijk ook het [overzicht van onderzoekspeptiden](https://peptideman.nl/peptiden.html).
+> Op onze [certificatenpagina](https://peptideman.nl/certificaten.html) zie je welke van deze gegevens in onze rapporten staan en welke niet. Bekijk ook het [overzicht van onderzoekspeptiden](https://peptideman.nl/peptiden.html).
 
 *(Naar `certificaten.html`, omdat `kwaliteit.html` nog niet is nagekeken.)*
 
@@ -106,4 +108,4 @@ De tweede rij vervalt. Onder de tabel, vóór "Een leverancier die open is over 
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

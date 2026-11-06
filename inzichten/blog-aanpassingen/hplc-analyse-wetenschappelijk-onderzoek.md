@@ -41,4 +41,4 @@ Titel, meta, H1, disclaimers en de technische uitleg over HPLC blijven zoals ze 
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

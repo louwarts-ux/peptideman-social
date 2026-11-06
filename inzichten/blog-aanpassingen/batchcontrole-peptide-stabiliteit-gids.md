@@ -58,7 +58,7 @@ Disclaimers, de uitleg over afbraakroutes, HPLC, opslag en batchvariatie blijven
 
 **Nieuw:**
 
-> Welke certificaten PeptideMan publiceert, zie je op de pagina met [certificaten van analyse](https://peptideman.nl/certificaten.html). Bekijk ook het [overzicht van onderzoekspeptiden](https://peptideman.nl/peptiden.html).
+> Op onze [certificatenpagina](https://peptideman.nl/certificaten.html) zie je welke van deze gegevens in onze rapporten staan en welke niet. Bekijk ook het [overzicht van onderzoekspeptiden](https://peptideman.nl/peptiden.html).
 
 *(Naar `certificaten.html`, omdat `kwaliteit.html` nog niet is nagekeken.)*
 
@@ -92,4 +92,4 @@ Disclaimers, de uitleg over afbraakroutes, HPLC, opslag en batchvariatie blijven
 - Wil je de slug ook aanpassen (bijv. `batchvariatie-peptide-stabiliteit-gids` met 301)? Optioneel.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

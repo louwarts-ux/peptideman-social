@@ -58,10 +58,8 @@ Titel, meta, H1, disclaimers en de algemene uitleg over verzendmethoden, track &
 >
 > Een goede verpakking houdt de vials op hun plek en vangt schokken tijdens het sorteren op. De neutrale buitenkant beschermt de inhoud en je privacy. In het pakket hoort de productinformatie die je nodig hebt voor je administratie, zoals het batchnummer, zodat je de zending kunt koppelen aan het bijbehorende analysecertificaat.
 
-**Nieuw:**
+**Nieuw** (eerste alinea vervalt; verpakking is niet bevestigd):
 
-> Zendingen gaan in stevige verpakking die de vials op hun plek houdt.
->
 > Een goede verpakking houdt de vials op hun plek en vangt schokken tijdens het sorteren op. Vraag de leverancier waar je het batchnummer vindt en of er voor die batch een analysecertificaat is, zodat je de zending kunt koppelen aan de juiste gegevens.
 
 ## 6. FAQ verpakking: zelfde aanpassing
@@ -72,7 +70,7 @@ Titel, meta, H1, disclaimers en de algemene uitleg over verzendmethoden, track &
 
 **Nieuw:**
 
-> Zendingen gaan in stevige verpakking die de vials op hun plek houdt.
+> Een goede verpakking is stevig en houdt de vials op hun plek. Vraag de leverancier hoe zendingen verpakt worden en waar je het batchnummer vindt.
 
 ## 7. FAQ certificaat per batch: aandachtspunt toevoegen
 
@@ -102,7 +100,7 @@ Titel, meta, H1, disclaimers en de algemene uitleg over verzendmethoden, track &
 
 **Nieuw:**
 
-> Bewaar peptiden volgens de opslagcondities op de productpagina, meestal koel, droog en donker.
+> Bewaar peptiden volgens de opslagcondities die de leverancier voor het specifieke peptide opgeeft, meestal koel, droog en donker.
 
 **Oud** (FAQ "Wat doe je direct na ontvangst van een zending?"):
 

@@ -96,6 +96,7 @@ En direct onder de lijst, als nieuwe alinea:
 - FAQ, regelgeving (verwijst naar een jurist) en de slotdisclaimer zijn in orde.
 
 ## Na te gaan door David
+- Staat er een batchnummer op de Janoshik-rapporten? Zo niet, dan valt het signaal "Rapport zonder batchnummer" (punt 5) op PeptideMan terug en moet dat punt opnieuw worden bekeken.
 - Staat op elke vial een batchnummer en een houdbaarheidsdatum? Stap 3 noemt dat als kenmerk van een goede levering. Zo niet, dan valt PeptideMan daar alsnog op af en is ook die regel aan te passen.
 - Is de zending te volgen met tracking, en is de verpakking beschermd tegen vocht en warmte (stap 3)? Niet bevestigd.
 - Vermelden de Janoshik-rapporten een batchnummer, testdatum, chromatogram en ondertekening? Dat bepaalt hoe streng de checklist in punt 4 voor PeptideMan uitvalt.
@@ -103,4 +104,4 @@ En direct onder de lijst, als nieuwe alinea:
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

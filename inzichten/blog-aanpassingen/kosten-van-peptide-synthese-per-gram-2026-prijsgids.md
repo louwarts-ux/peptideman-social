@@ -51,7 +51,7 @@ Titel, meta, H1, disclaimers en de uitleg over synthesekosten blijven zoals ze z
 ## Na te gaan door David
 - Vermelden de Janoshik-rapporten een massaspectrum, productiedatum, opslagcondities of houdbaarheid? Zo ja, dan kan in punt 2 concreter staan wat er wel op staat.
 - Wat staat er op `kwaliteit.html`?
-- Het artikel gaat over synthese op bestelling. Biedt PeptideMan custom synthese aan (verwacht: nee)? Zo niet, dan kan bovenaan een zin als bij `custom-peptide-synthese-aanvragen-stap-voor-stap`: "PeptideMan biedt zelf geen custom synthese aan; dit artikel legt uit hoe de kosten bij een syntheselaboratorium zijn opgebouwd."
+- Het artikel gaat over synthese op bestelling. Biedt PeptideMan custom synthese aan (verwacht: nee)? Optioneel, pas na bevestiging door David: dan kan bovenaan een zin als bij `custom-peptide-synthese-aanvragen-stap-voor-stap`: "PeptideMan biedt zelf geen custom synthese aan; dit artikel legt uit hoe de kosten bij een syntheselaboratorium zijn opgebouwd."
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

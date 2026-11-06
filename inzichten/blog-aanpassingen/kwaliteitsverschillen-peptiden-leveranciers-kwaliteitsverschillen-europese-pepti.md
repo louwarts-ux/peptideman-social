@@ -117,4 +117,4 @@ Titel, H1, disclaimers en de uitleg over HPLC, MS, TFA, endotoxinen en logistiek
 - Wat staat er op `kwaliteit.html`?
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.
