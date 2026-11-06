@@ -74,8 +74,38 @@ Deze zin beschrijft precies wat PeptideMan publiceert (het rapport van één get
 
 Met een 301-redirect van de oude URL naar `https://peptideman.nl/blog/kwaliteit-peptideleverancier-controleren/`, en interne links bijwerken. De nieuwe slug sluit aan op de titel ("Kwaliteit peptideleverancier controleren"). Het woord "garantie" in de URL kan als belofte over de eigen producten worden gelezen.
 
+## 7. Kern: geen "COA per batch" als eis
+
+**Oud** (onder "Wat is de kern?"):
+
+> Kwaliteit is controleerbaar als HPLC, massaspectrometrie, COA per batch en GMP-status consistent zijn, aangevuld met aandacht voor synthese, transport en stabiliteit.
+
+**Nieuw:**
+
+> Kwaliteit is controleerbaar als HPLC, massaspectrometrie, een COA met batchnummer en GMP-status consistent zijn, aangevuld met aandacht voor synthese, transport en stabiliteit.
+
+## 8. FAQ transparante leverancier: geen "per batch een ondertekend COA"
+
+**Oud** (FAQ "Waaraan herken je een transparante leverancier van onderzoekspeptiden?"):
+
+> Een transparante leverancier deelt per batch een ondertekend COA met chromatogram, MS-resultaat en batchnummer.
+
+**Nieuw:**
+
+> Een transparante leverancier laat zien welke batch is getest, door wie en wat er is gemeten, bij voorkeur met chromatogram en MS-resultaat.
+
+## 9. FAQ GMP: geen "COA per batch"
+
+**Oud** (FAQ "Garandeert GMP-certificering de kwaliteit van een batch?"):
+
+> Combineer de GMP-status van de productielocatie daarom altijd met HPLC- en MS-resultaten op een COA per batch.
+
+**Nieuw:**
+
+> Combineer de GMP-status van de productielocatie daarom altijd met HPLC- en MS-resultaten op een COA waarvan je weet bij welke batch het hoort.
+
 ## Niet aangepast
-- De normen voor een volledig COA (methode, golflengte, MS, ondertekening), de vergelijkingstabel en de FAQ "Waaraan herken je een transparante leverancier" blijven als algemene uitleg. Ze staan niet direct naast een link naar de eigen certificaten; de nieuwe zin in punt 1 laat de lezer zien wat de eigen rapporten wel en niet bevatten.
+- De normen voor een volledig COA (methode, golflengte, MS, ondertekening) en de vergelijkingstabel blijven als algemene uitleg. Ze staan niet direct naast een link naar de eigen certificaten; de nieuwe zin in punt 1 laat de lezer zien wat de eigen rapporten wel en niet bevatten. Waar een norm "per batch" als eis stelde (kern, FAQ), is die in punt 7 tot en met 9 afgezwakt.
 - De H1 ("kwaliteitsgarantie van een peptideleverancier") gaat over leveranciers in het algemeen.
 
 ## Na te gaan door David
@@ -87,4 +117,4 @@ Met een 301-redirect van de oude URL naar `https://peptideman.nl/blog/kwaliteit-
 - Wat er op `kwaliteit.html` staat over batches.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN (licht); punten verwerkt.

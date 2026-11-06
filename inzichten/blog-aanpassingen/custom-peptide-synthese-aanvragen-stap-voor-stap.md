@@ -28,9 +28,9 @@ Het artikel zelf is goede algemene uitleg. Het probleem is dat titel, "dien de a
 
 **Nieuw:**
 
-> Voor het standaardassortiment van PeptideMan staat voor 16 van de 18 producten het Janoshik-rapport van één geteste batch op de pagina met [analysecertificaten](https://peptideman.nl/certificaten.html). De rapporten vermelden de analysemethode niet.
+> Van de producten van PeptideMan staat voor 16 van de 18 het Janoshik-rapport van één geteste batch op de pagina met [analysecertificaten](https://peptideman.nl/certificaten.html). Je flacon kan uit een latere batch komen, en de rapporten vermelden de analysemethode niet.
 
-## 3. Titel (optioneel)
+## 3. Titel
 
 **Oud** (title-tag):
 

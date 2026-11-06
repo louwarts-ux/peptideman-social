@@ -6,21 +6,9 @@ Bron van de oude tekst: live pagina, via Firecrawl opgehaald op 6 nov 2026.
 
 Titel, H1, disclaimers en de uitleg over HPLC, MS en het CoA blijven zoals ze zijn. Hieronder staat per plek de oude tekst en de nieuwe tekst.
 
-## 1. Productlink BPC-157 weg uit de alinea over peesschade (belangrijkste punt)
+## 1. De hele BPC-157-sectie, de FAQ en de twee BPC-157-bronnen weg (aanbevolen, belangrijkste punt)
 
-**Oud** (slot van "Waarom vraagt BPC-157 om extra aandacht voor kwaliteit?"):
-
-> Vraag daarom naar HPLC- en MS-gegevens en kijk of de zuiverheid over meerdere batches consistent is. De specificaties staan op de productpagina van [BPC-157 (10 mg) voor laboratoriumonderzoek](https://peptideman.nl/producten/bpc-157-10mg.html).
-
-**Nieuw:**
-
-> Vraag daarom naar HPLC- en MS-gegevens en kijk of de zuiverheid over meerdere batches consistent is.
-
-*(Een kooplink direct na dieronderzoek naar peesschade kan als medische aanprijzing worden gelezen; Geneesmiddelenwet, jurist. Zelfde patroon als in het afgekeurde `peptiden-voor-wetenschappelijk-onderzoek-kopen`.)*
-
-## 2. Aanbevolen: de hele BPC-157-sectie, de FAQ en de twee BPC-157-bronnen weg
-
-Het artikel gaat over kwaliteit beoordelen; de sectie over BPC-157 en peesschade voegt daar weinig aan toe en de bronnen hebben "healing" in de titel. Zo is het ook opgelost in `peptiden-voor-wetenschappelijk-onderzoek-kopen`. Als David dit doet, vervalt punt 1.
+Het artikel gaat over kwaliteit beoordelen; de sectie over BPC-157 en peesschade voegt daar weinig aan toe en de bronnen hebben "healing" in de titel. Zo is het ook opgelost in `peptiden-voor-wetenschappelijk-onderzoek-kopen`. Een kooplink of BPC-157-sectie naast dieronderzoek naar peesschade kan als medische aanprijzing worden gelezen (Geneesmiddelenwet; jurist).
 
 **Oud** (kop + drie alinea's, tussen "Wat hoort er op een Certificate of Analysis?" en "Hoe bewaar je gevriesdroogde peptiden in het laboratorium?"):
 
@@ -47,6 +35,20 @@ Het artikel gaat over kwaliteit beoordelen; de sectie over BPC-157 en peesschade
 
 > - [Reversed phase high pressure liquid chromatography for the identification and purification of neuropeptides](https://pubmed.ncbi.nlm.nih.gov/7070207/) (Life Sci, 1982)
 > - [Characterization of Synthetic Peptides by Mass Spectrometry](https://pubmed.ncbi.nlm.nih.gov/26424265/) (Methods Mol Biol, 2015)
+
+## 2. Alleen als alternatief voor punt 1: sectie laten staan, productlink eruit
+
+Kiest David niet voor punt 1, dan minimaal deze wijziging. De bronnen met "healing" in de titel blijven dan staan; dat blijft een punt voor de jurist.
+
+**Oud** (slot van "Waarom vraagt BPC-157 om extra aandacht voor kwaliteit?"):
+
+> Vraag daarom naar HPLC- en MS-gegevens en kijk of de zuiverheid over meerdere batches consistent is. De specificaties staan op de productpagina van [BPC-157 (10 mg) voor laboratoriumonderzoek](https://peptideman.nl/producten/bpc-157-10mg.html).
+
+**Nieuw:**
+
+> Vraag daarom naar HPLC- en MS-gegevens en kijk of de zuiverheid over meerdere batches consistent is.
+
+*(Een kooplink direct na dieronderzoek naar peesschade kan als medische aanprijzing worden gelezen; Geneesmiddelenwet, jurist. Zelfde patroon als in het afgekeurde `peptiden-voor-wetenschappelijk-onderzoek-kopen`.)*
 
 ## 3. Meta: geen "CoA per batch" in Google
 
@@ -133,7 +135,7 @@ Het artikel gaat over kwaliteit beoordelen; de sectie over BPC-157 en peesschade
 - Is er een beleid voor batches die niet aan de specificaties voldoen (vervanging)? Het artikel noemt dat als kenmerk van een betrouwbare leverancier.
 - Staat er een batchnummer op elke vial?
 - Wat er op `kwaliteit.html` staat over batches.
-- Voor de jurist: BPC-157 met productlink naast dieronderzoek naar peesschade (punt 1 en 2), en een artikel gericht op "farmaceutisch onderzoek" terwijl de webshop aan particulieren (18+) verkoopt.
+- Voor de jurist: BPC-157 met productlink naast dieronderzoek naar peesschade (vervalt met punt 1; blijft spelen bij alternatief punt 2), en een artikel gericht op "farmaceutisch onderzoek" terwijl de webshop aan particulieren (18+) verkoopt.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

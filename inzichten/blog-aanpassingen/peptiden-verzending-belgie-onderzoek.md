@@ -2,6 +2,8 @@
 
 URL: https://peptideman.nl/blog/peptiden-verzending-belgie-onderzoek/
 Oordeel claimcheck 6 nov 2026: AANPASSEN (zie `inzichten/2026-11-06-blog-claimcheck.md`).
+
+**Niet live zetten voordat David bevestigt dat PeptideMan naar België levert; bij ja eerst jurist.**
 Bron van de oude tekst: live pagina, via Firecrawl opgehaald op 6 nov 2026.
 
 Titel en meta blijven. Let op: het hele artikel gaat uit van levering naar België. Dat is niet bevestigd (zie "Na te gaan door David"). Levert PeptideMan niet naar België, dan hoort het artikel offline.
@@ -74,7 +76,23 @@ Titel en meta blijven. Let op: het hele artikel gaat uit van levering naar Belgi
 
 ## 6. Rechtstreekse inkoop: geen onbevestigde inkoop en geen controle vóór verzending
 
-**Oud** (onder "Wat betekent rechtstreekse inkoop voor de kwaliteit?", na de eerste alinea):
+**Oud** (kop):
+
+> ## Wat betekent rechtstreekse inkoop voor de kwaliteit?
+
+**Nieuw:**
+
+> ## Wat zegt de herkomst over de kwaliteit?
+
+**Oud** (eerste alinea onder die kop):
+
+> Rechtstreekse inkoop betekent minder schakels tussen synthese en laboratorium. Dat maakt de herkomst van een batch beter te volgen en de kwaliteitscontrole overzichtelijker.
+
+**Nieuw:**
+
+> Hoe minder schakels tussen synthese en laboratorium, hoe beter de herkomst van een batch te volgen is.
+
+**Oud** (zelfde sectie, na de eerste alinea):
 
 > PeptideMan werkt rechtstreeks met synthesefabrikanten. Van 16 van de 18 producten is een batch onafhankelijk geanalyseerd; de rapporten staan op de certificatenpagina. Dat heeft twee praktische gevolgen:
 >
@@ -85,7 +103,7 @@ Titel en meta blijven. Let op: het hele artikel gaat uit van levering naar Belgi
 
 > Van 16 van de 18 producten van PeptideMan is één batch onafhankelijk geanalyseerd door Janoshik; de rapporten staan op de certificatenpagina. Je vial kan uit een latere batch komen, en de rapporten vermelden de analysemethode niet.
 
-*(De eerste alinea en de kop blijven als algemene uitleg. Bevestigt David de rechtstreekse inkoop, dan kan "PeptideMan werkt rechtstreeks met synthesefabrikanten." terug.)*
+*(Bevestigt David de rechtstreekse inkoop, dan kan "PeptideMan werkt rechtstreeks met synthesefabrikanten." terug.)*
 
 ## 7. Verpakking: algemeen formuleren (vochtopnemer en isolatie niet bevestigd)
 
@@ -202,4 +220,4 @@ Titel en meta blijven. Let op: het hele artikel gaat uit van levering naar Belgi
 - Wat staat er op `kwaliteit.html`? (punt 4 verwijst nu naar `certificaten.html`)
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN; punten verwerkt.

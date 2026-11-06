@@ -108,7 +108,9 @@ Titel, meta, H1, disclaimers en de algemene uitleg over verzendmethoden, track &
 
 **Nieuw:**
 
-> bewaar het materiaal volgens de opslagcondities op de productpagina.
+> bewaar het materiaal volgens de opslagcondities die de leverancier voor het specifieke peptide opgeeft.
+
+*(Alternatief als David bevestigt dat de opslagtemperatuur op elke productpagina staat: "volgens de opslagcondities op de productpagina".)*
 
 ## Niet aangepast
 - De alinea over een korte keten ("rechtstreekse samenwerking met productiefaciliteiten", "elke werkdag pakketten aanmeldt") is algemeen geformuleerd en zegt niets over PeptideMan. Blijft, maar zie hieronder.
@@ -119,8 +121,9 @@ Titel, meta, H1, disclaimers en de algemene uitleg over verzendmethoden, track &
 - Biedt PeptideMan expresslevering of dagelijkse verzending aan? Koopt PeptideMan rechtstreeks bij fabrikanten? Zo ja, dan kan dat er concreet bij; zo nee, dan blijft de tekst algemeen.
 - Staat er een batchnummer op elke vial of bij de zending? Zo ja, dan kan punt 5 concreter.
 - Staan er opslagcondities op de Janoshik-rapporten? Zo ja, dan kan "of certificaat" in punt 9 blijven.
+- Staat de opslagtemperatuur op de productpagina? Zo ja, dan kan punt 9 naar "op de productpagina" (alternatief).
 - Verpakking (neutrale buitenkant, isolatie, vochtopnemer): niet bevestigd, daarom weggelaten.
 - Wat er op `kwaliteit.html` staat over batches.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN (licht); punten verwerkt.

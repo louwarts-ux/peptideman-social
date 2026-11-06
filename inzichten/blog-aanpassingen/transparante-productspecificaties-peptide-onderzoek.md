@@ -29,6 +29,26 @@ De uitspraak "In celkweekonderzoek is beschreven dat resterend trifluoracetaat d
 
 > Op onze pagina met [analysecertificaten](https://peptideman.nl/certificaten.html) zie je welke van deze gegevens in onze rapporten staan en welke niet.
 
+## 2a. Norm "batchnummer moet overeenkomen": eerlijk over een afwijkend nummer
+
+**Oud** (onder "Batchinformatie en traceerbaarheid"):
+
+> Het batchnummer op het certificaat moet overeenkomen met het etiket op de vial.
+
+**Nieuw:**
+
+> Idealiter komt het batchnummer op het certificaat overeen met het etiket op de vial. Wijkt het af, dan beschrijft het certificaat een andere, eerder geteste batch; dat zegt minder over jouw materiaal.
+
+## 2b. Controle bij ontvangst
+
+**Oud** (onder "Wat kun je controleren bij ontvangst?"):
+
+> Vergelijk het batchnummer op de vial met het certificaat en controleer of de verpakking intact is.
+
+**Nieuw:**
+
+> Vergelijk het batchnummer op de vial met het certificaat; wijkt het af, dan hoort het certificaat bij een andere batch. Controleer ook of de verpakking intact is.
+
 ## 3. "Afwijkend batchnummer" als teken van een onvolledig certificaat: aandachtspunt
 
 Bij PeptideMan kan de flacon uit een latere batch komen dan de geteste batch. Als rode vlag keurt deze regel de eigen werkwijze af.
@@ -71,4 +91,4 @@ Bij PeptideMan kan de flacon uit een latere batch komen dan de geteste batch. Al
 - Wat er op `kwaliteit.html` staat over batches.
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: AANPASSEN (licht); punten verwerkt.
