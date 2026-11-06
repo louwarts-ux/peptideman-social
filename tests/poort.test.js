@@ -70,6 +70,26 @@ test('Metricool: geen beeld, stil kanaal of claim wordt tegengehouden', () => {
   assert.match(reden, /afvalclaim/)
 })
 
+test('Metricool: terugzetten naar concept mag altijd, ook op een stil kanaal of met een foute tekst', () => {
+  const terug = over => beoordeel({
+    tool_name: `${M}updateScheduledPost`,
+    tool_input: { info: info({ providers: [{ network: 'threads' }], media: [], text: 'Afvallen met peptiden', ...over }) },
+  })
+  assert.strictEqual(terug({ draft: true, autoPublish: false }), null)
+  assert.match(terug({ draft: true, autoPublish: true }), /autoPublish aanzetten/)
+  assert.match(terug({ draft: true }), /threads ligt stil/)
+  assert.match(terug({ draft: false, autoPublish: false }), /threads ligt stil/)
+  assert.match(terug({ draft: 'true', autoPublish: false }), /threads ligt stil/)
+})
+
+test('Metricool: een nieuw concept op een stil kanaal blijft dicht', () => {
+  const reden = beoordeel({
+    tool_name: `${M}createScheduledPost`,
+    tool_input: { info: info({ draft: true, autoPublish: false, providers: [{ network: 'threads' }] }) },
+  })
+  assert.match(reden, /threads ligt stil/)
+})
+
 test('als hook: exit 2 met reden op stderr', () => {
   const event = { tool_name: `${M}createScheduledPost`, tool_input: {} }
   const r = spawnSync('node', [path.join(ROOT, 'scripts/hooks/poort.js')], { input: JSON.stringify(event), encoding: 'utf8' })

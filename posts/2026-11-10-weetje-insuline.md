@@ -16,5 +16,6 @@ hashtags: #insuline #peptideonderzoek #biochemie #aminozuren #PeptideMan
 bron: https://pubmed.ncbi.nlm.nih.gov/33610859/ (Flier JS, Kahn CR. Mol Metab 2021;52:101194. "Insulin: A pacesetter for the shape of modern biomedical science and the Nobel Prize")
 
 beeld: posts/media/2026-11-10-weetje-insuline.png
-beeld-url: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-10-weetje-insuline.png
 claimcheck: GOED
+ingepland: 2026-11-10 11:00 (concept)

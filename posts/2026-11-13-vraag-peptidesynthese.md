@@ -16,5 +16,6 @@ hashtags: #peptidesynthese #peptideonderzoek #labwerk #PeptideMan
 bron: https://pubmed.ncbi.nlm.nih.gov/18079725/ (Coin I, Beyermann M, Bienert M. Nat Protoc 2007;2(12):3247-56. "Solid-phase peptide synthesis: from standard procedures to the synthesis of difficult sequences")
 
 beeld: posts/media/2026-11-13-vraag-peptidesynthese.png
-beeld-url: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-13-vraag-peptidesynthese.png
 claimcheck: GOED
+ingepland: 2026-11-13 11:00 (concept)

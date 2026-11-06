@@ -103,6 +103,12 @@ function checkPost(text) {
     if (lengte > 150) letOp.push(`TikTok-caption is ${lengte} tekens, advies maximaal 150`)
   }
   if (kanaal.includes('pinterest') && !post['pin-titel']) letOp.push('pin-titel ontbreekt (een zoekvraag)')
+  if (kanaal.includes('pinterest')) {
+    // Twee pins faalden met "400 Invalid request", vermoedelijk door een te lange beschrijving
+    // (caption plus hashtags, zo gaat hij naar Metricool). Nog niet bevestigd, dus een waarschuwing.
+    const lengte = [...[post.caption, post.hashtags].filter(Boolean).join('\n\n')].length
+    if (lengte > 500) letOp.push(`Pinterest-beschrijving is ${lengte} tekens, advies maximaal 500`)
+  }
 
   const beeldUrl = post['beeld-url'] ?? 'open'
   if (beeldUrl !== 'open' && !/^https:\/\//.test(beeldUrl)) fout.push('beeld-url is geen https-link')

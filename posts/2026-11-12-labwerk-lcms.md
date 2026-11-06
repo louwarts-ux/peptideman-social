@@ -16,5 +16,6 @@ hashtags: #LCMS #HPLC #peptideonderzoek #labwerk #PeptideMan
 bron: https://pubmed.ncbi.nlm.nih.gov/26424265/ (Prabhala BK, Mirza O, Højrup P, Hansen PR. Methods Mol Biol 2015;1348. "Characterization of Synthetic Peptides by Mass Spectrometry")
 
 beeld: posts/media/2026-11-12-labwerk-lcms.png
-beeld-url: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-12-labwerk-lcms.png
 claimcheck: GOED
+ingepland: 2026-11-12 11:00 (concept)

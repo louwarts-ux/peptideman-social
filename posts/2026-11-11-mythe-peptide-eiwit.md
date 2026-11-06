@@ -16,5 +16,6 @@ hashtags: #peptiden #eiwitten #aminozuren #peptideonderzoek #PeptideMan
 bron: https://pubmed.ncbi.nlm.nih.gov/32965931/ (Protein Structure and Function, PubMed 32965931)
 
 beeld: posts/media/2026-11-11-mythe-peptide-eiwit.png
-beeld-url: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-11-mythe-peptide-eiwit.png
 claimcheck: GOED
+ingepland: 2026-11-11 11:00 (concept)

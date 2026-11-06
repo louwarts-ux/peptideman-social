@@ -13,5 +13,6 @@ bron: https://pubmed.ncbi.nlm.nih.gov/36768879/ ("The Long Way of Oxytocin from 
 soort-bron: overzichtsartikel (geschiedenis en fysiologie), geen eigen experiment en geen studie bij mensen. Alleen de structuurfeiten uit de abstract zijn gebruikt: oxytocine is een nonapeptide (CYIQNCPLG-NH2) met een disulfidebrug tussen de cysteines op positie 1 en 6; de aminozuurvolgorde van oxytocine en vasopressine is bepaald en chemisch gesynthetiseerd; dit leidde tot de Nobelprijs voor du Vigneaud in 1955. Geen fysiologische effecten overgenomen.
 
 beeld: posts/media/2026-11-15-weetje-klein-hormoon.png
-beeld-url: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-15-weetje-klein-hormoon.png
 claimcheck: GOED
+ingepland: 2026-11-15 08:00 (concept)

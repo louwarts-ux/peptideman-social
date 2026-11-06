@@ -13,5 +13,6 @@ bron: https://pubmed.ncbi.nlm.nih.gov/26879647/ (Preston GW, Phillips DH. Anal B
 soort-bron: methodeartikel (analytische chemie, synthetisch standaardpeptide), geen studie bij mens of dier. De abstract beschrijft dat piekoppervlakken uit een HPLC-UV-chromatogram worden gebruikt om een zuiverheidspercentage op massabasis te schatten, en dat dit semi-kwantitatief kan zijn omdat UV-absorptie niet voor alle stoffen evenredig is met massa.
 
 beeld: posts/media/2026-11-14-labwerk-99-procent.png
-beeld-url: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-14-labwerk-99-procent.png
 claimcheck: GOED
+ingepland: 2026-11-14 08:00 (concept)

@@ -2,7 +2,7 @@
 // PreToolUse-poort: houdt deterministisch tegen wat nooit mag, wat de agent ook denkt.
 // - Schrijven in posts/*.md: de nieuwe inhoud moet door `checkPost` komen.
 // - Metricool: direct publiceren is dicht; klaarzetten (ter beoordeling of als concept) en wijzigen
-//   alleen met een schone tekst en beeld.
+//   alleen met een schone tekst en beeld. Terugzetten naar concept (draft: true, autoPublish: false) mag altijd.
 // Exit 2 blokkeert de tool; de melding op stderr gaat terug naar Claude.
 const fs = require('fs')
 const path = require('path')
@@ -41,6 +41,10 @@ function beoordeel({ tool_name: tool, tool_input: input = {} }, projectDir = pro
     if (tool === `${METRICOOL}createScheduledPost` && info.draft !== true) {
       return 'Direct publiceren is dicht. Zet de post klaar als concept ("draft": true) of met createScheduledPostForReview, zodat David hem eerst goedkeurt.'
     }
+    // Terugtrekken: een bestaande post terugzetten naar concept zonder automatisch publiceren mag
+    // altijd, ook op een stil kanaal, zonder beeld of met een tekst die de regels breekt. Een concept
+    // gaat nooit vanzelf live, en juist zo'n post moet je van de planning kunnen halen.
+    if (tool === `${METRICOOL}updateScheduledPost` && info.draft === true && info.autoPublish === false) return null
     const netwerken = (info.providers ?? []).map(p => p.network)
     const problemen = []
     const anders = netwerken.filter(n => !KANALEN.includes(n))
