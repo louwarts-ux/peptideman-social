@@ -2,16 +2,10 @@ kanaal: Pinterest
 pijler: Weetje
 pin-titel: Wat is ipamorelin?
 pin-link: https://peptideman.nl
-beeldtekst: Wat is ipamorelin? Een peptide van 5 aminozuren, in 1998 beschreven. Onderzocht in rattencellen, ratten en varkens.
+beeldtekst: Wat is ipamorelin? Een peptide van 5 aminozuren, in 1998 beschreven. In deze studie: rattencellen, ratten en varkens. Nergens als geneesmiddel goedgekeurd.
 
 caption: |
-  Wat is ipamorelin? Een kort peptide van 5 aminozuren, in 1998 beschreven door onderzoekers van Novo Nordisk.
-
-  In rattencellen en bij ratten en varkens onderzochten zij via welke receptor de stof werkt en welke hormoonspiegels in het bloed veranderden. Het ging om cel- en dieronderzoek, niet om onderzoek bij mensen.
-
-  Ipamorelin is nergens als geneesmiddel goedgekeurd.
-
-  Bron: pubmed.ncbi.nlm.nih.gov/9849822
+  Wat is ipamorelin? Een peptide van 5 aminozuren, in 1998 beschreven door onderzoekers van Novo Nordisk. Zij onderzochten in rattencellen, ratten en varkens aan welke receptor de stof bindt. Nergens als geneesmiddel goedgekeurd. Bron: pubmed.ncbi.nlm.nih.gov/9849822
 
   Uitsluitend voor onderzoek.
 
