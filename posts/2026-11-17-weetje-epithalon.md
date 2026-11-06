@@ -19,3 +19,4 @@ bron: https://pubmed.ncbi.nlm.nih.gov/42884164/ (Jain A et al. Int J Mol Sci 202
 beeld: posts/media/2026-11-17-weetje-epithalon.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-17-weetje-epithalon.png
 claimcheck: GOED
+ingepland: 2026-11-17 11:00 (concept)
