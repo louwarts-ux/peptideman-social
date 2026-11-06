@@ -4,7 +4,7 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 
 ## De zaak
 - PeptideMan (peptideman.nl) is een Nederlandse webshop die onderzoekspeptiden online verkoopt aan particulieren.
-- Positionering: zuivere peptiden voor onderzoek, per batch onafhankelijk getest door Janoshik (HPLC/LC-MS), uitsluitend voor onderzoek.
+- Positionering: zuivere peptiden voor onderzoek, onafhankelijk getest door Janoshik, uitsluitend voor onderzoek. Voor 16 van de 18 producten staat het Janoshik-rapport van één geteste batch online; je flacon kan uit een latere batch komen, en de rapporten vermelden de analysemethode niet (stand certificatenpagina 6 nov 2026). Schrijf dus nooit "per batch getest", "elke batch", "met HPLC geanalyseerd" of "HPLC en MS" over PeptideMan zelf.
 - Verzending vanuit Nederland met PostNL en DHL: €6,95 per bestelling, gratis vanaf €150.
 - Concurrenten: NexGen (nextgenpeptides.nl), Dutch Peptide (dutchpeptide.com; niet verwarren met dutch-peptides.nl, "Dutch Peptides"), Peptidekoning (peptidekoning.to, was peptidekoning.com). Peptidekoning was op 3 nov 2026 niet bereikbaar, kreeg van de IGJ een verkoopverbod op drie afslankmiddelen (NOS) en staat op Trustpilot onder hetzelfde bedrijf als NexGen (NEXTGEN GROUP B.V., Utrecht). Andere Nederlandse shops op "peptides kopen": fit-peptides.com, peptidenederland.com, bropeptides.com (deelt zijn assortiment in naar vetverbranding, spierherstel en anti-aging; geen voorbeeld), peptidenstore.com, peptidemeester.org, peptidesvoordelig.nl.
 - Contact: peptideman.nl · info@peptideman.nl
