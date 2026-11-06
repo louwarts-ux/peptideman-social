@@ -154,11 +154,14 @@ en
 
 ## Na te gaan door David
 - Is Janoshik ISO/IEC 17025-geaccrediteerd? Het artikel noemt accreditatie meermaals als eis en vraagt de lezer het register te controleren.
-- Vermelden de Janoshik-rapporten een gemeten massa (MS)? Zo niet, dan valt PeptideMan onder de rode vlag "Geen massaspectrometrie"; overweeg ook die regel als aandachtspunt (zoals punt 6).
+- Vermelden de Janoshik-rapporten een gemeten massa (MS) en accreditatie? Zo niet, dan moeten deze drie plekken aandachtspunten worden (zoals punt 6), anders keurt het artikel PeptideMan alsnog af:
+  - de rode vlag "Geen massaspectrometrie, waardoor de identiteit niet bevestigd is.";
+  - de tabelrij "Massaspectrometrie | Gemeten en theoretische massa op het COA | Alleen HPLC";
+  - "geaccrediteerd laboratorium" en stap 1 van het stappenplan (register van de Raad voor Accreditatie). Janoshik staat niet in het Nederlandse RvA-register, dus een lezer die stap 1 volgt, vindt het lab daar niet.
 - Staan er chromatogrammen en opslaginformatie in de rapporten? Zo niet, dan geldt hetzelfde voor die rode vlaggen.
 - Kan PeptideMan per product een veiligheidsinformatieblad (SDS) leveren? De tabel noemt "Niet te krijgen" een waarschuwingssignaal.
 - Wat staat er op `kwaliteit.html`? (punt 8 verwijst nu naar `certificaten.html`)
 - Jurist: kwaliteitsuitspraken die verder gaan dan de rapporten (reclameregels, oneerlijke handelspraktijken).
 
 ## Controle
-Nog niet gecontroleerd door de claimcheck.
+Claimcheck 6 nov 2026: GOED.

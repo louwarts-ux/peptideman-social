@@ -36,13 +36,13 @@ Titel, meta en de rest van het artikel blijven. Alle wijzigingen zitten in de se
 
 ## 3. FAQ certificaat: zelfde aandachtspunt
 
-**Oud** (FAQ "Hoe krijg ik een certificaat van analyse van PeptideMan?", tweede zin):
+**Oud** (FAQ "Hoe krijg ik een certificaat van analyse van PeptideMan?", hele antwoord):
 
-> Vergelijk het batchnummer op het certificaat altijd met het nummer op je vial.
+> Voor 16 van de 18 producten staat het analysecertificaat van een geteste batch op de certificatenpagina. Vergelijk het batchnummer op het certificaat altijd met het nummer op je vial.
 
 **Nieuw:**
 
-> Je vial kan uit een latere batch komen, en de rapporten vermelden de analysemethode niet.
+> Voor 16 van de 18 producten staat het analysecertificaat van één geteste batch op de certificatenpagina. Je vial kan uit een latere batch komen, en de rapporten vermelden de analysemethode niet.
 
 ## Niet aangepast
 - De algemene uitleg over HPLC, MS, het COA en opslag blijft. De COA-tabel ("komt overeen met het label op je vial") staat ver van de eigen certificaten en is algemene uitleg.
