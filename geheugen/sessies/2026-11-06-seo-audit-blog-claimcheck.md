@@ -19,7 +19,7 @@
 - Open uit de vorige sessie blijft staan (concepten inplannen, oude posts weggooien, ~18 nov foto-experiment).
 
 **Besluiten**
-- Claude SEO niet in deze repo. David besloot regel 7 in de kennis aan te passen en de testclaim-regel in de poort op te nemen.
+- Claude SEO niet in deze repo. Regel 7 in de kennis aangepast en de testclaim-regel in de poort opgenomen, op verzoek van de gebruiker.
 
 **Let op**
 - curl naar peptideman.nl wordt door de proxy geblokkeerd (403); Firecrawl werkt wel. Hele artikelen overschrijven kost veel context: maximaal ±10 per agent. Eén artikel (syntheseroutes) werd door een filter tegengehouden; dat heb ik met gerichte citaten (`formats: query`) gecontroleerd.
