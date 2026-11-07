@@ -9,7 +9,7 @@
 - Beantwoord: "15 van 16 ≥99%" klopt (`certificaten/testresultaten.csv`), alle 18 productpagina's vermelden opslag, de site biedt alleen standaardproducten.
 
 **Open**
-- `retatrutide-simpel-uitgelegd`: herschrijven met bron en vraagkoppen (nu nog "per batch", geen bronnen).
+- Retatrutide-artikel: herschreven en live (PR #115, bundel `2026-11-07c`); jurist moet nog kijken. Certificaatpagina's van retatrutide noemen in de meta "(HPLC-UV / LC-MS)", terwijl de rapporten geen methode vermelden.
 - `waar-let-je-op-bij-leverancier-onderzoekspeptiden`: verhuisd artikel; de import schrijft niet naar de oude slug in Blobs. Import of route aanpassen.
 - `peptiden-verzending-belgie-onderzoek`: David bevestigt of PeptideMan naar België levert (en jurist).
 - Korte antwoorden onder een paar vraagkoppen; TAKENBORD van de site niet bijgewerkt; werkbranch van peptideman-social heeft een commit die nog niet in een PR zit.
