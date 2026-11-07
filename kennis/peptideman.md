@@ -16,10 +16,10 @@ De vaste bedrijfskennis voor alle agents in deze repo. Klopt hier iets niet meer
 - Uitstraling: zakelijk en rustig.
 
 ## Social
-- Actieve kanalen: TikTok, Pinterest en Instagram (@peptideman.nl, 80 berichten en 21 volgers op 3 nov 2026). Facebook ligt stil. De keten (poort, planner) plant nog alleen TikTok en Pinterest in via Metricool; Instagram valt daar nog buiten.
+- Actieve kanalen: TikTok, Pinterest en Instagram (@peptideman.nl, 80 berichten en 21 volgers op 3 nov 2026). Facebook ligt stil. De keten (poort, planner) plant alle drie in via Metricool, altijd als concept; Instagram sinds 8 nov 2026.
 - Metricool: merk-ID 6948479, tijdzone Europe/Amsterdam. Pinterest-bord voor de Bibliotheek: ID 967922213604666698. Pin-link: https://peptideman.nl.
 - Bibliotheek-pins gaan om 11:00 de deur uit, één per dag. Metricool geeft voor Pinterest geen beste tijden; neem dan de eerste vrije dag om 11:00.
-- Pinterest en TikTok eisen een beeld met een openbare link. Zonder `beeld-url` kan een post niet in Metricool. Vul `beeld-url` in zodra het beeld online staat, anders blijft de post hangen.
+- Pinterest, TikTok en Instagram eisen een beeld of video met een openbare link. Zonder `beeld-url` kan een post niet in Metricool. Vul `beeld-url` in zodra het beeld online staat, anders blijft de post hangen.
 - Beelden staan online via de aparte Netlify-site peptideman-media-hspj (site-ID aad221e0-ec80-4ecc-9987-3d34bcc78464), los van de webshop. Link: https://peptideman-media-hspj.netlify.app/social/<naam>.png. Deploy alleen een map met de PNG's in `social/`, nooit de hele repo.
 - Bibliotheek-reeks: korte, educatieve posts over peptideonderzoek in vijf pijlers: Weetje, Vraag van de dag, Mythe vs Feit, Video en Labwerk.
 - **Labwerk** is de pijler waarmee PeptideMan opvalt: laat zien hoe zuiverheid gemeten wordt. Denk aan een HPLC-chromatogram uitgelegd, wat er in een Janoshik-rapport staat, wat "99%" echt betekent, hoe je een vervalst rapport herkent. Concurrenten roepen "getest"; PeptideMan legt het uit. Geen claims nodig, wel vertrouwen.
@@ -51,6 +51,11 @@ Nog weinig data: 4 unieke TikTok-posts (8 t/m 30 okt), reacties overal 0. Pinter
 - Fotocarrousel: 4 à 6 beelden van 1080×1920, één gedachte per beeld, laatste beeld: "Volg voor meer uit het lab".
 - Caption kort (maximaal 150 tekens), 3 à 5 hashtags, geen link.
 - Elke post is nieuw: nooit een eerdere post herhalen.
+
+**Instagram: Reels en posts.**
+- Een Reel is een verticale video (1080×1920); net als op TikTok telt de eerste seconde.
+- Instagram toont alleen het begin van de caption vóór "meer": de kern staat in de eerste zin.
+- Links in de caption zijn niet klikbaar; zet "link in bio".
 
 ## Regels voor alle teksten
 - Geen gezondheidsclaims: niets over genezen, afvallen, spiergroei of verjonging bij mensen.

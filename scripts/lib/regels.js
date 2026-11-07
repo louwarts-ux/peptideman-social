@@ -40,7 +40,11 @@ const TESTEN = [
 // Verdient een tweede blik: over PeptideMan klopt het niet, als algemene uitleg mag het
 const METHODE = /\b(met HPLC (en (MS|massaspectrometrie) )?(ge)?analyse(e)?rd|HPLC- en (MS|massaspectrometrie)-?rapport)/i
 
-const KANALEN = ['tiktok', 'pinterest']
+// Kanalen die de keten mag inplannen (Metricool-namen). Facebook ligt stil.
+const KANALEN = ['tiktok', 'pinterest', 'instagram']
+const NAMEN = { tiktok: 'TikTok', pinterest: 'Pinterest', instagram: 'Instagram' }
+// Voor meldingen, afgeleid van KANALEN: "TikTok, Pinterest en Instagram"
+const ACTIEF = KANALEN.map(k => NAMEN[k] ?? k).join(', ').replace(/, ([^,]+)$/, ' en $1')
 const VELDEN = ['kanaal', 'pijler', 'caption', 'hashtags', 'bron', 'claimcheck']
 const DISCLAIMER = /uitsluitend voor onderzoek/i
 
@@ -102,7 +106,7 @@ function checkPost(text) {
   const { fout, letOp } = checkText(publiek, { kanaal })
 
   for (const veld of VELDEN) if (!post[veld]) fout.push(`veld "${veld}" ontbreekt`)
-  if (kanaal && !KANALEN.some(k => kanaal.includes(k))) fout.push(`kanaal "${post.kanaal}": alleen TikTok en Pinterest zijn actief`)
+  if (kanaal && !KANALEN.some(k => kanaal.includes(k))) fout.push(`kanaal "${post.kanaal}": alleen ${ACTIEF} zijn actief`)
   if (post.bron && !/pubmed\.ncbi\.nlm\.nih\.gov\/\d+/.test(post.bron) && !/labwerk/i.test(post.pijler ?? '')) {
     fout.push('bron is geen PubMed-link')
   }
@@ -138,4 +142,4 @@ function volgendeStap(post, fout = []) {
   return 'klaar'
 }
 
-module.exports = { parsePost, checkText, checkPost, volgendeStap, hashtagsVan, KANALEN }
+module.exports = { parsePost, checkText, checkPost, volgendeStap, hashtagsVan, KANALEN, ACTIEF }

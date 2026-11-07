@@ -63,11 +63,18 @@ test('Metricool: ook een concept moet schoon zijn', () => {
 test('Metricool: geen beeld, stil kanaal of claim wordt tegengehouden', () => {
   const reden = beoordeel({
     tool_name: `${M}createScheduledPostForReview`,
-    tool_input: { info: info({ media: [], providers: [{ network: 'instagram' }], text: 'Afvallen met peptiden' }) },
+    tool_input: { info: info({ media: [], providers: [{ network: 'facebook' }], text: 'Afvallen met peptiden' }) },
   })
   assert.match(reden, /geen beeld/)
-  assert.match(reden, /instagram ligt stil/)
+  assert.match(reden, /facebook ligt stil; alleen TikTok, Pinterest en Instagram/)
   assert.match(reden, /afvalclaim/)
+})
+
+test('Metricool: een Instagram-concept met schone tekst en beeld mag, samen met TikTok ook', () => {
+  const concept = providers => beoordeel({ tool_name: `${M}createScheduledPost`, tool_input: { info: info({ draft: true, providers }) } })
+  assert.strictEqual(concept([{ network: 'instagram' }]), null)
+  assert.strictEqual(concept([{ network: 'tiktok' }, { network: 'instagram' }]), null)
+  assert.match(concept([{ network: 'instagram' }, { network: 'facebook' }]), /facebook ligt stil/)
 })
 
 test('Metricool: terugzetten naar concept mag altijd, ook op een stil kanaal of met een foute tekst', () => {

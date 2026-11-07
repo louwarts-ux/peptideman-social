@@ -6,7 +6,7 @@
 // Exit 2 blokkeert de tool; de melding op stderr gaat terug naar Claude.
 const fs = require('fs')
 const path = require('path')
-const { checkPost, checkText, KANALEN } = require('../lib/regels')
+const { checkPost, checkText, KANALEN, ACTIEF } = require('../lib/regels')
 
 const METRICOOL = 'mcp__Metricool_Social_Media_Management__'
 
@@ -48,8 +48,8 @@ function beoordeel({ tool_name: tool, tool_input: input = {} }, projectDir = pro
     const netwerken = (info.providers ?? []).map(p => p.network)
     const problemen = []
     const anders = netwerken.filter(n => !KANALEN.includes(n))
-    if (anders.length) problemen.push(`kanaal ${anders.join(', ')} ligt stil; alleen TikTok en Pinterest`)
-    if (!(info.media ?? []).length) problemen.push('geen beeld: Pinterest en TikTok weigeren een post zonder beeld')
+    if (anders.length) problemen.push(`kanaal ${anders.join(', ')} ligt stil; alleen ${ACTIEF}`)
+    if (!(info.media ?? []).length) problemen.push(`geen beeld: ${ACTIEF} weigeren een post zonder beeld`)
     for (const m of info.media ?? []) if (!/^https:\/\//.test(m)) problemen.push(`beeld "${m}" is geen openbare https-link`)
     if (info.autoPublish === true && tool === `${METRICOOL}updateScheduledPost`) problemen.push('autoPublish aanzetten bij een wijziging mag niet')
     const tekst = [info.text, info.pinterestData?.pinTitle].filter(Boolean).join('\n')
