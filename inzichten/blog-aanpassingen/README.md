@@ -1,5 +1,11 @@
 # Blogaanpassingen peptideman.nl (6 november 2026)
 
+**Live sinds 7 november 2026:** 36 artikelen via peptideman-site PR #114 (bundel `2026-11-07-herschrijving`, met back-up in Netlify Blobs; terugzetten: `tools/herschrijf-blog.mjs --terugzetten 2026-11-07`). Na de deploy gecontroleerd: alle 36 pagina's tonen precies de nieuwe tekst; SEO- en winkelcontrole zonder fouten. Bij het doorvoeren zijn de punten uit een laatste inhoudsreview meegenomen, dus de live tekst wijkt hier en daar af van deze voorstellen. De bron van de live tekst is `peptideman-site/peptideman-2.0/blog-herschreven/`.
+
+Niet live gezet: `retatrutide-simpel-uitgelegd` (geen geschikte bron; koppen zijn geen vragen, dus moet breder herschreven), `waar-let-je-op-bij-leverancier-onderzoekspeptiden` (verhuisd artikel; de import schrijft niet naar de oude slug) en `peptiden-verzending-belgie-onderzoek` (wacht op bevestiging levering naar België).
+
+Beantwoord bij het doorvoeren: "15 van 16 rapporten ≥99%" klopt (`certificaten/testresultaten.csv`, `tools/test-zuiverheid.mjs`); alle 18 productpagina's vermelden opslag; de site biedt alleen standaardproducten (geen custom synthese).
+
 Per artikel een voorstel met de oude tekst (letterlijk, voor zoek-en-vervang) en de nieuwe tekst. Gebaseerd op `inzichten/2026-11-06-blog-claimcheck.md` en de aangepaste regel 7 in `kennis/peptideman.md`. De website zelf is niet aangepast: de sitecode staat in `louwarts-ux/peptideman-site`, en deze sessie kreeg daar geen toegang toe.
 
 ## Werkwijze

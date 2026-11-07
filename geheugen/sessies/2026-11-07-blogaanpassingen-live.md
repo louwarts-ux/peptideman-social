@@ -21,3 +21,9 @@
 **Let op**
 - Toegang tot `peptideman-site` werd eerst automatisch geweigerd en lukte pas op uitdrukkelijk verzoek.
 - Een bundel-import overschrijft `title` en `summary` in de index: neem die velden altijd mee.
+
+## Vervolg 7 nov: live
+- PR #10 (peptideman-social) gemerged. David bevestigde dat hij het is en vroeg om live zetten.
+- peptideman-site PR #114 gemerged: 36 artikelen via bundel `2026-11-07-herschrijving`. Live HTML opgehaald via `dancing-ganache-ac762d.netlify.app` (netlify.app mag wél door de proxy). Import laat nu ook oude schaduwvelden (`content_html` e.d.) weg; met test.
+- Gecontroleerd na deploy: 36/36 pagina's gelijk aan de bundel (eerst 29/36: Blobs is enkele seconden traag), `controleer-seo.sh` en `controleer-winkel.mjs` zonder fouten.
+- Open: retatrutide (herschrijven met bron en vraagkoppen), het verhuisde leveranciersartikel, België, korte antwoorden onder een paar vraagkoppen; TAKENBORD van de site niet bijgewerkt.
