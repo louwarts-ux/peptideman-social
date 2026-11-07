@@ -7,11 +7,12 @@
 - peptideman-site PR #114 gemerged en live: 36 artikelen via bundel `2026-11-07-herschrijving` (back-up in Blobs; terugzetten: `tools/herschrijf-blog.mjs --terugzetten 2026-11-07`). `netlify/lib/blog-import.mjs` laat nu oude schaduwvelden (`content_html` e.d.) weg, met test. Codereviewer en inhoudsreviewer akkoord; `node tools/verifieer.mjs` 20/20.
 - Na deploy: 36/36 pagina's gelijk aan de bundel, `controleer-seo.sh` en `controleer-winkel.mjs` zonder fouten (via `dancing-ganache-ac762d.netlify.app`).
 - Retatrutide-artikel volledig herschreven (strikt molecuul, receptoren, soort onderzoek; bron PMID 42942810 met neutraal label) en live via peptideman-site PR #115, bundel `2026-11-07c`. Claimcheck GOED, inhoudsreview en bronnencontrole verwerkt; live gelijk aan bundel. PR #11 en #12 (peptideman-social) gemerged.
+- Verhuisd leveranciersartikel live via PR #118 (bundel `2026-11-07f`); `blog-import.mjs` kent nu `bronSlug`. Oude URL 301, overzicht en sitemap zonder dubbel.
+- David (via andere sessie, 07-11): Janoshik is geaccrediteerd en de batchnummers op voorraad komen overeen met de geteste batches; niet als claim in teksten zolang er geen bron is.
 - Beantwoord: "15 van 16 ≥99%" klopt (`certificaten/testresultaten.csv`), alle 18 productpagina's vermelden opslag, de site biedt alleen standaardproducten.
 
 **Open**
 - Retatrutide-artikel: jurist moet nog kijken. Certificaatpagina's van retatrutide noemen in de meta "(HPLC-UV / LC-MS)", terwijl de rapporten geen methode vermelden.
-- `waar-let-je-op-bij-leverancier-onderzoekspeptiden`: verhuisd artikel; de import schrijft niet naar de oude slug in Blobs. Import of route aanpassen.
 - `peptiden-verzending-belgie-onderzoek`: David bevestigt of PeptideMan naar België levert (en jurist).
 - Korte antwoorden onder een paar vraagkoppen; TAKENBORD van de site niet bijgewerkt.
 - Jurist: punten uit `inzichten/blog-aanpassingen/README.md`. Trustpilot-knop weghalen.
