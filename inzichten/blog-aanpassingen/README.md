@@ -4,7 +4,9 @@
 
 Retatrutide: volledig herschreven en live sinds 7 november via peptideman-site PR #115 (strikt molecuul, receptoren en soort onderzoek; bron PMID 42942810). Jurist blijft nodig: retatrutide wordt vrijwel alleen met afvallen in verband gebracht.
 
-Niet live gezet: `waar-let-je-op-bij-leverancier-onderzoekspeptiden` (verhuisd artikel; de import schrijft niet naar de oude slug) en `peptiden-verzending-belgie-onderzoek` (wacht op bevestiging levering naar België).
+Verhuisd leveranciersartikel: live sinds 7 november via peptideman-site PR #118 (import schrijft verhuisde artikelen nu onder de oude slug).
+
+Niet live gezet: `peptiden-verzending-belgie-onderzoek` (wacht op bevestiging levering naar België).
 
 Beantwoord bij het doorvoeren: "15 van 16 rapporten ≥99%" klopt (`certificaten/testresultaten.csv`, `tools/test-zuiverheid.mjs`); alle 18 productpagina's vermelden opslag; de site biedt alleen standaardproducten (geen custom synthese).
 
