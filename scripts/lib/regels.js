@@ -30,6 +30,16 @@ const LICHAAM = [
   { re: /\b(gewichtsverlies|kilo'?s? kwijt|buikvet|vetverlies|slank(er)?|voor en na|before and after|body ?transformation|droogtrainen)\b/i, why: 'lichaamsverandering (Pinterest)' },
 ]
 
+// Overclaims over het testen bij PeptideMan: er staat per product het rapport van één geteste
+// batch online en dat rapport noemt geen analysemethode (kennis, regel 7; claimcheck blog 6 nov 2026).
+const TESTEN = [
+  { re: /\b(per|elke|iedere) (productie)?batch (wordt |is |onafhankelijk |apart )*(getest|geanalyseerd|gecontroleerd|geverifieerd)\b/i, why: 'overclaim: er is per product één batch getest, niet elke batch' },
+  { re: /\b(test|testen|controleren|analyseren) (wij |we )?(elke|iedere) (productie)?batch\b/i, why: 'overclaim: er is per product één batch getest, niet elke batch' },
+  { re: /\bper batch (getest|gecontroleerd|geborgd|borgen)\b/i, why: 'overclaim: er is per product één batch getest, niet elke batch' },
+]
+// Verdient een tweede blik: over PeptideMan klopt het niet, als algemene uitleg mag het
+const METHODE = /\b(met HPLC (en (MS|massaspectrometrie) )?(ge)?analyse(e)?rd|HPLC- en (MS|massaspectrometrie)-?rapport)/i
+
 const KANALEN = ['tiktok', 'pinterest']
 const VELDEN = ['kanaal', 'pijler', 'caption', 'hashtags', 'bron', 'claimcheck']
 const DISCLAIMER = /uitsluitend voor onderzoek/i
@@ -69,10 +79,13 @@ function checkText(text, { kanaal } = {}) {
   const letOp = []
   for (const c of vind(text, CLAIMS)) fout.push(`"${c.match}": ${c.why}`)
   for (const c of vind(text, DOSERING)) fout.push(`"${c.match}": ${c.why}`)
+  for (const c of vind(text, TESTEN)) fout.push(`"${c.match}": ${c.why}`)
   if (/pinterest/i.test(kanaal ?? '')) {
     for (const c of vind(text, LICHAAM)) fout.push(`"${c.match}": ${c.why}`)
   }
   if (!DISCLAIMER.test(text)) fout.push('"Uitsluitend voor onderzoek." ontbreekt')
+  const methode = text.match(METHODE)
+  if (methode) letOp.push(`"${methode[0]}": gaat dit over PeptideMan? De rapporten noemen geen analysemethode`)
   if (/\b\d+([.,]\d+)?\s?(mcg|µg|mg|iu|ie)\b/i.test(text)) letOp.push('bevat een hoeveelheid in mg/mcg/IE: is het echt onderzoek en geen dosering?')
   return { fout, letOp }
 }
