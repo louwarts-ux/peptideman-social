@@ -1,29 +1,25 @@
-# Sessie 7 nov 2026: aanpassingsvoorstellen blog en poging tot livegang
+# Sessie 7 nov 2026: blogaanpassingen live op peptideman.nl
 
-**Doel**: alle afgekeurde en aan te passen blogartikelen herschrijven en live zetten. Vervolg op `geheugen/sessies/2026-11-06-seo-audit-blog-claimcheck.md`.
+**Doel**: de claimcheck-aanpassingen voor de blog doorvoeren en live zetten. Vervolg op `geheugen/sessies/2026-11-06-seo-audit-blog-claimcheck.md`.
 
 **Gedaan**
-- `inzichten/blog-aanpassingen/`: 39 voorstellen (oude tekst letterlijk, nieuwe tekst), elk door de claimcheck gelezen. `README.md` geeft het overzicht, 9 vragen voor David en 5 punten voor de jurist. Nieuwe PMID's via eutils nagekeken (7070207, 26424265, 10567002, 27847966, 21030672, 16099219, 10469335).
-- PR #10 (peptideman-social, base `claude/mods-overview-a6tdns`) bijgewerkt; geen reviews, geen CI. Controle-check-ins via een geplande taak.
-- `peptideman-site` gekloond naar `/home/user/peptideman-site`. Niets gewijzigd.
+- `inzichten/blog-aanpassingen/`: 39 voorstellen (oud/nieuw) na claimcheck; `README.md` met de stand. PR #10 (peptideman-social) gemerged.
+- peptideman-site PR #114 gemerged en live: 36 artikelen via bundel `2026-11-07-herschrijving` (back-up in Blobs; terugzetten: `tools/herschrijf-blog.mjs --terugzetten 2026-11-07`). `netlify/lib/blog-import.mjs` laat nu oude schaduwvelden (`content_html` e.d.) weg, met test. Codereviewer en inhoudsreviewer akkoord; `node tools/verifieer.mjs` 20/20.
+- Na deploy: 36/36 pagina's gelijk aan de bundel, `controleer-seo.sh` en `controleer-winkel.mjs` zonder fouten (via `dancing-ganache-ac762d.netlify.app`).
+- Beantwoord: "15 van 16 ≥99%" klopt (`certificaten/testresultaten.csv`), alle 18 productpagina's vermelden opslag, de site biedt alleen standaardproducten.
 
 **Open**
-- Live zetten: blogartikelen staan in Netlify Blobs. Route: `tools/herschrijf-blog.mjs --bundel` → `netlify/functions/_blog_herschreven.json` (nieuwe stempel) → PR → na merge en productie-deploy importeert `deploy-succeeded.mjs` met back-up. Daarvoor is de huidige HTML per artikel nodig: `peptideman.nl` moet bereikbaar zijn (proxy 403).
-- Merge en deploy alleen als David het uitdrukkelijk vraagt (`peptideman-site/CLAUDE.md`).
-- Niet live: `peptiden-verzending-belgie-onderzoek` tot David bevestigt dat PeptideMan naar België levert (en jurist).
-- Bij 21 voorstellen is na het verwerken van de claimcheck geen tweede claimcheck gedaan.
-- David: de 9 vragen in de README. Jurist: de 5 punten. Overige open punten uit de sessie van 6 nov blijven staan.
+- `retatrutide-simpel-uitgelegd`: herschrijven met bron en vraagkoppen (nu nog "per batch", geen bronnen).
+- `waar-let-je-op-bij-leverancier-onderzoekspeptiden`: verhuisd artikel; de import schrijft niet naar de oude slug in Blobs. Import of route aanpassen.
+- `peptiden-verzending-belgie-onderzoek`: David bevestigt of PeptideMan naar België levert (en jurist).
+- Korte antwoorden onder een paar vraagkoppen; TAKENBORD van de site niet bijgewerkt; werkbranch van peptideman-social heeft een commit die nog niet in een PR zit.
+- Jurist: punten uit `inzichten/blog-aanpassingen/README.md`. Trustpilot-knop weghalen.
 
 **Besluiten**
-- Regel 7 van de kennis en de testclaim-regel in de poort: op verzoek van de gebruiker. Of het verzoek van David kwam is niet bevestigd.
-- Netwerktoegang tot `peptideman.nl` (nieuwe omgeving): geweigerd door de gebruiker. Niet opnieuw voorstellen zonder vraag.
+- David bevestigde dat hij de gebruiker is en vroeg om live zetten en mergen.
+- Netwerktoegang tot peptideman.nl (nieuwe omgeving) geweigerd; niet nodig gebleken.
 
 **Let op**
-- Toegang tot `peptideman-site` werd eerst automatisch geweigerd en lukte pas op uitdrukkelijk verzoek.
-- Een bundel-import overschrijft `title` en `summary` in de index: neem die velden altijd mee.
-
-## Vervolg 7 nov: live
-- PR #10 (peptideman-social) gemerged. David bevestigde dat hij het is en vroeg om live zetten.
-- peptideman-site PR #114 gemerged: 36 artikelen via bundel `2026-11-07-herschrijving`. Live HTML opgehaald via `dancing-ganache-ac762d.netlify.app` (netlify.app mag wél door de proxy). Import laat nu ook oude schaduwvelden (`content_html` e.d.) weg; met test.
-- Gecontroleerd na deploy: 36/36 pagina's gelijk aan de bundel (eerst 29/36: Blobs is enkele seconden traag), `controleer-seo.sh` en `controleer-winkel.mjs` zonder fouten.
-- Open: retatrutide (herschrijven met bron en vraagkoppen), het verhuisde leveranciersartikel, België, korte antwoorden onder een paar vraagkoppen; TAKENBORD van de site niet bijgewerkt.
+- `peptideman.nl` is geblokkeerd, maar `*.netlify.app` niet: haal live pagina's op via `https://dancing-ganache-ac762d.netlify.app/...`.
+- Blogartikelen staan in Netlify Blobs; aanpassen via een bundel in `netlify/functions/_blog_herschreven.json` (= werkmap `peptideman-2.0/blog-herschreven/`), import na productie-deploy. Blobs zijn enkele seconden traag na import.
+- Force-push en `checkout -B` worden geweigerd; gewoon bovenop committen.
