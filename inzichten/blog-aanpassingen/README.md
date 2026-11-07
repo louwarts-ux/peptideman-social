@@ -2,7 +2,9 @@
 
 **Live sinds 7 november 2026:** 36 artikelen via peptideman-site PR #114 (bundel `2026-11-07-herschrijving`, met back-up in Netlify Blobs; terugzetten: `tools/herschrijf-blog.mjs --terugzetten 2026-11-07`). Na de deploy gecontroleerd: alle 36 pagina's tonen precies de nieuwe tekst; SEO- en winkelcontrole zonder fouten. Bij het doorvoeren zijn de punten uit een laatste inhoudsreview meegenomen, dus de live tekst wijkt hier en daar af van deze voorstellen. De bron van de live tekst is `peptideman-site/peptideman-2.0/blog-herschreven/`.
 
-Niet live gezet: `retatrutide-simpel-uitgelegd` (geen geschikte bron; koppen zijn geen vragen, dus moet breder herschreven), `waar-let-je-op-bij-leverancier-onderzoekspeptiden` (verhuisd artikel; de import schrijft niet naar de oude slug) en `peptiden-verzending-belgie-onderzoek` (wacht op bevestiging levering naar België).
+Retatrutide: volledig herschreven en live sinds 7 november via peptideman-site PR #115 (strikt molecuul, receptoren en soort onderzoek; bron PMID 42942810). Jurist blijft nodig: retatrutide wordt vrijwel alleen met afvallen in verband gebracht.
+
+Niet live gezet: `waar-let-je-op-bij-leverancier-onderzoekspeptiden` (verhuisd artikel; de import schrijft niet naar de oude slug) en `peptiden-verzending-belgie-onderzoek` (wacht op bevestiging levering naar België).
 
 Beantwoord bij het doorvoeren: "15 van 16 rapporten ≥99%" klopt (`certificaten/testresultaten.csv`, `tools/test-zuiverheid.mjs`); alle 18 productpagina's vermelden opslag; de site biedt alleen standaardproducten (geen custom synthese).
 
