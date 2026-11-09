@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Labwerk chromatogram lezen</title>
+<style>
+:root{--bg:#0B0B0D;--gold:#C9A227;--text:#B7B1A3;--light:#F5F2EA;--surface:#141417;--border:#3A3A42}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1000px;height:1500px;background:var(--bg)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);position:relative;overflow:hidden}
+.tag{position:absolute;top:96px;left:80px;font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{position:absolute;top:160px;left:80px;right:80px;font-size:96px;line-height:1.05;color:var(--light);font-weight:800;letter-spacing:-.03em}
+h1 span{color:var(--gold)}
+.chart{position:absolute;top:640px;left:80px;right:80px;height:260px}
+.chart svg{width:100%;height:100%;display:block}
+.lab{position:absolute;top:925px;left:80px;right:80px;display:flex;justify-content:space-between;font-size:26px;color:var(--text)}
+.cap{position:absolute;top:990px;left:80px;right:80px;font-size:46px;line-height:1.15;color:var(--light);font-weight:600}
+.cap span{color:var(--gold)}
+.big{position:absolute;top:1130px;left:80px;right:80px;background:var(--surface);border:2px solid var(--border);border-radius:8px;padding:28px 36px;font-size:30px;line-height:1.4}
+.big b{color:var(--light)}
+.src{position:absolute;left:80px;right:80px;top:1325px;font-size:23px;line-height:1.4}
+.foot{position:absolute;left:80px;right:80px;bottom:64px;display:flex;align-items:center;gap:16px;font-size:24px}
+.logo{width:44px;height:44px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center}
+.foot .url{margin-left:auto;color:var(--gold)}
+</style></head><body>
+<div class="tag">Labwerk · Bibliotheek</div>
+<h1>Hoe lees je een <span>HPLC-chromatogram?</span></h1>
+<div class="chart"><svg viewBox="0 0 840 260" preserveAspectRatio="none">
+<line x1="0" y1="250" x2="840" y2="250" stroke="#3A3A42" stroke-width="3"/>
+<path d="M0 250 L120 250 Q150 250 160 235 Q170 215 180 235 Q190 250 220 250 L330 250 Q380 250 400 150 Q420 20 440 20 Q460 20 480 150 Q500 250 550 250 L640 250 Q665 250 675 225 Q685 205 695 225 Q705 250 730 250 L840 250" fill="none" stroke="#C9A227" stroke-width="5" stroke-linejoin="round"/>
+<line x1="440" y1="20" x2="440" y2="250" stroke="#3A3A42" stroke-width="2" stroke-dasharray="8 8"/>
+</svg></div>
+<div class="lab"><span>retentietijd →</span><span>piek = meestal één stof</span></div>
+<div class="cap">Een piek: <span>meestal één stof.</span></div>
+<div class="big"><b>Retentietijd:</b> het moment waarop de piek verschijnt. <b>Oppervlak:</b> hoe groot het signaal van die stof is.</div>
+<div class="src">Bron: Preston &amp; Phillips, Anal Bioanal Chem 2016 · PubMed 26879647<br>Methodeartikel · Uitsluitend voor onderzoek.</div>
+<div class="foot"><div class="logo">P</div>PeptideMan<span class="url">peptideman.nl</span></div>
+</body></html>
