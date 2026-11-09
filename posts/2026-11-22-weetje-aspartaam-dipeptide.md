@@ -2,10 +2,10 @@ kanaal: TikTok
 pijler: Weetje
 titel: Een zoetmiddel dat eigenlijk een peptide is
 eerste-beeld: Dit zoetmiddel is eigenlijk een peptide
-beeldtekst: 2. Dit zoetmiddel is eigenlijk een peptide. Aspartaam bestaat uit twee aminozuren aan elkaar: een dipeptide.
+beeldtekst: Dit zoetmiddel is eigenlijk een peptide. Aspartaam bestaat uit twee aminozuren aan elkaar: een dipeptide.
 
 caption: |
-  Aspartaam bestaat uit twee aminozuren aan elkaar. Dat is een dipeptide. Bron: PubMed 7381839. Uitsluitend voor onderzoek.
+  Aspartaam: twee aminozuren aan elkaar (aspartaat en fenylalanine), met een methylgroep. Een dipeptide. PubMed 7381839. Uitsluitend voor onderzoek.
 
 
 hashtags: #zoetmiddel #scheikunde #wistjedat #peptideonderzoek
@@ -14,5 +14,6 @@ bron: https://pubmed.ncbi.nlm.nih.gov/7381839/ ("Peptide sweeteners. 3. Effect o
 soort-bron: chemisch onderzoek (synthese van analogen, structuur-activiteit), geen dier- of celstudie. Alleen het structuurfeit uit de abstract is gebruikt: de abstract noemt aspartaam "the dipeptide sweetener L-aspartyl-L-phenylalanine methyl ester", dus twee aminozuren (aspartaat en fenylalanine) met een methylester. Geen smaak-, veiligheids-, gezondheids- of consumptieclaims overgenomen.
 
 beeld: posts/media/2026-11-22-weetje-aspartaam-dipeptide.png
-beeld-url: open
-claimcheck: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-22-weetje-aspartaam-dipeptide.png
+claimcheck: GOED
+ingepland: 2026-11-22 14:30 (concept)
