@@ -20,4 +20,4 @@ flow-url: https://elevenlabs.io/app/flows/vNElLTSBBqrwZm6zPZYP
 video-bestand: posts/media/2026-10-29-video-hplc-zuiverheid-v2.mp4 (14 s, 720x1280, stem + muziek + woordmerk; Dell-logo weggeretoucheerd en 0-14 s per seconde nagekeken; niet in git, alleen lokaal en straks op de mediasite)
 video-url: open
 ai-label: aan
-claimcheck: open
+claimcheck: GOED
