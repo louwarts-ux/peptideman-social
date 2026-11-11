@@ -13,11 +13,11 @@ caption: |
 
 hashtags: #labwerk #HPLC #wetenschap #peptideonderzoek #PeptideMan
 
-bron: https://pubmed.ncbi.nlm.nih.gov/7070207/ (Moore GJ, 1982. Reversed-phase HPLC als snelle en effectieve techniek om de zuiverheid van synthetische peptiden te beoordelen. Methodeartikel.)
+bron: https://pubmed.ncbi.nlm.nih.gov/7070207/ (Moore GJ. Reversed phase high pressure liquid chromatography for the identification and purification of neuropeptides. Life Sci. 1982;30(12):995-1002. Abstract: RP-HPLC "provides a fast and effective technique for assessing the purity of synthetic peptides". Methodeartikel; gecontroleerd via NCBI op 11 nov 2026.)
 
 modellen: Seedance 2.5 (720p, 9:16, 14 s), stem eleven_v4 "Harry", muziek eleven_music_v2_5
 flow-url: https://elevenlabs.io/app/flows/vNElLTSBBqrwZm6zPZYP
-video-bestand: peptideman-hplc-99-zuiver-v2.mp4 (14 s, 720x1280, stem + muziek + woordmerk, Dell-logo weg)
+video-bestand: posts/media/2026-10-29-video-hplc-zuiverheid-v2.mp4 (14 s, 720x1280, stem + muziek + woordmerk; Dell-logo weggeretoucheerd en 0-14 s per seconde nagekeken; niet in git, alleen lokaal en straks op de mediasite)
 video-url: open
 ai-label: aan
 claimcheck: open
