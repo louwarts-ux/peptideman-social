@@ -68,10 +68,15 @@ test('TikTok: link in caption is fout, lange caption een waarschuwing', () => {
 })
 
 test('meer dan vijf hashtags en een stil kanaal', () => {
-  const post = voorbeeld.replace('kanaal: Pinterest', 'kanaal: Instagram').replace('#PeptideMan', '#PeptideMan #a #b')
+  const post = voorbeeld.replace('kanaal: Pinterest', 'kanaal: Facebook').replace('#PeptideMan', '#PeptideMan #a #b')
   const { fout } = checkPost(post)
   assert.ok(fout.some(f => f.includes('7 hashtags')))
-  assert.ok(fout.some(f => f.includes('alleen TikTok en Pinterest')))
+  assert.ok(fout.some(f => f.includes('kanaal "Facebook": alleen TikTok, Pinterest en Instagram zijn actief')))
+})
+
+test('Instagram is een actief kanaal', () => {
+  const { fout } = checkPost(voorbeeld.replace('kanaal: Pinterest', 'kanaal: Instagram'))
+  assert.deepStrictEqual(fout, [])
 })
 
 test('overclaims over het testen: "per batch" en "elke batch" zijn fout, HPLC-methode is let op', () => {
