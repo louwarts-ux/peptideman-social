@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Vraag van de dag peptidevolgorde</title>
+<style>
+:root{--bg:#0B0B0D;--gold:#C9A227;--text:#B7B1A3;--light:#F5F2EA;--surface:#141417;--border:#3A3A42}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1000px;height:1500px;background:var(--bg)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);position:relative;overflow:hidden}
+.tag{position:absolute;top:96px;left:80px;font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{position:absolute;top:160px;left:80px;right:80px;font-size:92px;line-height:1.05;color:var(--light);font-weight:800;letter-spacing:-.03em}
+h1 span{color:var(--gold)}
+.row{position:absolute;top:520px;left:80px;right:80px;height:210px;display:flex;align-items:center;justify-content:space-between}
+.aa{width:230px;height:210px;border-radius:8px;border:3px solid var(--gold);background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.aa .c3{font-size:52px;font-weight:700;color:var(--light);line-height:1.1}
+.aa .c1{font-size:88px;font-weight:800;color:var(--gold);line-height:1.1}
+.dash{font-size:56px;font-weight:700;color:var(--border)}
+.ends{position:absolute;top:750px;left:80px;right:80px;display:flex;justify-content:space-between;font-size:26px;font-weight:600;color:var(--text)}
+.ends b{color:var(--gold)}
+.cap{position:absolute;top:840px;left:80px;right:80px;font-size:56px;line-height:1.15;color:var(--light);font-weight:600}
+.cap span{color:var(--gold)}
+.big{position:absolute;top:980px;left:80px;right:80px;background:var(--surface);border:2px solid var(--border);border-radius:8px;padding:34px 36px;font-size:32px;line-height:1.4}
+.big b{color:var(--light)}
+.src{position:absolute;left:80px;right:80px;top:1260px;font-size:24px;line-height:1.4}
+.foot{position:absolute;left:80px;right:80px;bottom:64px;display:flex;align-items:center;gap:16px;font-size:24px}
+.logo{width:44px;height:44px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center}
+.foot .url{margin-left:auto;color:var(--gold)}
+</style></head><body>
+<div class="tag">Vraag van de dag · Bibliotheek</div>
+<h1>Hoe lees je een <span>peptidevolgorde?</span></h1>
+<div class="row">
+<div class="aa"><div class="c3">Gly</div><div class="c1">G</div></div><div class="dash">-</div>
+<div class="aa"><div class="c3">Ala</div><div class="c1">A</div></div><div class="dash">-</div>
+<div class="aa"><div class="c3">Ser</div><div class="c1">S</div></div>
+</div>
+<div class="ends"><span>begin: <b>N</b>-terminus</span><span>einde: <b>C</b>-terminus</span></div>
+<div class="cap">Gly-Ala-Ser wordt <span>GAS.</span></div>
+<div class="big">Lees van <b>links naar rechts</b>: van de N-terminus (vrije aminogroep) naar de C-terminus. Elk aminozuur heeft een code van <b>drie letters</b> (met streepjes) of <b>één letter</b> (zonder streepjes).</div>
+<div class="src">Bron: IUPAC-IUB, Eur J Biochem 1984 · PubMed 6692818<br>Nomenclatuur-aanbeveling. Voorbeeld verzonnen.<br>Uitsluitend voor onderzoek.</div>
+<div class="foot"><div class="logo">P</div>PeptideMan<span class="url">peptideman.nl</span></div>
+</body></html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><title>Weetje peptidebinding</title>
+<style>
+:root{--bg:#0B0B0D;--gold:#C9A227;--text:#B7B1A3;--light:#F5F2EA;--surface:#141417;--border:#3A3A42}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;background:var(--bg)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);position:relative;overflow:hidden}
+.tag{position:absolute;top:150px;left:90px;font-size:34px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{position:absolute;top:270px;left:90px;right:90px;font-size:120px;line-height:1.06;color:var(--light);font-weight:800;letter-spacing:-.04em}
+h1 span{color:var(--gold)}
+.flat{position:absolute;top:950px;left:90px;right:90px;height:200px}
+.flat .line{position:absolute;top:58px;left:0;right:0;height:4px;background:var(--gold)}
+.flat .dot{position:absolute;top:30px;width:60px;height:60px;border-radius:50%;border:4px solid var(--gold);background:var(--bg)}
+.lbl{position:absolute;top:1170px;left:90px;right:90px;font-size:36px;letter-spacing:.04em;color:var(--text)}
+.big{position:absolute;top:1250px;left:90px;right:90px;background:var(--surface);border:2px solid var(--border);border-radius:8px;padding:32px 44px;font-size:40px;line-height:1.3}
+.big b{color:var(--light)}
+.src{position:absolute;left:90px;right:90px;top:1590px;font-size:28px;line-height:1.4}
+.foot{position:absolute;left:90px;right:90px;bottom:90px;display:flex;align-items:center;gap:20px;font-size:34px}
+.logo{width:64px;height:64px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:800;font-size:40px;display:flex;align-items:center;justify-content:center}
+.foot .url{margin-left:auto;color:var(--gold)}
+</style></head><body>
+<div class="tag">Weetje · Bibliotheek</div>
+<h1>Een peptide is een ketting met bijna <span>platte schakels.</span></h1>
+<div class="flat"><svg viewBox="0 0 900 200" width="900" height="200" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<polygon points="300,40 600,40 640,150 340,150" fill="rgba(201,162,39,.16)" stroke="#C9A227" stroke-width="4" stroke-dasharray="14 10"/>
+<polyline points="20,150 160,60 300,150 450,60 600,150 750,60 880,150" fill="none" stroke="#B7B1A3" stroke-width="6" stroke-linejoin="round"/>
+<g fill="#0B0B0D" stroke="#C9A227" stroke-width="5"><circle cx="20" cy="150" r="16"/><circle cx="160" cy="60" r="16"/><circle cx="300" cy="150" r="16"/><circle cx="450" cy="60" r="16"/><circle cx="600" cy="150" r="16"/><circle cx="750" cy="60" r="16"/><circle cx="880" cy="150" r="16"/></g>
+</svg></div>
+<div class="lbl">Gemarkeerd: één schakel, vrijwel vlak</div>
+<div class="big">Waar twee aminozuren aan elkaar zitten, ligt dat stukje (de <b>peptidebinding</b>) vrijwel in één vlak. Kleine afwijkingen komen voor.</div>
+<div class="src">Bron: Proteins 2015 (structuurartikel) · PubMed 26148341<br>Uitsluitend voor onderzoek.</div>
+<div class="foot"><div class="logo">P</div>PeptideMan<span class="url">peptideman.nl</span></div>
+</body></html>
