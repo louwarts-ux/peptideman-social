@@ -19,3 +19,5 @@ beeld: posts/media/2026-11-23-labwerk-retentietijd.png
 beeld-url: open
 claimcheck: open
 soort-bron: overzichtsartikel (review, J Sep Sci 2022). Abstract: hydrofobiciteit is een belangrijke eigenschap van peptiden en eiwitten; het artikel bespreekt hoe die bepaald wordt, onder meer via gedrag in reversed-phase vloeistofchromatografie, en hoe die ook voor scheiding en zuivering een cruciale rol speelt. Geen studie bij mensen of dieren.
+
+status: weggelaten na twee toetsrondes (eindredacteur: AANPASSEN; claimcheck: GOED). Niet ingepland.

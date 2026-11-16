@@ -19,3 +19,5 @@ beeld: posts/media/2026-11-26-labwerk-zuivering.png
 beeld-url: open
 claimcheck: open
 soort-bron: methodeartikel (chemie, J Pept Sci 2023). Abstract (uittreksel): zuivering met HPLC kost veel oplosmiddel en moeite en laat zich lastig parallelliseren; als alternatief zijn veel catch-and-release-methoden ontwikkeld. Het artikel beschrijft het wegnemen van ingekorte ketens na SPPS. Geen studie bij mensen of dieren.
+
+status: weggelaten na twee toetsrondes (eindredacteur: AANPASSEN; claimcheck: GOED). Niet ingepland.

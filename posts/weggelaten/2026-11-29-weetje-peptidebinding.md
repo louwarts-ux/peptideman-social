@@ -15,3 +15,5 @@ soort-bron: structuur-/methodeartikel (kristallografie), geen studie bij mensen 
 beeld: posts/media/2026-11-29-weetje-peptidebinding.png
 beeld-url: open
 claimcheck: open
+
+status: weggelaten na twee toetsrondes (eindredacteur: AANPASSEN; claimcheck: GOED). Niet ingepland.

@@ -19,3 +19,5 @@ soort-bron: moleculair-biologisch onderzoek aan kikkerhuid (dier), geen studie b
 beeld: posts/media/2026-11-25-mythe-d-aminozuren.png
 beeld-url: open
 claimcheck: open
+
+status: weggelaten na twee toetsrondes (eindredacteur: AANPASSEN; claimcheck: GOED). Niet ingepland.

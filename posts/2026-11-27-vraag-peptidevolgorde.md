@@ -17,5 +17,5 @@ bron: https://pubmed.ncbi.nlm.nih.gov/6692818/ (IUPAC-IUB Joint Commission on Bi
 soort-bron: nomenclatuur-aanbeveling, geen onderzoek bij mensen of dieren
 
 beeld: posts/media/2026-11-27-vraag-peptidevolgorde.png
-beeld-url: open
-claimcheck: open
+beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-27-vraag-peptidevolgorde.png
+claimcheck: GOED

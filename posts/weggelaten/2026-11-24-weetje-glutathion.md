@@ -19,3 +19,5 @@ soort-bron: overzichtsartikel over celbiochemie (opbouw en afbraak van glutathio
 beeld: posts/media/2026-11-24-weetje-glutathion.png
 beeld-url: open
 claimcheck: open
+
+status: weggelaten na twee toetsrondes (eindredacteur: AANPASSEN; claimcheck: GOED). Niet ingepland.
