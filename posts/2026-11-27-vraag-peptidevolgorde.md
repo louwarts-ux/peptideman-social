@@ -19,3 +19,4 @@ soort-bron: nomenclatuur-aanbeveling, geen onderzoek bij mensen of dieren
 beeld: posts/media/2026-11-27-vraag-peptidevolgorde.png
 beeld-url: https://peptideman-media-hspj.netlify.app/social/2026-11-27-vraag-peptidevolgorde.png
 claimcheck: GOED
+ingepland: 2026-11-27 15:00 (concept, Metricool-id 429753793; 11:00 uit het plan was bezet door een Black Week-concept)
