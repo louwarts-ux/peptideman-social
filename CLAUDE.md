@@ -34,6 +34,7 @@ Weigert de poort iets, pas dan de tekst aan. Zet de hook niet uit.
 ```
 node scripts/pm.js status    # stand en volgende stap per post
 node scripts/pm.js check     # alle posts tegen de regels
+node scripts/pm.js tekst [platform] "<tekst>"   # losse tekst tegen de regels en platformlimieten
 node scripts/pm.js shield    # agents, hooks en repo op risico's
 node scripts/pm.js doctor    # is alles aanwezig
 npm test                     # tests van regels en hooks

@@ -92,3 +92,31 @@ test('overclaims over het testen: "per batch" en "elke batch" zijn fout, HPLC-me
   assert.deepStrictEqual(schoon.fout, [])
   assert.deepStrictEqual(schoon.letOp, [])
 })
+
+// Gaten die bleken bij het vergelijken met de oude caption-check-mod (17-11-2026).
+test('afvalbelofte met een getal is fout, ook in het Engels', () => {
+  for (const zin of ['Lose 5 kg in a month.', 'Drop 10 lbs fast.', 'In een maand 5 kilo kwijt.', 'Zo ben je 3 kg lichter.']) {
+    const { fout } = checkText(zin + ' Uitsluitend voor onderzoek.')
+    assert.ok(fout.some(f => /afvalclaim/.test(f)), `${zin} -> ${fout.join('; ')}`)
+  }
+})
+
+test('voorkomen/preventie verdient een tweede blik, maar is geen fout', () => {
+  for (const zin of ['BPC-157 voorkomt blessures.', 'Prevents muscle loss.', 'Onderzoek naar preventie van ontstekingen.', 'In muizen voorkwam het schade.']) {
+    const { fout, letOp } = checkText(zin + ' Uitsluitend voor onderzoek.')
+    assert.deepStrictEqual(fout, [], zin)
+    assert.ok(letOp.some(l => /voorkomen|preventie/.test(l)), `${zin} -> ${letOp.join('; ')}`)
+  }
+})
+
+test('"voorkomt" in de betekenis van "aanwezig zijn" geeft geen waarschuwing', () => {
+  for (const zin of ['GHK is een peptide dat van nature in bloedplasma voorkomt en sterk aan koper bindt.', 'Dit peptide voorkomt in maagsap.', 'Een stof die in de natuur voorkomt.']) {
+    const { letOp } = checkText(zin + ' Uitsluitend voor onderzoek.')
+    assert.ok(!letOp.some(l => /voorkomen|preventie/.test(l)), `${zin} -> ${letOp.join('; ')}`)
+  }
+})
+
+test('onderzoek naar behandeling van wonden bij ratten blijft toegestaan', () => {
+  const { fout } = checkText('De behandeling van wonden bij ratten werd onderzocht. Uitsluitend voor onderzoek.')
+  assert.deepStrictEqual(fout, [])
+})
