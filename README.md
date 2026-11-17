@@ -23,6 +23,7 @@ plan → schrijven → claimcheck + eindredactie → beeld → inplannen → met
 ```
 node scripts/pm.js status    # stand en volgende stap per post
 node scripts/pm.js check     # alle posts tegen de regels
+node scripts/pm.js tekst [platform] "<tekst>"   # een losse tekst tegen de regels en platformlimieten
 node scripts/pm.js shield    # veiligheidsscan
 node scripts/pm.js doctor    # is alles aanwezig en aangesloten
 npm test                     # tests van regels en hooks
@@ -30,33 +31,7 @@ npm test                     # tests van regels en hooks
 
 Weigert de poort iets, dan staat in de melding waarom; pas de tekst aan. Een nieuwe vaste regel voeg je toe in `scripts/lib/regels.js` met een test in `tests/`.
 
-## Mods
-
-### caption-check
-
-A [Claude Code mod](https://code.claude.com/docs/en/plugins/mods/overview) that adds `/caption-check`. It checks a draft post against each platform's character and hashtag limits, notes where the feed cuts the caption off with "more", and flags health-claim wording ("cures", "FDA approved", "guaranteed", ...) that platforms often reject in peptide posts. It runs at once, even while Claude is working, and Claude sees the result, so you can follow up with "fix it".
-
-```
-/caption-check BPC-157 heals your gut, guaranteed #peptides #recovery
-/caption-check threads Morning stack #peptides #recovery
-```
-
-Platforms: `instagram` (`ig`), `tiktok` (`tt`), `x` (`twitter`), `threads`, `linkedin` (`li`), `facebook` (`fb`). Leave the platform out to check all of them. The limits are in `mods/caption-check/hooks/check.ts`.
-
-Install it from a terminal Claude Code session (v2.1.287 or later):
-
-```
-/plugin install caption-check --marketplace louwarts-ux/peptideman-social
-```
-
-Answer `y` to add the marketplace, then pick a scope. To try it without installing, run `claude --plugin-dir mods/caption-check` from this repo.
-
-Develop:
-
-```
-claude plugin validate mods/caption-check
-claude plugin test mods/caption-check
-```
+Een losse tekst (een caption die je wilt plaatsen, een reactie, een idee) toets je met `pm tekst`. Die gebruikt dezelfde regels als de poort, plus de tekenlimieten per platform (`tiktok`, `pinterest`, `instagram`, `threads`, `x`, `linkedin`, `facebook`; zonder platform alleen de huisregels). De limieten staan in `scripts/lib/tekst.js`. Dit vervangt de oude mod `/caption-check`, die eigen en zwakkere regels had.
 
 ## Agents
 

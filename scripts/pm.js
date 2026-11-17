@@ -2,13 +2,15 @@
 // pm: het gereedschap achter de PeptideMan-werkwijze.
 //   node scripts/pm.js status          waar staat elke post, wat is de volgende stap
 //   node scripts/pm.js check [post...] posts toetsen aan de regels (zonder argument: alle)
+//   node scripts/pm.js tekst [platform] <tekst>  een losse tekst toetsen aan de huisregels en platformlimieten
 //   node scripts/pm.js shield          agents, hooks en repo scannen op risico's
 //   node scripts/pm.js doctor          is alles aanwezig en aangesloten
-// Exitcode 1 als check, shield of doctor een fout vindt.
+// Exitcode 1 als check, tekst, shield of doctor een fout vindt.
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const { checkPost } = require('./lib/regels')
+const { toetsTekst, vindPlatform, PLATFORMS } = require('./lib/tekst')
 
 const ROOT = path.resolve(__dirname, '..')
 const lees = rel => fs.readFileSync(path.join(ROOT, rel), 'utf8')
@@ -54,6 +56,20 @@ function check(bestanden) {
     fouten += p.fout.length
   }
   return fouten
+}
+
+function tekst(args) {
+  const platform = vindPlatform(args[0])
+  const t = (platform ? args.slice(1) : args).join(' ').trim()
+  if (!t) {
+    console.log(`Gebruik: node scripts/pm.js tekst [platform] <tekst>\nPlatforms: ${PLATFORMS.map(p => p.id).join(', ')}. Zonder platform: alleen de huisregels.`)
+    return 1
+  }
+  const r = toetsTekst(t, platform && platform.id)
+  console.log(`${r.fout.length ? '✗' : '✓'} ${r.tekens} tekens, ${r.hashtags} hashtags${platform ? `, ${platform.label}` : ''}`)
+  for (const f of r.fout) console.log(`  ✗ ${f}`)
+  for (const l of r.letOp) console.log(`  · ${l}`)
+  return r.fout.length
 }
 
 // Gereedschap dat nooit in een agent hoort: publiceert direct of verwijdert.
@@ -139,9 +155,9 @@ module.exports = { status }
 
 if (require.main === module) {
   const [cmd, ...args] = process.argv.slice(2)
-  const acties = { status: () => (console.log(status()), 0), check: () => check(args), shield, doctor }
+  const acties = { status: () => (console.log(status()), 0), check: () => check(args), tekst: () => tekst(args), shield, doctor }
   if (!acties[cmd]) {
-    console.log('Gebruik: node scripts/pm.js status | check [post...] | shield | doctor')
+    console.log('Gebruik: node scripts/pm.js status | check [post...] | tekst [platform] <tekst> | shield | doctor')
     process.exit(cmd ? 1 : 0)
   }
   process.exit(acties[cmd]() > 0 ? 1 : 0)

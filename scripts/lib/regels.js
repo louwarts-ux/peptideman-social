@@ -9,6 +9,8 @@ const CLAIMS = [
   { re: /\b(heals?|healing)\b/i, why: 'geneesclaim' },
   { re: /\b(helpt|werkt) (bij|tegen)\b/i, why: 'werkingsclaim' },
   { re: /\b(afvallen|vetverbranding|fat ?loss|weight ?loss|lose weight)\b/i, why: 'afvalclaim' },
+  { re: /\b(lose|drop|shed)\s+\d+([.,]\d+)?\s?(kg|kilos?|lbs?|pounds)\b/i, why: 'afvalclaim' },
+  { re: /\b\d+([.,]\d+)?\s?(kg|kilo'?s?)\s+(kwijt|lichter)\b/i, why: 'afvalclaim' },
   { re: /\b(spiergroei|spiermassa opbouwen|muscle growth|build muscle)\b/i, why: 'spiergroeiclaim' },
   { re: /\b(verjong\w*|anti-?aging|jonger worden)\b/i, why: 'verjongingsclaim' },
   { re: /\b(gegarandeerd|guaranteed?)\b/i, why: 'gegarandeerd resultaat' },
@@ -37,6 +39,11 @@ const TESTEN = [
   { re: /\b(test|testen|controleren|analyseren) (wij |we )?(elke|iedere) (productie)?batch\b/i, why: 'overclaim: er is per product één batch getest, niet elke batch' },
   { re: /\bper batch (getest|gecontroleerd|geborgd|borgen)\b/i, why: 'overclaim: er is per product één batch getest, niet elke batch' },
 ]
+// Verdient een tweede blik: "voorkomt" is een belofte, "voorkwam in muizen" kan een correcte beschrijving
+// van onderzoek zijn. Daarom geen fout maar werk voor de claimcheck-agent.
+// "Voorkomen" betekent ook "aanwezig zijn" ("dat van nature in bloedplasma voorkomt en …"): telt alleen als
+// er direct iets op volgt dat wordt tegengegaan, niet een voegwoord, voorzetsel of leesteken.
+const PREVENTIE = /\b(voorkomt|voorkwam(en)?)\b(?!\s*(en|in|bij|op|als|ook|vaak|veel|of|maar|niet|wel|[.,;:!?)]|$))|\b(preventie[fv]?e?|prevents?|prevention|preventing)\b/i
 // Verdient een tweede blik: over PeptideMan klopt het niet, als algemene uitleg mag het
 const METHODE = /\b(met HPLC (en (MS|massaspectrometrie) )?(ge)?analyse(e)?rd|HPLC- en (MS|massaspectrometrie)-?rapport)/i
 
@@ -84,6 +91,8 @@ function checkText(text, { kanaal } = {}) {
     for (const c of vind(text, LICHAAM)) fout.push(`"${c.match}": ${c.why}`)
   }
   if (!DISCLAIMER.test(text)) fout.push('"Uitsluitend voor onderzoek." ontbreekt')
+  const preventie = text.match(PREVENTIE)
+  if (preventie) letOp.push(`"${preventie[0]}": voorkomen/preventie is een belofte, tenzij het onderzoek beschrijft (cel, dier, mens) met bron`)
   const methode = text.match(METHODE)
   if (methode) letOp.push(`"${methode[0]}": gaat dit over PeptideMan? De rapporten noemen geen analysemethode`)
   if (/\b\d+([.,]\d+)?\s?(mcg|µg|mg|iu|ie)\b/i.test(text)) letOp.push('bevat een hoeveelheid in mg/mcg/IE: is het echt onderzoek en geen dosering?')
