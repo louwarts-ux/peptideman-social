@@ -2,14 +2,10 @@ kanaal: Pinterest
 pijler: Vraag van de dag
 pin-titel: Hoe bepaal je de volgorde van aminozuren in een peptide?
 pin-link: https://peptideman.nl
-beeldtekst: Hoe bepaal je de volgorde van aminozuren? Edman-afbraak is het klassieke hulpmiddel voor de N-terminale volgorde van eiwitten. Massaspectrometrie (LC-MS/MS) heeft die methode grotendeels aangevuld of vervangen.
+beeldtekst: Klassiek met Edman-afbraak, een methode om het beginstuk van een eiwit af te lezen. Massaspectrometrie (LC-MS/MS) is een alternatief dat ook het beginstuk kan bepalen.
 
 caption: |
-  Hoe bepaal je de volgorde van aminozuren in een peptide? Edman-afbraak is het klassieke hulpmiddel voor de N-terminale volgorde van eiwitten. Massaspectrometrie (LC-MS/MS) heeft die methode grotendeels aangevuld of vervangen.
-
-  Soort bron: analytische methodestudie (2019) aan eiwitten in het lab, geen studie bij mensen of dieren.
-
-  Uitsluitend voor onderzoek.
+  Hoe bepaal je de volgorde van aminozuren in een peptide? Onderzoekers gebruiken van oudsher Edman-afbraak en tegenwoordig ook LC-MS/MS. Een methodestudie uit 2019 beschrijft zo'n LC-MS/MS-aanpak voor het beginstuk van eiwitten. Soort bron: laboratoriummethode, geen mens of dier. Uitsluitend voor onderzoek.
 
 hashtags: #aminozuurvolgorde #massaspectrometrie #peptideonderzoek #labwerk #PeptideMan
 

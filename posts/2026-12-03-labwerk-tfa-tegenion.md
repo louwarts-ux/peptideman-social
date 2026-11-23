@@ -2,12 +2,12 @@ kanaal: Pinterest
 pijler: Labwerk
 pin-titel: Wat is TFA in een peptide?
 pin-link: https://peptideman.nl
-beeldtekst: TFA. Een tegenion in het monster. Trifluoracetaat is vrijwel altijd aanwezig in commercieel gesynthetiseerde peptiden. IR-meting: 1673 cm-1, de band overlapt met het peptide.
+beeldtekst: TFA. Een tegenion dat bij het peptide hoort. Wat is het? Een geladen deeltje dat bij het peptide hoort. Waarom telt het? Het stoort sommige metingen. Volgens een laboratoriumstudie (2007) zit TFA vrijwel altijd in commercieel gesynthetiseerde peptiden. De studie onderzocht hoe je het verwijdert voor een IR-meting van de peptidestructuur.
 
 caption: |
-  Wat is TFA in een peptide? TFA (trifluoracetaat) is een tegenion dat volgens een laboratoriumstudie (2007) vrijwel altijd aanwezig is in commercieel gesynthetiseerde peptiden. Zijn sterke infraroodband bij 1673 cm-1 overlapt met de amide I-band van het peptide, dus moest TFA voor die meting verwijderd worden.
+  Wat is TFA in een peptide? Een tegenion dat bij het peptide hoort. Volgens een laboratoriumstudie (2007) zit het vrijwel altijd in commercieel gesynthetiseerde peptiden. De sterke infraroodband van TFA kan een IR-meting storen.
 
-  Soort bron: laboratoriumstudie (chemie, in oplossing), geen onderzoek bij mensen.
+  Bron: laboratoriumstudie (chemie), geen onderzoek bij mensen.
 
   Uitsluitend voor onderzoek.
 

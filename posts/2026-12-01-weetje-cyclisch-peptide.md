@@ -2,10 +2,10 @@ kanaal: Pinterest
 pijler: Weetje
 pin-titel: Wat is een cyclisch peptide?
 pin-link: https://peptideman.nl
-beeldtekst: Pedein A. Een peptide als ring van 6 bouwstenen. Een 24-ledige ring, geïsoleerd uit de bacterie Chondromyces pediculatus.
+beeldtekst: Cyclisch peptide. Een peptide waarvan de keten een ring vormt. Voorbeeld: pedein A. Zes bouwstenen in een ring, gevonden in de bacterie Chondromyces pediculatus.
 
 caption: |
-  Een cyclisch peptide is een peptide waarvan de keten een ring vormt. Voorbeeld: pedein A en B, 24-ledige ringen van zes bouwstenen (tryptofaan, glycine, sarcosine en drie ongewone hydroxy-aminozuren), geïsoleerd uit de bacterie Chondromyces pediculatus.
+  Een cyclisch peptide is een peptide waarvan de keten een ring vormt. Voorbeeld: pedein A, een ring van zes bouwstenen uit de bacterie Chondromyces pediculatus.
 
   Soort bron: structuuronderzoek in het lab (NMR), niet bij mensen.
   Bron: pubmed.ncbi.nlm.nih.gov/18305355
